@@ -1,0 +1,259 @@
+[
+  {
+    "id": "grid_catalog",
+    "url": "https://datos.canarias.es/catalogos/estadisticas/api/3/action/package_show?id=indicadores-demograficos-malla-de-250m-canarias-01-01-2024",
+    "checked_at": "2026-09-27T11:22:25.027781+00:00",
+    "status": 200,
+    "content_type": "application/json;charset=utf-8",
+    "bytes": 11072,
+    "sha256": "b30ee950ceb1bbcc4691d4168774caa64d3134128bf79a698d94b76b93c32089",
+    "title": "indicadores-demograficos-malla-de-250m-canarias-01-01-2024",
+    "license_id": "istac-aviso-legal",
+    "license_url": "http://www.gobiernodecanarias.org/istac/aviso_legal.html",
+    "resources": [
+      {
+        "format": "CSV",
+        "url": "https://datos.canarias.es/api/estadisticas/geographical-resources/indicadoresdemograficos/ows?service=WFS&version=1.1.0&request=GetFeature&typeName=Malla de 250m-20240101&outputFormat=csv"
+      },
+      {
+        "format": "KML",
+        "url": "https://datos.canarias.es/api/estadisticas/geographical-resources/indicadoresdemograficos/ows?service=WFS&version=1.1.0&request=GetFeature&typeName=Malla de 250m-20240101&outputFormat=application/vnd.google-earth.kml+xml"
+      },
+      {
+        "format": "GML3",
+        "url": "https://datos.canarias.es/api/estadisticas/geographical-resources/indicadoresdemograficos/ows?service=WFS&version=1.1.0&request=GetFeature&typeName=Malla de 250m-20240101&outputFormat=gml32"
+      },
+      {
+        "format": "geojson",
+        "url": "https://datos.canarias.es/api/estadisticas/geographical-resources/indicadoresdemograficos/ows?service=WFS&version=1.1.0&request=GetFeature&typeName=Malla de 250m-20240101&outputFormat=application/json"
+      },
+      {
+        "format": "geopackage",
+        "url": "https://datos.canarias.es/api/estadisticas/geographical-resources/indicadoresdemograficos/ows?service=WFS&version=1.1.0&request=GetFeature&typeName=Malla de 250m-20240101&outputFormat=geopkg"
+      },
+      {
+        "format": "WMS",
+        "url": "https://datos.canarias.es/api/estadisticas/geographical-resources/indicadoresdemograficos/ows?service=WMS&request=GetCapabilities"
+      },
+      {
+        "format": "WFS",
+        "url": "https://datos.canarias.es/api/estadisticas/geographical-resources/indicadoresdemograficos/ows?service=WFS&request=GetCapabilities"
+      },
+      {
+        "format": "ODS",
+        "url": "https://datos.canarias.es/catalogos/estadisticas/dataset/977b59f9-c2b4-4f6a-87b1-ff4a996e0976/resource/e51b9f20-2cd1-4335-87ed-678541e6f3f0/download/diccionario.ods"
+      }
+    ]
+  },
+  {
+    "id": "grid",
+    "url": "https://datos.canarias.es/api/estadisticas/geographical-resources/indicadoresdemograficos/ows?service=WFS&version=1.1.0&request=GetFeature&typeName=Malla+de+250m-20240101&outputFormat=application%2Fjson",
+    "checked_at": "2026-09-27T11:22:25.028283+00:00",
+    "status": 200,
+    "content_type": "application/json;charset=UTF-8",
+    "bytes": 21705565,
+    "sha256": "bd324e76a36d4451dbc70819da132e8605940412d4de4e0e56ce08976af40ef8",
+    "numberMatched": 13277,
+    "numberReturned": 13277,
+    "crs": {
+      "type": "name",
+      "properties": {
+        "name": "urn:ogc:def:crs:EPSG::4326"
+      }
+    },
+    "by_island": {
+      "ES707": {
+        "cells": 1315,
+        "child_0_14": 8823,
+        "null_0_14": 0,
+        "null_0_17": 1315,
+        "geometry_types": [
+          "MultiPolygon"
+        ],
+        "bounds": [
+          -17.9901,
+          28.4799,
+          -17.7279,
+          28.843
+        ]
+      },
+      "ES709": {
+        "cells": 5442,
+        "child_0_14": 110182,
+        "null_0_14": 0,
+        "null_0_17": 5442,
+        "geometry_types": [
+          "MultiPolygon"
+        ],
+        "bounds": [
+          -16.8878,
+          28.0038,
+          -16.1506,
+          28.574
+        ]
+      },
+      "ES706": {
+        "cells": 285,
+        "child_0_14": 2009,
+        "null_0_14": 0,
+        "null_0_17": 285,
+        "geometry_types": [
+          "MultiPolygon"
+        ],
+        "bounds": [
+          -17.3447,
+          28.024,
+          -17.099,
+          28.2002
+        ]
+      },
+      "ES708": {
+        "cells": 1206,
+        "child_0_14": 21433,
+        "null_0_14": 0,
+        "null_0_17": 1206,
+        "geometry_types": [
+          "MultiPolygon"
+        ],
+        "bounds": [
+          -13.8757,
+          28.856,
+          -13.4443,
+          29.2366
+        ]
+      },
+      "ES703": {
+        "cells": 192,
+        "child_0_14": 1214,
+        "null_0_14": 0,
+        "null_0_17": 192,
+        "geometry_types": [
+          "MultiPolygon"
+        ],
+        "bounds": [
+          -18.1072,
+          27.6387,
+          -17.8838,
+          27.8411
+        ]
+      },
+      "ES704": {
+        "cells": 987,
+        "child_0_14": 16945,
+        "null_0_14": 0,
+        "null_0_17": 987,
+        "geometry_types": [
+          "MultiPolygon"
+        ],
+        "bounds": [
+          -14.3611,
+          28.047,
+          -13.8262,
+          28.747
+        ]
+      },
+      "ES705": {
+        "cells": 3850,
+        "child_0_14": 95208,
+        "null_0_14": 0,
+        "null_0_17": 3850,
+        "geometry_types": [
+          "MultiPolygon"
+        ],
+        "bounds": [
+          -15.8178,
+          27.7419,
+          -15.3688,
+          28.1706
+        ]
+      }
+    },
+    "topology_validation": "NOT RUN; bounding boxes and geometry types only"
+  },
+  {
+    "id": "siap_professionals",
+    "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E54086A_000003/1.1.csv",
+    "checked_at": "2026-09-27T11:22:25.028378+00:00",
+    "status": 200,
+    "content_type": "text/csv",
+    "bytes": 160596,
+    "sha256": "ca254c7076a698e953937b876b63fd5623acf64a14ea45dead0b5a40e9c1389f",
+    "header_and_sample": [
+      "TERRITORIO#es,TERRITORIO_CODE,TIME_PERIOD#es,TIME_PERIOD_CODE,TIPO_PROFESIONAL_ATENCION_PRIMARIA#es,TIPO_PROFESIONAL_ATENCION_PRIMARIA_CODE,LUGAR_CONSULTA#es,LUGAR_CONSULTA_CODE,MEDIDAS#es,MEDIDAS_CODE,OBS_VALUE,ESTADO_OBSERVACION#es,CONFIDENCIALIDAD_OBSERVACION#es,NOTAS_OBSERVACION#es",
+      "Canarias,ES70,2004,2004,Enfermería - Atención primaria (AP),ENFERMERIA_AP,Total,_T,Nº de profesionales de atención primaria (AP),NUMERO_PROFESIONALES_AP,1002,,,",
+      "Canarias,ES70,2004,2004,Enfermería - Atención primaria (AP),ENFERMERIA_AP,Total,_T,Ratio por profesional,RATIO_PROFESIONAL,1855,,,",
+      "Lanzarote,ES708,2004,2004,Enfermería - Atención primaria (AP),ENFERMERIA_AP,Total,_T,Nº de profesionales de atención primaria (AP),NUMERO_PROFESIONALES_AP,63,,,",
+      "Lanzarote,ES708,2004,2004,Enfermería - Atención primaria (AP),ENFERMERIA_AP,Total,_T,Ratio por profesional,RATIO_PROFESIONAL,1960,,,"
+    ]
+  },
+  {
+    "id": "siap_population",
+    "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E54086A_000001/1.1.csv",
+    "checked_at": "2026-09-27T11:22:25.028457+00:00",
+    "status": 200,
+    "content_type": "text/csv",
+    "bytes": 1121727,
+    "sha256": "ff655c1d8c77961fa9d1297b65acddb22d1501312375d9fcfec94a75fd2e8fc7",
+    "header_and_sample": [
+      "TERRITORIO#es,TERRITORIO_CODE,TIME_PERIOD#es,TIME_PERIOD_CODE,SEXO#es,SEXO_CODE,GRUPO_EDAD#es,GRUPO_EDAD_CODE,MEDIDAS#es,MEDIDAS_CODE,OBS_VALUE,ESTADO_OBSERVACION#es,CONFIDENCIALIDAD_OBSERVACION#es,NOTAS_OBSERVACION#es",
+      "Canarias,ES70,2004,2004,Mujeres,F,De 10 a 14 años,Y10T14,Población asignada,POBLACION_ASIGNADA,48712,,,",
+      "Canarias,ES70,2004,2004,Hombres,M,De 10 a 14 años,Y10T14,Población asignada,POBLACION_ASIGNADA,51798,,,",
+      "Canarias,ES70,2004,2004,Total,_T,De 10 a 14 años,Y10T14,Población asignada,POBLACION_ASIGNADA,100510,,,",
+      "Canarias,ES70,2005,2005,Mujeres,F,De 10 a 14 años,Y10T14,Población asignada,POBLACION_ASIGNADA,47428,,,"
+    ]
+  },
+  {
+    "id": "siap_zones",
+    "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E54086A_000002/1.1.csv",
+    "checked_at": "2026-09-27T11:22:25.028535+00:00",
+    "status": 200,
+    "content_type": "text/csv",
+    "bytes": 33918,
+    "sha256": "055575f7c48b26ef5b12b315559808bce51430a34c608bd45640d2fc712ac7fe",
+    "header_and_sample": [
+      "TERRITORIO#es,TERRITORIO_CODE,TIME_PERIOD#es,TIME_PERIOD_CODE,MEDIDAS#es,MEDIDAS_CODE,OBS_VALUE,ESTADO_OBSERVACION#es,CONFIDENCIALIDAD_OBSERVACION#es,NOTAS_OBSERVACION#es",
+      "Canarias,ES70,2004,2004,Consultorio local,CONSULTORIO_LOCAL,151,,,",
+      "Canarias,ES70,2004,2004,Centro de salud,CENTRO_SALUD,105,,,",
+      "Canarias,ES70,2004,2004,Zona básica de salud,ZONA_BASICA_SALUD,105,,,",
+      "Lanzarote,ES708,2004,2004,Consultorio local,CONSULTORIO_LOCAL,9,,,"
+    ]
+  },
+  {
+    "id": "population_catalog",
+    "url": "https://datos.canarias.es/catalogos/estadisticas/api/3/action/package_show?id=urn-siemac-org-siemac-metamac-infomodel-statisticalresources-dataset-istac-e30243a_000001",
+    "checked_at": "2026-09-27T11:22:25.028669+00:00",
+    "status": 200,
+    "content_type": "application/json;charset=utf-8",
+    "bytes": 12356,
+    "sha256": "03c371a06bdfe4e1473b29f0600851702ae520f402af8389e901de3a4fb29928",
+    "title": "Población según sexos y edades. Canarias, islas y municipios por años",
+    "license_id": "istac-aviso-legal",
+    "license_url": "http://www.gobiernodecanarias.org/istac/aviso_legal.html",
+    "resources": [
+      {
+        "format": "JSON",
+        "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E30243A_000001/1.5.json"
+      },
+      {
+        "format": "XML",
+        "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E30243A_000001/1.5.xml"
+      },
+      {
+        "format": "JSON",
+        "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E30243A_000001/1.5.jsonstat"
+      },
+      {
+        "format": "TSV",
+        "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E30243A_000001/1.5.tsv"
+      },
+      {
+        "format": "CSV",
+        "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E30243A_000001/1.5.csv"
+      },
+      {
+        "format": "XLSX",
+        "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E30243A_000001/1.5.xlsx"
+      }
+    ]
+  }
+]
