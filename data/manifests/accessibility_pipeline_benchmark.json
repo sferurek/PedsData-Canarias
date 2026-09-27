@@ -1,0 +1,24 @@
+{
+  "n_origins": 13277,
+  "n_destinations": 158,
+  "runtime_seconds": 47.853,
+  "peak_memory_mb": 149.03,
+  "failures": 0,
+  "requests": 706,
+  "origin_batch_size": 40,
+  "destination_batch_size": 40,
+  "partitioning": "island_and_terrestrial_component",
+  "public_server_requests": 0,
+  "engine_version": "5.27.1",
+  "graph_snapshot": "f0b0700b3224c76f6b62682102cbf2002936164d1de7bb28d8820af81578a37e",
+  "zbs_aggregation_enabled": false,
+  "result_publication_status": "staging_only",
+  "cell_result_sha256": "8c0a8c72d9aa4ce0fceffc90a3626074275ff0d19f861f21d805125313f836c7",
+  "routing_status_counts": {
+    "routed": 13257,
+    "requires_interisland_transfer": 20
+  },
+  "island_aggregate_count": 7,
+  "la_graciosa_cells": 20,
+  "la_graciosa_population_0_14": 91
+}

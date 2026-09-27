@@ -1,8 +1,6 @@
 # Métodos de accesibilidad pediátrica
 
-**Estado:** especificación preparada; cálculo bloqueado. No existe
-`pediatric_accessibility_2024.csv` porque ZBS actual y routing no han superado
-sus gates. Un fichero vacío aparentaría una medición real.
+**Estado:** pipeline ejecutado y validado en `staging`; resultados aún no publicados. Gate C está GREEN y Gate B sigue RED, por lo que se habilitan isla, municipio y malla, pero no ZBS. El export curado se reserva para la fase de cálculo/publicación autorizada.
 
 ## Universo
 
@@ -28,7 +26,7 @@ ferry, avión y ambulancia como si fueran una ruta terrestre.
 
 ## Agregación
 
-Para cada isla, municipio válido y ZBS vigente se calcularán bandas `<5`,
+Para cada isla y municipio válido se calculan bandas `<5`,
 `5–<10`, `10–<15`, `15–<20`, `20–<30`, `>=30`, además de sin ruta y no
 evaluable. El denominador publicado separará población total, evaluada, sin
 ruta y no evaluable.
@@ -38,7 +36,7 @@ Para una banda `b`, `%b = 100 × Σ niños de celdas routed en b / Σ niños del
 la falta de ruta sea visible. Mediana y P90 son cuantiles ponderados por niños,
 no por número de celdas; no incluyen estados sin tiempo.
 
-La asignación ZBS no se ejecutará hasta disponer de límites actuales. Si una
+La asignación ZBS está desactivada hasta disponer de límites actuales. Si una
 celda cruza un límite, se conservarán pesos espaciales y análisis de
 sensibilidad; no se repartirá población de forma silenciosa.
 
@@ -50,6 +48,8 @@ o combinaciones que permitan inferencias indebidas; umbral de supresión y
 agrupación requieren aprobación metodológica antes de publicar. No se imputan
 islas ni años faltantes.
 
-El cálculo podrá comenzar cuando ZBS tenga versión actual utilizable y el motor
-use un grafo local congelado con discrepancias y snapping aceptados. Hasta ese
-momento, cualquier tiempo permanece `not_evaluated`.
+## Ejecución técnica de Fase 2
+
+`etl/prepare_accessibility.py` particiona por isla/componente, usa matrices OSRM de 40 orígenes por 40 destinos y conserva el mínimo por origen. La ejecución local procesó 13.277 celdas y 158 destinos en 706 peticiones, 47,853 s y 149,03 MB de pico, sin fallos ni peticiones a servidores públicos.
+
+Produjo 13.257 celdas `routed` y 20 celdas de La Graciosa `requires_interisland_transfer`, que suman 91 niños y mantienen tiempo/distancia nulos. Los CSV permanecen en `data/staging/`. El manifiesto versionado registra motor, checksum del grafo, lotes, runtime, memoria, fallos y checksum del resultado. El cálculo ZBS figura explícitamente como desactivado.
