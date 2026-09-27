@@ -13,7 +13,7 @@ La decisión cubre accesibilidad terrestre a recursos pediátricos en las siete 
 - Los seis cruces entre componentes y La Graciosa fueron bloqueados antes de la petición; ninguno recibió cero minutos.
 - Los 21 trayectos de referencia incluyen urbano, rural y extremo en cada isla.
 - Frente a la mediana de OSRM/Valhalla públicos de Fase 1, 10 tiempos quedaron en GREEN y 11 en YELLOW; ninguno superó el límite RED de 35 %. La diferencia temporal mediana fue 20,1 % y la máxima 32,6 %.
-- El benchmark completó 28 peticiones locales en 0,256 segundos. Es una prueba funcional, no una medida de capacidad sostenida.
+- El benchmark completó 28 peticiones locales en menos de un segundo. Es una prueba funcional, no una medida de capacidad sostenida.
 
 ## Umbrales y cautelas
 

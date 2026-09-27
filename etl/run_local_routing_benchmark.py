@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import csv
 import hashlib
 import json
@@ -12,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CASES = ROOT / "data/curated/routing_test_cases.csv"
 OUTPUT = ROOT / "data/curated/local_osrm_benchmark_results.csv"
 MANIFEST = ROOT / "data/manifests/local_osrm_benchmark.json"
-ENDPOINT = "http://127.0.0.1:55000"
+DEFAULT_ENDPOINT = "http://127.0.0.1:55000"
 
 
 def sha256(path):
@@ -23,11 +24,11 @@ def sha256(path):
     return digest.hexdigest()
 
 
-def run_route(case):
+def run_route(case, endpoint):
     result = base_result(case, "osrm-local-5.27.1")
     coordinates = (f"{case['origin_longitude']},{case['origin_latitude']};"
                    f"{case['destination_longitude']},{case['destination_latitude']}")
-    url = f"{ENDPOINT}/route/v1/driving/{coordinates}?overview=false&steps=false"
+    url = f"{endpoint}/route/v1/driving/{coordinates}?overview=false&steps=false"
     payload, status, latency, error = request_json(url)
     result.update(request_sent="true", http_status=status, latency_ms=latency, error=error)
     if payload and payload.get("code") == "Ok" and payload.get("routes"):
@@ -42,11 +43,15 @@ def run_route(case):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--base-url", default=DEFAULT_ENDPOINT)
+    args = parser.parse_args()
+    endpoint = args.base_url.rstrip("/")
     with CASES.open(encoding="utf-8") as handle:
         cases = list(csv.DictReader(handle))
     started = time.monotonic()
     rows = [guarded_result(case, "osrm-local-5.27.1")
-            if case["expected_status"] != "routed" else run_route(case)
+            if case["expected_status"] != "routed" else run_route(case, endpoint)
             for case in cases]
     runtime = round(time.monotonic() - started, 3)
     with OUTPUT.open("w", newline="", encoding="utf-8") as handle:
@@ -59,7 +64,8 @@ def main():
         "graph_manifest_sha256": sha256(ROOT / "data/manifests/osrm_canarias_graph.json"),
         "test_cases_sha256": sha256(CASES),
         "output_sha256": sha256(OUTPUT),
-        "case_count": len(cases), "requests_sent": 28,
+        "case_count": len(cases),
+        "requests_sent": sum(row["request_sent"] == "true" for row in rows),
         "runtime_seconds": runtime,
     }
     MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
