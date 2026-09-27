@@ -1,9 +1,12 @@
 # Siguiente paso recomendado
 
-El próximo encargo puede iniciar **Fase 3 — cálculo publicable y mapa de accesibilidad pediátrica sin ZBS** sobre el último commit de Fase 2.
+La siguiente fase debe ser **revisión RC1 y preparación de release**, manteniendo el producto sin ZBS mientras Gate B siga RED.
 
-> Reproduce `etl/prepare_accessibility.py` con el snapshot y motor fijados. Revisa los 13.277 resultados, denominadores, celdas pequeñas, cuantiles y agregados insulares/municipales; después promueve un export curado con provenance completo. Construye el mapa básico y los siete perfiles insulares, más perfiles municipales cuando la geografía sea válida.
->
-> Mantén Gate B RED: no publiques filtros, perfiles, ratios ni actividad ZBS y no uses los polígonos de 2017 como actuales. Muestra “Pendiente de geometría oficial vigente”. Mantén La Graciosa como componente separado con transferencia interinsular y tiempo desconocido. No asignes tiempo terrestre a UCIP/UCIN fuera de isla.
->
-> La UI debe mostrar población evaluada, no evaluable y sin ruta; fuente, periodo, motor, grafo y limitaciones. No conviertas los CSV de staging en cifras públicas sin revisión metodológica. No envíes los borradores institucionales sin autorización explícita.
+1. Realizar revisión clínica y metodológica independiente de los siete perfiles, denominadores total/evaluable y lenguaje de acceso potencial.
+2. Auditar privacidad y accesibilidad WCAG con usuarios y herramientas externas.
+3. Resolver observaciones de rendimiento del GeoJSON y evaluar teselas vectoriales si la carga móvil real lo requiere.
+4. Incorporar renta/ruralidad solo con provenance y compatibilidad municipal; mantener el Access Gap sin score.
+5. Mantener separadas infraestructura (centros) y dotación (pediatras SIAP).
+6. Publicar release únicamente tras cerrar el checklist RC1.
+
+Si aparece geometría ZBS oficial vigente, abrir un cambio metodológico separado con códigos, vigencia, licencia, crosswalk y QA; no activar perfiles ZBS por sustitución silenciosa.
