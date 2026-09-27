@@ -14,6 +14,7 @@ class HealthZoneTest(unittest.TestCase):
     def setUpClass(cls):
         cls.historical = json.loads((ROOT / "data/curated/health_zones.geojson").read_text())
         cls.qa = json.loads((ROOT / "data/curated/health_zones_qa.json").read_text())
+        cls.phase2 = json.loads((ROOT / "data/curated/zbs_phase2_audit.json").read_text())
         path = ROOT / "data/curated/health_zones_current_catalog.csv"
         with path.open(encoding="utf-8") as handle:
             cls.current = list(csv.DictReader(handle))
@@ -28,6 +29,7 @@ class HealthZoneTest(unittest.TestCase):
         for feature in self.historical["features"]:
             self.assertTrue(shape(feature["geometry"]).is_valid)
             self.assertFalse(feature["properties"]["routing_eligible"])
+            self.assertTrue(feature["properties"]["historical_reference_only"])
             self.assertEqual("NEEDS_VALIDATION", feature["properties"]["verification_status"])
 
     def test_current_catalog_has_no_fabricated_codes_or_geometry(self):
@@ -48,6 +50,12 @@ class HealthZoneTest(unittest.TestCase):
         self.assertEqual(5, result["historical_2017_count"])
         self.assertEqual(6, result["current_ap_catalog_2026_count"])
         self.assertEqual(6, result["siap_2024_count"])
+
+    def test_phase2_audit_keeps_gate_red(self):
+        self.assertEqual("RED", self.phase2["gate"])
+        self.assertFalse(self.phase2["current_official_geometry_found"])
+        self.assertEqual(0, self.phase2["e54086b"]["instances_total"])
+        self.assertFalse(self.phase2["historical_2017"]["routing_eligible"])
 
 
 if __name__ == "__main__":

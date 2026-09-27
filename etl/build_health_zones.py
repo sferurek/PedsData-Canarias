@@ -85,6 +85,7 @@ def historical_features(shapefile_path: Path):
             "valid_from": None, "valid_to": None, "reference_year": 2017,
             "source_url": ZBS_URL, "source_date": "2017",
             "verification_status": "NEEDS_VALIDATION", "routing_eligible": False,
+            "historical_reference_only": True,
             "notes": "Geometría histórica IACS/AtlasVPM; no equivale a ZBS vigente.",
         }
         features.append({"type": "Feature", "properties": properties, "geometry": mapping(geometry)})
@@ -149,7 +150,8 @@ def main() -> None:
     collection = {
         "type": "FeatureCollection", "name": "health_zones_historical_2017_not_for_routing",
         "metadata": {"source_crs": "EPSG:4258", "output_crs": "EPSG:4326", "reference_year": 2017,
-                     "verification_status": "NEEDS_VALIDATION", "routing_eligible": False},
+                     "verification_status": "NEEDS_VALIDATION", "routing_eligible": False,
+                     "historical_reference_only": True},
         "features": features,
     }
     args.output.write_text(json.dumps(collection, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
