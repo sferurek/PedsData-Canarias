@@ -38,3 +38,23 @@ La aplicación Next.js ofrece mapa de bandas discretas, filtros por isla y munic
 - revisión visual: Canarias, siete mapas insulares, desktop e iPhone, leyenda, filtros y ausencia de clipping horizontal.
 
 La RC1 sigue requiriendo revisión clínica, metodológica y visual externa antes de considerarse release final.
+
+## Preview
+
+No había credenciales ni proyecto Vercel configurados en el entorno. El intento con Vercel CLI 60.1.3 abrió el flujo de autenticación y se canceló sin publicar una URL. La alternativa exigida queda cumplida mediante build reproducible:
+
+```bash
+cd apps/web
+pnpm install --frozen-lockfile
+pnpm build
+```
+
+Para crear la preview tras autenticar el entorno:
+
+```bash
+cd apps/web
+pnpm dlx vercel@60.1.3 login
+pnpm dlx vercel@60.1.3 --yes
+```
+
+El despliegue debe conservar la etiqueta RC1 y no promocionarse como release final.
