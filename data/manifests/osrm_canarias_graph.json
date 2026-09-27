@@ -1,0 +1,20 @@
+{
+  "engine": "OSRM",
+  "engine_version": "5.27.1",
+  "container_image": "ghcr.io/project-osrm/osrm-backend:v5.27.1",
+  "container_image_digest": "sha256:b1ca5d72da456e82f81b8732a095c2357b00710099efa844040d1eb40b4b5386",
+  "container_platform": "linux/amd64",
+  "profile": "/opt/car.lua",
+  "algorithm": "MLD",
+  "graph_build_date": "2026-09-27",
+  "osm_checksum_sha256": "2c5f0f3c7b42fc68f6d1bf64679642edb86f546fe510e6f081a07a4d398379f9",
+  "graph_file_count": 26,
+  "graph_size_bytes": 116750248,
+  "graph_bundle_sha256": "f0b0700b3224c76f6b62682102cbf2002936164d1de7bb28d8820af81578a37e",
+  "configuration": {
+    "extract": "osrm-extract -p /opt/car.lua",
+    "partition": "osrm-partition",
+    "customize": "osrm-customize",
+    "serve": "osrm-routed --algorithm mld"
+  }
+}

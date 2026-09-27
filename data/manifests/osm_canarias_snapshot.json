@@ -1,0 +1,31 @@
+{
+  "dataset": "OpenStreetMap Canary Islands extract",
+  "source_url": "https://download.geofabrik.de/africa/canary-islands-260926.osm.pbf",
+  "download_date": "2026-09-27",
+  "license": "ODbL 1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "extract_version": "canary-islands-260926",
+  "osm_data_timestamp": "2026-09-26T20:22:51Z",
+  "format": "osm.pbf",
+  "size_bytes": 59822582,
+  "checksum_md5": "d3dc2e5748256cdfc52e89b52e2e8f61",
+  "checksum_sha256": "2c5f0f3c7b42fc68f6d1bf64679642edb86f546fe510e6f081a07a4d398379f9",
+  "bounding_box_wgs84": [
+    -18.92352,
+    26.36117,
+    -12.47875,
+    30.25648
+  ],
+  "islands": [
+    "el-hierro",
+    "la-gomera",
+    "la-palma",
+    "tenerife",
+    "gran-canaria",
+    "fuerteventura",
+    "lanzarote"
+  ],
+  "separate_road_components": [
+    "la-graciosa"
+  ]
+}
