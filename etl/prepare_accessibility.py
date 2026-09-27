@@ -189,9 +189,12 @@ def main():
         failure_count += failures
         for origin in component_origins:
             match = best[origin["origin_id"]]
-            if match:
+            if match and match[0] > 0 and match[1] > 0:
                 duration, distance, facility_id = match
                 row_status = "routed"
+            elif match:
+                duration = distance = facility_id = ""
+                row_status = "not_evaluated"
             else:
                 duration = distance = facility_id = ""
                 row_status = status if not component_destinations else ("not_evaluated" if failures else "no_route")
