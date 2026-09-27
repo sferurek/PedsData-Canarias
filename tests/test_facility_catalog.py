@@ -53,6 +53,16 @@ class FacilityCatalogTest(unittest.TestCase):
                 self.assertIn(row[field], allowed)
                 self.assertNotEqual("0", row[field])
 
+    def test_phase2_facility_evidence_and_hospital_defaults(self):
+        by_id = {row["official_id"]: row for row in self.rows}
+        self.assertEqual(by_id["0538005432"]["verification_status"], "VERIFIED")
+        self.assertEqual(by_id["0538005432"]["routing_eligible_pediatric_ap"], "true")
+        self.assertEqual(by_id["0538005357"]["routing_eligible_pediatric_ap"], "false")
+        self.assertEqual(by_id["0538002288"]["pediatric_inpatient"], "needs_validation")
+        self.assertEqual(by_id["0535003934"]["pediatric_inpatient"], "needs_validation")
+        for official_id in ("0535001838", "0538001821", "0538001932"):
+            self.assertEqual(by_id[official_id]["picu"], "observed")
+
 
 if __name__ == "__main__":
     unittest.main()

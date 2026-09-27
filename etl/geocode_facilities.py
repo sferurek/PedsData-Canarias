@@ -153,6 +153,7 @@ def write_curated(rows, cache, details, fieldnames, output):
         if candidate:
             apply_candidate(row, candidate, match)
         apply_regcess_detail(row, details[row["official_id"]])
+        apply_phase2_evidence(row)
         eligible = row["verification_status"] == "VERIFIED" and row["pediatrics_ap"] == "observed"
         row["routing_eligible_pediatric_ap"] = str(eligible).lower()
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -166,7 +167,7 @@ def write_curated(rows, cache, details, fieldnames, output):
 def apply_regcess_detail(row, detail):
     services = set(detail["service_codes"])
     if row["facility_type"] == "hospital":
-        row["pediatric_inpatient"] = "observed"
+        row["pediatric_inpatient"] = "needs_validation"
         row["neonatology"] = "observed" if services & {"U22", "U23"} else "not_available"
         row["nicu"] = "observed" if "U23" in services else "not_available"
     if "U68" in services:
@@ -181,6 +182,45 @@ def apply_regcess_detail(row, detail):
     mismatch = "no aparece en el Catálogo AP" in row["notes"]
     row["verification_status"] = "PARTIAL" if mismatch else "VERIFIED"
     row["notes"] += " Coordenada oficial publicada por REGCESS/eGeo."
+
+
+def apply_phase2_evidence(row):
+    """Apply dated SCS evidence that is stronger than registry-code inference."""
+    official_id = row["official_id"]
+    if official_id == "0538005432":
+        row.update(verification_status="VERIFIED", health_zone_name_source="LOS SILOS-BUENAVISTA")
+        row["source_url"] += "|https://www3.gobiernodecanarias.org/noticias/sanidad-invierte-mas-de-22-millones-de-euros-en-la-puesta-en-marcha-del-nuevo-consultorio-local-de-buenavista/"
+        row["notes"] += " SCS confirma apertura, consulta de Pediatría y cobertura compartida con Los Silos (17/07/2025)."
+    elif official_id == "0538005357":
+        row["health_zone_name_source"] = "TACORONTE"
+        row["source_url"] += "|https://www3.gobiernodecanarias.org/noticias/la-gerencia-de-atencion-primaria-de-tenerife-amplia-la-cartera-de-servicios-del-consultorio-local-de-el-sauzal/"
+        row["notes"] += " SCS confirma Pediatría operativa; falta coordenada oficial."
+
+    observed_all = {"0535001838", "0538001821", "0538001932"}
+    if official_id in observed_all:
+        for field in ("pediatric_emergency", "pediatric_inpatient", "neonatology", "nicu", "picu"):
+            row[field] = "observed"
+    hospital_sources = {
+        "0535001838": "https://www3.gobiernodecanarias.org/sanidad/scs/scs/as/gc/30/memorias/24/docs/MEMORIA_%20CHUIMI_2024_DIGITAL.pdf",
+        "0538001821": "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idCarpeta=3da5f513-541b-11de-9665-998e1388f7ed&idDocument=1d1229fb-3520-11e0-919a-bdaa63e0a438",
+        "0538001932": "https://www3.gobiernodecanarias.org/sanidad/scs/content/213b498d-c7e1-11e4-b8de-159dab37263e/PediatriayAreasEspecificas.pdf",
+    }
+    if official_id in hospital_sources:
+        row["source_url"] += "|" + hospital_sources[official_id]
+
+    partial_hospitals = {"0535002243", "0535001908", "0538002289", "0538002290"}
+    if official_id in partial_hospitals:
+        row["pediatric_inpatient"] = "observed"
+    if official_id in {"0535002243", "0535001908"}:
+        row["pediatric_emergency"] = "observed"
+    partial_sources = {
+        "0535002243": "https://www3.gobiernodecanarias.org/sanidad/scs/content/3017ea34-b2f5-11ef-ba3e-0f9d182f8154/Memoria-GSS-Lanzarote-2023.pdf",
+        "0535001908": "https://www3.gobiernodecanarias.org/sanidad/scs/scs/ftv/at_especializada/hospital.jsp",
+        "0538002289": "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idCarpeta=7db198c4-ab2a-11dd-970d-d73a0633ac17&idDocument=b3596b34-4251-11df-875b-a3a23aaf73b8",
+        "0538002290": "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idCarpeta=d4df6819-5419-11de-9665-998e1388f7ed&idDocument=297458c3-50ff-11e3-a0f5-65699e4ff786",
+    }
+    if official_id in partial_sources:
+        row["source_url"] += "|" + partial_sources[official_id]
 
 
 def apply_candidate(row, candidate, match):

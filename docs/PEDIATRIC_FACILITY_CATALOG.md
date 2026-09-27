@@ -1,22 +1,22 @@
 # Catálogo pediátrico geolocalizado
 
 **Corte de verificación:** 27/09/2026  
-**Resultado del gate A:** **GREEN**, con dos excepciones explícitas en Tenerife que no entran en routing.
+**Resultado del gate A:** **YELLOW**, con una excepción sin coordenada y ausencia de destino pediátrico confirmado en La Graciosa.
 
 ## Resultado
 
-El catálogo curado contiene **168 recursos públicos con U.20 Pediatría registrada en REGCESS**: 159 centros/consultorios de Atención Primaria y 9 hospitales. Las siete islas están presentes. REGCESS/eGeo publica coordenadas para 167 registros; 166 quedan `VERIFIED`, uno `PARTIAL` y uno `NEEDS_VALIDATION`.
+El catálogo curado contiene **168 recursos públicos con U.20 Pediatría registrada en REGCESS**: 159 centros/consultorios de Atención Primaria y 9 hospitales. Las siete islas están presentes. REGCESS/eGeo publica coordenadas para 167 registros; 167 quedan `VERIFIED` y uno `NEEDS_VALIDATION`. Hay 158 destinos AP elegibles para routing.
 
 | Isla | Total | AP con U.20 | Hospitales con U.20 | VERIFIED | PARTIAL | NEEDS_VALIDATION |
 |---|---:|---:|---:|---:|---:|---:|
 | El Hierro | 3 | 2 | 1 | 3 | 0 | 0 |
 | La Gomera | 2 | 1 | 1 | 2 | 0 | 0 |
 | La Palma | 5 | 4 | 1 | 5 | 0 | 0 |
-| Tenerife | 89 | 87 | 2 | 87 | 1 | 1 |
+| Tenerife | 89 | 87 | 2 | 88 | 0 | 1 |
 | Gran Canaria | 47 | 46 | 1 | 47 | 0 | 0 |
 | Fuerteventura | 8 | 7 | 1 | 8 | 0 | 0 |
 | Lanzarote | 14 | 12 | 2 | 14 | 0 | 0 |
-| **Canarias** | **168** | **159** | **9** | **166** | **1** | **1** |
+| **Canarias** | **168** | **159** | **9** | **167** | **0** | **1** |
 
 El fichero operativo es [`data/curated/pediatric_facilities.csv`](../data/curated/pediatric_facilities.csv). `routing_eligible_pediatric_ap=true` solo aparece cuando concurren U.20, coordenada oficial y verificación completa.
 
@@ -39,12 +39,13 @@ Los snapshots raw no se versionan. Sus URL, periodos, fechas de descarga, versi�
 
 Existe U.22 sin U.23 registrada en el Hospital General de Fuerteventura, Hospital Nuestra Señora de Guadalupe y Hospital Universitario Dr. José Molina Orosa. La ausencia de U.23 se conserva como `not_available` en esta versión del registro; no se sustituye por una inferencia clínica.
 
-`U.68 Urgencias` no demuestra que exista una puerta de **Urgencias Pediátricas diferenciada**. El catálogo mantiene `pediatric_emergency=needs_validation`. `U.37 Medicina intensiva` tampoco identifica UCIP, por lo que `picu=needs_validation` en todos los centros hasta disponer de evidencia específica.
+`U.68 Urgencias` por sí sola no demuestra una puerta pediátrica diferenciada. Fuentes SCS adicionales confirman urgencias, ingreso pediátrico, Neonatología, UCIN y UCIP en CHUIMI, HUC y HUNSC; confirman urgencias/ingreso en Fuerteventura y Molina Orosa, e ingreso en La Gomera y La Palma. Los demás estados se conservan como `needs_validation` o `not_available`. U.20 hospitalaria ya no se convierte automáticamente en ingreso pediátrico.
 
 ## Excepciones conservadas
 
-- **Consultorio Local Buenavista del Norte:** REGCESS registra U.20 y coordenada, pero su CCN no aparece en el Catálogo AP 2026. Se mantiene `PARTIAL` y no entra en routing.
+- **Consultorio Local Buenavista del Norte:** REGCESS registra U.20 y coordenada; SCS confirmó apertura, consulta de Pediatría y cobertura compartida con Los Silos el 17/07/2025. Queda `VERIFIED` y entra en routing.
 - **Consultorio Local de El Sauzal:** REGCESS registra U.20, pero no publica coordenada y su CCN tampoco aparece en el Catálogo AP 2026. Se mantiene `NEEDS_VALIDATION` y no entra en routing.
+- **La Graciosa:** SCS confirma consultorio general y pertenencia a Teguise, pero REGCESS no muestra U.20 y la memoria 2023 no desglosa actividad pediátrica propia. No se crea un destino; conserva `requires_interisland_transfer` hacia Lanzarote.
 - La denominación ZBS del catálogo AP se conserva en `health_zone_name_source`; `health_zone_id` permanece vacío hasta cerrar el gate B. No se ha fabricado ningún código.
 
 ## Limitaciones y decisión
