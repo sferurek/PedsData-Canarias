@@ -1,12 +1,12 @@
 # Oportunidades de investigación
 
-## 1. Desigualdades territoriales de acceso pediátrico — prioritaria
+## 1. Accesibilidad geográfica pediátrica — prioritaria
 
-Diseño transversal ecológico descriptivo con siete islas, población infantil en malla, recursos verificados y red congelada. Outcomes: niños/pediatra (definir residentes vs TIS), % <15 min, % >20 min, mediana/P90 ponderados, niños fuera de umbral. Estratificar por isla, ZBS validada, ruralidad, dispersión y renta; sin ranking único.
+Mientras no exista una capa oficial vigente de ZBS, la pregunta principal es: **¿cómo varía la accesibilidad geográfica de la población de 0–14 años a Atención Primaria pediátrica en las siete islas Canarias, medida desde la malla de población de 250 m?** Diseño transversal ecológico descriptivo con población infantil en malla, recursos verificados y red congelada. Outcomes: % <15 min, % >20 min, mediana/P90 ponderados y niños fuera de umbral, agregados por isla y municipio. No se publicarán perfiles ZBS actuales.
 
-Publicable en principio después de validar catálogo, red y denominadores; no se garantiza aceptación editorial. Reportar acceso potencial, horarios y recurso más cercano frente a asignado; la oferta es distinta de utilización. Sensibilidad a motor, punto origen, asignación de malla, fecha de población y definición de pediatra. No sustituir tiempos interinsulares desconocidos por medianas de islas capitalinas.
+La fortaleza principal es una cohorte espacial exhaustiva de celdas pobladas con siete islas, destinos trazables y grafo reproducible. Las limitaciones son acceso potencial en lugar de uso real, ausencia de horarios/cupos, coordenadas que pueden representar edificios, población 0–14 y falta de asignación asistencial. El análisis de sensibilidad debe variar punto representativo, umbral de snapping, inclusión de destinos parciales y versión de red. No sustituir tiempos interinsulares desconocidos por medianas de islas capitalinas.
 
-Con datos hoy descargados se puede describir demografía 0–14 y dotación insular SIAP 2024, con límites de universo. Aún no puede publicarse una comparación fiable de accesibilidad calculada.
+Si se obtiene una capa ZBS vigente, con código y vigencia, se añadirá la pregunta secundaria sobre desigualdades por Zona de Salud y ratios SIAP compatibles. Ese cambio requiere un protocolo y crosswalk temporal; no autoriza reutilizar como actuales los polígonos de 2017.
 
 ## 2. Salud infantil y desigualdad social
 

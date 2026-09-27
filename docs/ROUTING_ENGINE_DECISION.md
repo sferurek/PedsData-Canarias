@@ -22,3 +22,5 @@ Se mantienen los umbrales temporales propuestos: GREEN hasta 20 %, YELLOW por en
 Los contrastes públicos no son ground truth institucional. Antes de publicación se conservarán el caso, el motor, el grafo y la fecha, y se añadirá validación local o institucional cuando exista. El filtro de componente terrestre es obligatorio: consultar OSRM sin ese filtro podría aceptar relaciones ferry presentes en OSM.
 
 Valhalla se mantiene como comparador independiente mediante los resultados congelados de Fase 1. No se incorpora un segundo grafo local a producción porque OSRM ya satisface los criterios y duplicarlo no cambia la trazabilidad del motor elegido.
+
+La reutilización debe atribuir OpenStreetMap y mantener las obligaciones ODbL del extracto. El software OSRM está publicado con licencia BSD-2-Clause; ambas licencias son compatibles con este uso si se conservan atribución y avisos.

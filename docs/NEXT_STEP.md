@@ -1,26 +1,9 @@
 # Siguiente paso recomendado
 
-No iniciar UI. El siguiente encargo debe ser una fase de cierre de gates:
+El próximo encargo puede iniciar **Fase 3 — cálculo publicable y mapa de accesibilidad pediátrica sin ZBS** sobre el último commit de Fase 2.
 
-> Trabaja sobre `sferurek/PedsData-Canarias` desde el último commit de Fase 1.
-> No cambies los estados YELLOW/RED sin nueva evidencia. Cierra primero:
+> Reproduce `etl/prepare_accessibility.py` con el snapshot y motor fijados. Revisa los 13.277 resultados, denominadores, celdas pequeñas, cuantiles y agregados insulares/municipales; después promueve un export curado con provenance completo. Construye el mapa básico y los siete perfiles insulares, más perfiles municipales cuando la geografía sea válida.
 >
-> 1. obtener de ISTAC/SCS la geometría, código y vigencia de las ZBS actuales y
->    un crosswalk temporal con E54086B; conservar separadas en Fuerteventura las
->    4 zonas territoriales, 6 unidades funcionales y 5 polígonos de 2017;
-> 2. confirmar con SCS Buenavista del Norte, El Sauzal, cobertura de La Graciosa
->    y cartera hospitalaria pediátrica diferenciada;
-> 3. descargar un extracto OSM Canarias con fecha/licencia/checksum, fijar una
->    versión local de OSRM o Valhalla y repetir los 35 casos sin servidor demo;
-> 4. definir y justificar umbrales de snapping y diferencia temporal usando
->    trayectos de referencia en las siete islas.
+> Mantén Gate B RED: no publiques filtros, perfiles, ratios ni actividad ZBS y no uses los polígonos de 2017 como actuales. Muestra “Pendiente de geometría oficial vigente”. Mantén La Graciosa como componente separado con transferencia interinsular y tiempo desconocido. No asignes tiempo terrestre a UCIP/UCIN fuera de isla.
 >
-> Solo si B y C quedan GREEN, calcula accesibilidad AP 0–14 conforme a
-> `ACCESSIBILITY_METHODS.md`, carga `accessibility_result` y genera QA insular.
-> Después, y no antes, inicializa el mapa básico y siete perfiles. Mantén La
-> Graciosa como componente sin conexión terrestre y UCIP/UCIN interinsular con
-> tiempo desconocido. No envíes los borradores institucionales sin autorización.
-
-Si la administración no aporta ZBS vigente, el producto puede reconsiderarse
-en una decisión explícita como mapa insular/municipal sin perfiles ZBS; no debe
-presentarse como cumplimiento del gate B actual.
+> La UI debe mostrar población evaluada, no evaluable y sin ruta; fuente, periodo, motor, grafo y limitaciones. No conviertas los CSV de staging en cifras públicas sin revisión metodológica. No envíes los borradores institucionales sin autorización explícita.
