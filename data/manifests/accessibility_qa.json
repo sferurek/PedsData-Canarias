@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "failures": [],
+  "total_cells": 13277,
+  "unique_cells": 13277,
+  "population_0_14_raw": 255814,
+  "population_0_14_staging": 255814,
+  "routing_status_counts": {
+    "routed": 13256,
+    "requires_interisland_transfer": 20,
+    "no_route": 0,
+    "not_evaluated": 1
+  },
+  "island_cell_counts": {
+    "el-hierro": 192,
+    "fuerteventura": 987,
+    "gran-canaria": 3850,
+    "la-gomera": 285,
+    "la-palma": 1315,
+    "lanzarote": 1206,
+    "tenerife": 5442
+  },
+  "eligible_destination_count": 158,
+  "staging_sha256": "4aa6a173d36a591f526fb66efc0f301f92166cfaa533ccc026d1b305179dd7ba"
+}

@@ -1,0 +1,84 @@
+{
+  "publication_status": "validated_rc1",
+  "calculated_at": "2026-09-27T17:54:04.014561+00:00",
+  "source_period": "2024",
+  "age_group_original": "0-14",
+  "pipeline": "etl/prepare_accessibility.py + etl/publish_accessibility.py",
+  "pipeline_sha256": {
+    "prepare": "363886aef45861c535a5ababcbd1fdce8992a9920e233412d6d5075c15260f74",
+    "publish": "1f12c40b5101699030fa74a1767fc8ec68db5659e5aff0019081f2d882719bc9"
+  },
+  "sources": {
+    "istac_grid": {
+      "url": "https://datos.canarias.es/catalogos/estadisticas/dataset/indicadores-demograficos-malla-de-250m-canarias-01-01-2024",
+      "sha256": "f2398a22df456c05b129f355662c5488e78e2f4d8e2f4320c92e5616236f21ed",
+      "period": "2024"
+    },
+    "pediatric_facilities": {
+      "path": "data/curated/pediatric_facilities.csv",
+      "sha256": "d167c6c4eedc6973387757bb0531b923bce21e4201987db9a2332e0c57d7b4a3",
+      "catalog_date": "2026-09-27"
+    },
+    "osm": {
+      "source_url": "https://download.geofabrik.de/africa/canary-islands-260926.osm.pbf",
+      "extract_version": "canary-islands-260926",
+      "sha256": "2c5f0f3c7b42fc68f6d1bf64679642edb86f546fe510e6f081a07a4d398379f9",
+      "license": "ODbL 1.0"
+    },
+    "routing": {
+      "engine": "OSRM",
+      "version": "5.27.1",
+      "profile": "/opt/car.lua",
+      "graph_snapshot": "f0b0700b3224c76f6b62682102cbf2002936164d1de7bb28d8820af81578a37e"
+    }
+  },
+  "qa": {
+    "passed": true,
+    "failures": [],
+    "total_cells": 13277,
+    "unique_cells": 13277,
+    "population_0_14_raw": 255814,
+    "population_0_14_staging": 255814,
+    "routing_status_counts": {
+      "routed": 13256,
+      "requires_interisland_transfer": 20,
+      "no_route": 0,
+      "not_evaluated": 1
+    },
+    "island_cell_counts": {
+      "el-hierro": 192,
+      "fuerteventura": 987,
+      "gran-canaria": 3850,
+      "la-gomera": 285,
+      "la-palma": 1315,
+      "lanzarote": 1206,
+      "tenerife": 5442
+    },
+    "eligible_destination_count": 158,
+    "staging_sha256": "4aa6a173d36a591f526fb66efc0f301f92166cfaa533ccc026d1b305179dd7ba"
+  },
+  "outputs": {
+    "cells": {
+      "path": "data/curated/pediatric_accessibility_2024.csv",
+      "rows": 13277,
+      "sha256": "92b4f4cf1bccb62a91a6eb45b0252ad7d9ecea757f519ccafafb1efee177106b"
+    },
+    "islands": {
+      "path": "data/curated/accessibility_by_island_2024.csv",
+      "rows": 7,
+      "sha256": "41c6e3736597b8fb91df4c44ec1a813727ce06ef2f9d20b694acf2613bbe5d23"
+    },
+    "municipalities": {
+      "path": "data/curated/accessibility_by_municipality_2024.csv",
+      "rows": 88,
+      "publishable": 85,
+      "sha256": "a7707f13f607053490ac0e879ec558275397e575e679b949e36abb235490ba5f"
+    }
+  },
+  "zbs_aggregation_enabled": false,
+  "privacy": {
+    "cell_exact_children_visible_in_ui": false,
+    "municipality_minimum_population": 100,
+    "municipality_minimum_populated_cells": 5
+  }
+}
