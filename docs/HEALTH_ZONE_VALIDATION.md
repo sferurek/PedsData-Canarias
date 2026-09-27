@@ -52,4 +52,8 @@ La comparación con el catálogo actual invalida el uso operativo del shapefile 
 
 ## Decisión
 
-Gate B permanece **RED** porque no puede relacionarse población 2024 con una ZBS vigente sin fabricar límites. La accesibilidad insular puede evaluarse tras el benchmark de routing; cualquier salida ZBS seguirá `Pendiente de validación`. Se ha preparado una solicitud institucional, sin enviarla, para geometría, códigos, vigencias, E54086B y el crosswalk territorial/funcional.
+Gate B permanece **RED** porque no puede relacionarse población 2024 con una
+ZBS vigente sin fabricar límites. El benchmark de routing ya se ejecutó, pero
+su gate también quedó rojo; no se calcula aún accesibilidad insular. Se preparó
+una solicitud institucional, sin enviarla, para geometría, códigos, vigencias,
+E54086B y el crosswalk territorial/funcional.

@@ -1,6 +1,8 @@
 # Modelo lógico de datos — contrato propuesto
 
-Modelo de FASE 0; no se han ejecutado migraciones.
+La Fase 0 propuso este contrato. En Fase 1 las migraciones de `sql/` se
+ejecutaron en PostgreSQL 18/PostGIS 3.6. Añaden estados de valor, verificación y
+ruta, restricciones espaciales y vistas que preservan siete islas.
 
 ## Entidades y relaciones
 

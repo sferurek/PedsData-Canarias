@@ -54,4 +54,7 @@ Existe U.22 sin U.23 registrada en el Hospital General de Fuerteventura, Hospita
 - La vigencia puede diferir entre REGCESS en vivo, AP a 31/12/2025 y hospitales a 31/12/2024; cada fila conserva fechas y fuentes.
 - Las condiciones formales de reutilización siguen `NEEDS_VALIDATION` en el manifiesto y deben cerrarse antes de publicación externa.
 
-Gate A es **GREEN** para localizar Pediatría AP y disponer de destinos verificados en las siete islas. Las dos excepciones de Tenerife quedan visibles y excluidas por regla. Urgencias Pediátricas diferenciadas y UCIP siguen siendo subgates de cartera clínica; no bloquean el benchmark de acceso a Pediatría AP y no pueden mostrarse como confirmadas.
+Gate A es **YELLOW**. Hay destinos AP verificados en las siete islas, pero dos
+excepciones de Tenerife y la falta de destino U20 verificado en La Graciosa
+impiden declararlo completo. Urgencias Pediátricas diferenciadas y UCIP siguen
+sin confirmación homogénea y no pueden mostrarse como observadas.

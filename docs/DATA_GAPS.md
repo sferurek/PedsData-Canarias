@@ -1,5 +1,11 @@
 # Gaps por isla y bloqueos
 
+> **Actualización Fase 1:** G03 dispone ahora de catálogo geocodificado oficial
+> (Gate A YELLOW) y G04 tiene benchmark real en siete islas (Gate C RED por
+> inconsistencia temporal y falta de grafo congelado). La evidencia vigente está
+> en `PEDIATRIC_FACILITY_CATALOG.md`, `ROUTING_BENCHMARK.md` y `GATE_STATUS.md`.
+> El texto inferior se conserva como línea base de Fase 0.
+
 Un gap es una limitación de evidencia, no ausencia sanitaria. No se oculta ninguna isla. Estado al 27/09/2026.
 
 |Isla|Disponible comprobado|Gap específico / riesgo|Acción de cierre|
