@@ -1,0 +1,13 @@
+import Link from "next/link";
+
+export function SiteHeader() {
+  return <header className="site-header">
+    <Link className="brand" href="/" aria-label="PedsData Canarias, inicio">
+      <span className="brand-mark">P</span><span>PedsData <b>Canarias</b></span>
+    </Link>
+    <nav aria-label="Navegación principal">
+      <Link href="/#mapa">Mapa</Link><Link href="/#islas">Islas</Link><Link href="/#metodologia">Método</Link>
+    </nav>
+    <span className="rc-badge">RC1 · revisión</span>
+  </header>;
+}

@@ -8,3 +8,10 @@ data/raw/
 data/staging/
 .venv/
 .docker-ci/
+node_modules/
+.next/
+*.tsbuildinfo
+apps/web/test-results/
+apps/web/playwright-report/
+apps/web/coverage/
+apps/web/public/maplibre/
