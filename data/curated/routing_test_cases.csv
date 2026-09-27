@@ -1,0 +1,36 @@
+case_id,island_id,case_type,origin_cell_id,child_population_0_14,origin_component,origin_longitude,origin_latitude,destination_facility_id,destination_name,destination_component,destination_longitude,destination_latitude,expected_status,guard_reason
+el-hierro-urban,el-hierro,urban,250mN103475E157325,50,el-hierro,-17.91395,27.81285,regcess:0538002151,C.S. VALVERDE,el-hierro,-17.9150295,27.8151756,routed,
+el-hierro-rural,el-hierro,rural,250mN103550E155375,2,el-hierro,-18.10307625,27.756,regcess:0538002153,C.P. EL PINAR,el-hierro,-17.9805434,27.7042581,routed,
+el-hierro-extreme,el-hierro,extreme,250mN103550E155350,2,el-hierro,-18.105643229166667,27.75565,regcess:0538002153,C.P. EL PINAR,el-hierro,-17.9805434,27.7042581,routed,
+el-hierro-reverse,el-hierro,reverse,250mN103550E155350,2,el-hierro,-17.9805434,27.7042581,regcess:0538002153,C.P. EL PINAR,el-hierro,-18.105643229166667,27.75565,routed,
+el-hierro-no_route,el-hierro,no_route,250mN103475E157325,50,el-hierro,-17.91395,27.81285,regcess:0538002157,C.S. SAN SEBASTIAN DE LA GOMERA,la-gomera,-17.2188345,28.1110882,no_route,cross_island_topology_guard
+la-gomera-urban,la-gomera,urban,250mN103675E165700,164,la-gomera,-17.11355,28.0953,regcess:0538002157,C.S. SAN SEBASTIAN DE LA GOMERA,la-gomera,-17.2188345,28.1110882,routed,
+la-gomera-rural,la-gomera,rural,250mN105150E163875,1,la-gomera,-17.33065,28.1652,regcess:0538002157,C.S. SAN SEBASTIAN DE LA GOMERA,la-gomera,-17.2188345,28.1110882,routed,
+la-gomera-extreme,la-gomera,extreme,250mN105150E163850,2,la-gomera,-17.333044696969694,28.1644,regcess:0538002157,C.S. SAN SEBASTIAN DE LA GOMERA,la-gomera,-17.2188345,28.1110882,routed,
+la-gomera-reverse,la-gomera,reverse,250mN105150E163850,2,la-gomera,-17.2188345,28.1110882,regcess:0538002157,C.S. SAN SEBASTIAN DE LA GOMERA,la-gomera,-17.333044696969694,28.1644,routed,
+la-gomera-no_route,la-gomera,no_route,250mN103675E165700,164,la-gomera,-17.11355,28.0953,regcess:0538002283,C.S. BREÑA ALTA,la-palma,-17.7846669,28.6634534,no_route,cross_island_topology_guard
+la-palma-urban,la-palma,urban,250mN112125E161425,160,la-palma,-17.765050000000002,28.6871,regcess:0538002169,C.S. S/C DE LA PALMA,la-palma,-17.7605172,28.6878532,routed,
+la-palma-rural,la-palma,rural,250mN110375E160300,2,la-palma,-17.82368409090909,28.5009,regcess:0538002283,C.S. BREÑA ALTA,la-palma,-17.7846669,28.6634534,routed,
+la-palma-extreme,la-palma,extreme,250mN110325E160250,1,la-palma,-17.82708409090909,28.494999999999997,regcess:0538002279,C.S. TAZACORTE,la-palma,-17.9340215,28.6391295,routed,
+la-palma-reverse,la-palma,reverse,250mN110325E160250,1,la-palma,-17.9340215,28.6391295,regcess:0538002279,C.S. TAZACORTE,la-palma,-17.82708409090909,28.494999999999997,routed,
+la-palma-no_route,la-palma,no_route,250mN112125E161425,160,la-palma,-17.765050000000002,28.6871,regcess:0538002240,C.L. BUENAVISTA,tenerife,-16.8510594,28.3743505,no_route,cross_island_topology_guard
+tenerife-urban,tenerife,urban,250mN101300E169650,377,tenerife,-16.6674553030303,28.0126,regcess:0538002269,C.S. EL FRAILE - ARONA COSTA II,tenerife,-16.6686863,28.012789,routed,
+tenerife-rural,tenerife,rural,250mN102750E170325,1,tenerife,-16.641644696969696,28.1586,regcess:0538002187,C.L. VALLE SAN LORENZO,tenerife,-16.6568974,28.0910851,routed,
+tenerife-extreme,tenerife,extreme,250mN102775E170350,4,tenerife,-16.639928787878787,28.161499999999997,regcess:0538002187,C.L. VALLE SAN LORENZO,tenerife,-16.6568974,28.0910851,routed,
+tenerife-reverse,tenerife,reverse,250mN102775E170350,4,tenerife,-16.6568974,28.0910851,regcess:0538002187,C.L. VALLE SAN LORENZO,tenerife,-16.639928787878787,28.161499999999997,routed,
+tenerife-no_route,tenerife,no_route,250mN101300E169650,377,tenerife,-16.6674553030303,28.0126,regcess:0535002184,C.S. SAN NICOLAS TOLENTINO,gran-canaria,-15.781872,27.986708,no_route,cross_island_topology_guard
+gran-canaria-urban,gran-canaria,urban,250mN098550E181650,417,gran-canaria,-15.4341,28.134300000000003,regcess:0535002148,C.S. ALCARAVANERAS,gran-canaria,-15.4360855,28.1341842,routed,
+gran-canaria-rural,gran-canaria,rural,250mN097350E179100,1,gran-canaria,-15.64965,27.95495,regcess:0535002192,C.S. SAN MATEO,gran-canaria,-15.5327886,28.0082091,routed,
+gran-canaria-extreme,gran-canaria,extreme,250mN096850E179175,2,gran-canaria,-15.62936590909091,27.9137,regcess:0535002192,C.S. SAN MATEO,gran-canaria,-15.5327886,28.0082091,routed,
+gran-canaria-reverse,gran-canaria,reverse,250mN096850E179175,2,gran-canaria,-15.5327886,28.0082091,regcess:0535002192,C.S. SAN MATEO,gran-canaria,-15.62936590909091,27.9137,routed,
+gran-canaria-no_route,gran-canaria,no_route,250mN098550E181650,417,gran-canaria,-15.4341,28.134300000000003,regcess:0535002128,C.S. MORRO JABLE,fuerteventura,-14.3478753,28.0526594,no_route,cross_island_topology_guard
+fuerteventura-urban,fuerteventura,urban,250mN096700E194800,254,fuerteventura,-14.1098,28.34865,regcess:0535002125,C.L. PAJARA,fuerteventura,-14.1214435,28.376896,routed,
+fuerteventura-rural,fuerteventura,rural,250mN095750E196225,1,fuerteventura,-13.9476,28.30505,regcess:0535002125,C.L. PAJARA,fuerteventura,-14.1214435,28.376896,routed,
+fuerteventura-extreme,fuerteventura,extreme,250mN095775E196750,14,fuerteventura,-13.897147129186603,28.3219,regcess:0535002124,C.S. PUERTO DEL ROSARIO,fuerteventura,-13.8590089,28.5027104,routed,
+fuerteventura-reverse,fuerteventura,reverse,250mN095775E196750,14,fuerteventura,-13.8590089,28.5027104,regcess:0535002124,C.S. PUERTO DEL ROSARIO,fuerteventura,-13.897147129186603,28.3219,routed,
+fuerteventura-no_route,fuerteventura,no_route,250mN096700E194800,254,fuerteventura,-14.1098,28.34865,regcess:0535002241,C.L. PLAYA BLANCA,lanzarote,-13.774105,28.9383369,no_route,cross_island_topology_guard
+lanzarote-urban,lanzarote,urban,250mN101550E201675,262,lanzarote,-13.55745,28.96205,regcess:0535002228,CENTRO UNIVERSITARIO DE SALUD DE TITERROY,lanzarote,-13.5596181,28.9682275,routed,
+lanzarote-rural,lanzarote,rural,250mN101475E198425,1,lanzarote,-13.874195129870131,28.86645,regcess:0535002241,C.L. PLAYA BLANCA,lanzarote,-13.774105,28.9383369,routed,
+lanzarote-extreme,lanzarote,extreme,250mN101400E198425,11,lanzarote,-13.872332954545454,28.85995,regcess:0535002241,C.L. PLAYA BLANCA,lanzarote,-13.774105,28.9383369,routed,
+lanzarote-reverse,lanzarote,reverse,250mN101400E198425,11,lanzarote,-13.774105,28.9383369,regcess:0535002241,C.L. PLAYA BLANCA,lanzarote,-13.872332954545454,28.85995,routed,
+lanzarote-no_route,lanzarote,no_route,250mN104275E202950,22,la-graciosa,-13.499245129870129,29.23515,regcess:0535002230,C.L. DE MALA,lanzarote,-13.4707598,29.0930225,requires_interisland_transfer,la_graciosa_sea_crossing

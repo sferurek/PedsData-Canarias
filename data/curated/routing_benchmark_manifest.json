@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-09-27T14:44:20.293528+00:00",
+  "age_group_original": "0-14",
+  "case_count": 35,
+  "result_row_count": 105,
+  "inputs": {
+    "routing_test_cases.csv": "85c1af17e00e0c83e5a016962716800d7e923ea54b5193e0a51a36e200a115ae",
+    "pediatric_facilities.csv": "8edc99b89f5e1fcd4f5e079821f06c775c6ecfdd948cdcad29ec4c33bea5350b",
+    "child_population_grid_2024.geojson": "f2398a22df456c05b129f355662c5488e78e2f4d8e2f4320c92e5616236f21ed"
+  },
+  "output_sha256": "7310ea91d500610125155ac667b433197cbad9a2b8e9f3769ad59100bb3d0f5b"
+}
