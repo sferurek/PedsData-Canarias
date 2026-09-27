@@ -1,0 +1,82 @@
+{
+  "source_crs": "EPSG:4258",
+  "output_crs": "EPSG:4326",
+  "area_crs": "EPSG:32628",
+  "source_feature_count": 105,
+  "duplicate_source_code_count": 0,
+  "make_valid_applied": false,
+  "land_reference": "https://datos.canarias.es/catalogos/estadisticas/dataset/6dd8baf4-14f4-43a3-88b2-984d034c965c/resource/d31b5422-df3b-4eae-b0eb-b4acbecb8ef0/download/municipios_desde2007_generalizada_20170101.json",
+  "land_reference_note": "Cartografía municipal generalizada; diferencias costeras pequeñas no prueban huecos ZBS.",
+  "islands": {
+    "el-hierro": {
+      "historical_2017_count": 2,
+      "current_ap_catalog_2026_count": 2,
+      "siap_2024_count": 2,
+      "valid_geometry_count": 2,
+      "overlap_pairs_gt_1m2": [],
+      "land_coverage_percent": 99.58414,
+      "uncovered_land_m2": 1116118.71,
+      "zone_outside_land_m2": 483471.54
+    },
+    "la-gomera": {
+      "historical_2017_count": 5,
+      "current_ap_catalog_2026_count": 5,
+      "siap_2024_count": 5,
+      "valid_geometry_count": 5,
+      "overlap_pairs_gt_1m2": [],
+      "land_coverage_percent": 99.77248,
+      "uncovered_land_m2": 837407.44,
+      "zone_outside_land_m2": 646528.69
+    },
+    "la-palma": {
+      "historical_2017_count": 9,
+      "current_ap_catalog_2026_count": 9,
+      "siap_2024_count": 9,
+      "valid_geometry_count": 9,
+      "overlap_pairs_gt_1m2": [],
+      "land_coverage_percent": 99.81297,
+      "uncovered_land_m2": 1322847.55,
+      "zone_outside_land_m2": 867383.22
+    },
+    "tenerife": {
+      "historical_2017_count": 39,
+      "current_ap_catalog_2026_count": 38,
+      "siap_2024_count": 40,
+      "valid_geometry_count": 39,
+      "overlap_pairs_gt_1m2": [],
+      "land_coverage_percent": 99.81579,
+      "uncovered_land_m2": 3748736.94,
+      "zone_outside_land_m2": 1691544.43
+    },
+    "gran-canaria": {
+      "historical_2017_count": 38,
+      "current_ap_catalog_2026_count": 39,
+      "siap_2024_count": 39,
+      "valid_geometry_count": 38,
+      "overlap_pairs_gt_1m2": [],
+      "land_coverage_percent": 99.77927,
+      "uncovered_land_m2": 3443715.0,
+      "zone_outside_land_m2": 1523040.15
+    },
+    "fuerteventura": {
+      "historical_2017_count": 5,
+      "current_ap_catalog_2026_count": 6,
+      "siap_2024_count": 6,
+      "valid_geometry_count": 5,
+      "overlap_pairs_gt_1m2": [],
+      "land_coverage_percent": 99.64274,
+      "uncovered_land_m2": 5933474.4,
+      "zone_outside_land_m2": 1540312.88
+    },
+    "lanzarote": {
+      "historical_2017_count": 7,
+      "current_ap_catalog_2026_count": 7,
+      "siap_2024_count": 7,
+      "valid_geometry_count": 7,
+      "overlap_pairs_gt_1m2": [],
+      "land_coverage_percent": 98.40503,
+      "uncovered_land_m2": 13472910.92,
+      "zone_outside_land_m2": 1916562.16
+    }
+  }
+}
