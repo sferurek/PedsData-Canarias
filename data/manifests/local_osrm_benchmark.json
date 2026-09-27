@@ -1,0 +1,11 @@
+{
+  "executed_at": "2026-09-27T15:33:36.205863+00:00",
+  "engine": "OSRM",
+  "engine_version": "5.27.1",
+  "graph_manifest_sha256": "b196202052db54eef169c0634edf78a609517d975e2a94bf0d072ecb4ca25e63",
+  "test_cases_sha256": "85c1af17e00e0c83e5a016962716800d7e923ea54b5193e0a51a36e200a115ae",
+  "output_sha256": "52989872d70e5028a8d84973acb6a536b56e93a593d106b33780328eccd9e37a",
+  "case_count": 35,
+  "requests_sent": 28,
+  "runtime_seconds": 0.256
+}
