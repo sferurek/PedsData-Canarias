@@ -1,0 +1,46 @@
+{
+  "bdcap_obesity": {
+    "path": "data/raw/phase6b/bdcap_obesity_0_14_canarias_2011_2024.csv",
+    "source_url": "https://pestadistico.inteligenciadegestion.sanidad.gob.es/publicoSNS/S/base-de-datos-de-clinicos-de-atencion-primaria-bdcap",
+    "dataset_version": "BDCAP_2024_export_2026-09-28",
+    "checksum": "3e2c8edfe425fea5dcca6ee077db34532559f0fb0a1c4fb29a3f2df0fde7e5a3",
+    "retrieved_at": "2026-09-28T16:30:00+01:00",
+    "producer": "Ministerio de Sanidad",
+    "license_url": "https://www.sanidad.gob.es/avisoLegal/home.htm",
+    "query": {
+      "cube": "Problemas de salud",
+      "age": "00-14 años",
+      "geography": "05-Canarias",
+      "problem": "T82 - Obesidad",
+      "measures": ["Personas con problemas de salud por mil asignadas", "Casos"]
+    }
+  },
+  "metabolic_screening": {
+    "path": "data/raw/phase6b/neonatal_metabolic_screening_2024.pdf",
+    "source_url": "https://vsf-iwsold-pro-portal.sanidad.gob.es/areas/promocionPrevencion/cribado/cribadoNeonatal/enfermedadesEndocrinoMetabolicas/docs/informes/informeDeEvaluacionSICN_2024.pdf",
+    "dataset_version": "SICN_PCNPT_2024",
+    "checksum": "23902b0076921d3efc74ebf5ed228daba7228e8d30f994bb9a8d2bd84a297674",
+    "retrieved_at": "2026-09-28T16:45:00+01:00",
+    "producer": "Ministerio de Sanidad",
+    "license_url": "https://www.sanidad.gob.es/avisoLegal/home.htm"
+  },
+  "esde_screen_time": {
+    "path": "data/raw/phase6b/esde_screen_time_1_14_canarias_2023.csv",
+    "source_url": "https://www.ine.es/jaxi/files/tpx/es/csv_bdsc/72840.csv",
+    "table_url": "https://www.ine.es/jaxi/Tabla.htm?tpx=72840&L=0",
+    "dataset_version": "ESdE_2023_table_72840_update_2025-05-27",
+    "checksum": "3e1d851cd66f0758cd02cbdd8efce06e30cd148c2dd2680a42dc37cdd8eef069",
+    "retrieved_at": "2026-09-28T17:00:00+01:00",
+    "producer": "Instituto Nacional de Estadística",
+    "license_url": "https://www.ine.es/dyngs/AYU/index.htm?cid=125"
+  },
+  "estudes": {
+    "path": "data/raw/phase6b/estudes_canarias_2023.pdf",
+    "source_url": "https://www3.gobiernodecanarias.org/sanidad/scs/content/7a76643f-891d-11ee-95cc-155681044360/ESTUDES2023.pdf",
+    "dataset_version": "ESTUDES_Canarias_2023",
+    "checksum": "3a26b8bee6da9e219f24f6ae0c8eee13c52afd64e3469e96a52f21067d5f90b3",
+    "retrieved_at": "2026-09-28T17:15:00+01:00",
+    "producer": "OEDA / Servicio Canario de la Salud",
+    "license_url": "https://www.gobiernodecanarias.org/sanidad/scs/aviso-legal.html"
+  }
+}

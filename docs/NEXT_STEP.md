@@ -1,14 +1,7 @@
-# Siguiente paso recomendado
+# Siguiente paso vigente
 
-1. revisión clínica de los grupos diagnósticos agregados y del lenguaje de episodios;
-2. solicitar al SCS un extracto agregado CMBD por isla de residencia, edad y diagnóstico;
-3. obtener definiciones homogéneas de Urgencias Pediátricas de los nueve hospitales;
-4. completar el crosswalk ESC 2009/2015/2021 con n, pesos y errores;
-5. incorporar denominadores etarios anuales antes de publicar tasas de hospitalización o mortalidad;
-6. mantener el análisis respiratorio × ambiente desactivado hasta disponer de geografía y periodicidad compatibles.
+Con Phase 6B cerrada, la prioridad es revisión clínica y metodológica de RC4.1: interpretación BDCAP, lenguaje de cribado, universos ESdE/ESTUDES y estabilidad visual móvil.
 
-Gate ZBS permanece RED. RC3 sigue siendo preview para revisión técnica, clínica y metodológica.
+El siguiente incremento sustantivo necesita autorización para preparar solicitudes institucionales: CMBD por isla de residencia, urgencias homogéneas, actividad pediátrica AP, vacunación territorial, microbiología, listas de espera con geografía definida y recursos humanos.
 
-## Después de Fase 6
-
-Revisar RC4 clínica y metodológicamente. Prioridad: aclarar semántica territorial C00045A; export BDCAP pediátrico y SIVAMIN con cohortes/denominadores; extracción doble de cribados. No activar ZBS ni espera insular. HBSC no se encadena con ESdE/ESTUDES. No enviar solicitudes sin autorización y no promover preview a producción automáticamente.
+ZBS permanece RED. No activar perfiles ZBS, espera insular, tasas sin denominador ni cruces respiratorio-ambiente sin alineación temporal y geográfica. RC4.1 sigue siendo preview, no producción.

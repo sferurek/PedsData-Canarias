@@ -2,9 +2,11 @@
 Fecha28/09/2026.
 
 ## Conclusión
-**A. MUCHO_MAS_POR_EXPLOTAR**
+**C. CERCA_DEL_LIMITE**
 
-No se ha alcanzado el límite práctico de información pediátrica pública. Sí se aproxima el límite de ciertos cruces muy exigentes: edad×diagnóstico×isla×semana, agendas actuales por centro, dispensación pediátrica territorial y microbiología representativa. La falta de esos cruces no elimina las oportunidades de AP, prevención y adolescencia.
+Phase 6B resolvió los bloques abiertos con valor incremental inmediato: BDCAP pediátrica regional, cribado metabólico, ESdE y ESTUDES. SIVAMIN no ofrece un export autonómico reproducible; cribado auditivo 2024 no incluye Canarias; la geografía insular de espera sigue sin definición suficiente.
+
+Quedan oportunidades puntuales de informes hospitalarios y futuras ediciones. Sin embargo, las mejoras de mayor valor —edad×diagnóstico×isla, urgencias homogéneas, AP por diagnóstico, vacunación territorial, dispensación pediátrica, microbiología, espera con semántica y plantillas— requieren aclaración o solicitud institucional.
 
 ## Reutilización: registro de condiciones
 Los códigos siguientes se aplican individualmente a las filas de la matriz. Atribuir siempre organismo, producto, periodo, URL, versión y fecha de consulta. Esta es una evaluación operativa, no asesoría legal definitiva.
@@ -18,7 +20,7 @@ Los códigos siguientes se aplican individualmente a las filas de la matriz. Atr
 | CN | CNIG anuncia condiciones compatiblesCCBY4 para productos geográficos | Atribuir CNIG/IGN/productor y edición, conservar aviso de cada descarga | Confirmar licencia de la tesela canaria; no heredar automáticamente la de otro archivo |
 | NC | BES/CNE indica CC BY-NC-SA4 en informe revisado | Atribución, no comercial, compartir igual; no extrapolar a todo ISCIII | Revisar compatibilidad con producto/redistribución; mantener enlace si no encaja |
 
-INE, IMSERSO, DGT, Educación, SCS y MITECO quedan P cuando no se cerró licencia del producto, aunque puedan disponer de condiciones generales de reutilización. No se inventa una CC para ellos. La licencia de una página ISCIII no se hereda a las bases de datos que enlaza. El repositorio de PedsData tampoco relicencia contenido tercero.
+INE queda bajo su licencia general CC BY 4.0 para la tabla ESdE. El aviso SCS permite reproducción con cita, fecha, integridad y sin uso comercial directo; se aplica al informe ESTUDES. IMSERSO, DGT, Educación y MITECO conservan P cuando no se cerró la condición del producto. El repositorio no relicencia contenido tercero.
 
 ## Privacidad y semántica
 - No extraer nombres de listas de personal; el objetivo son agregados de dotación.
