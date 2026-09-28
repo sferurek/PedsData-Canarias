@@ -6,7 +6,7 @@ const remoteStorageState = process.env.PLAYWRIGHT_STORAGE_STATE;
 export default defineConfig({
   testDir: "./e2e",
   webServer: remoteBaseUrl ? undefined : {
-    command: "pnpm dev --port 3100",
+    command: "pnpm build && pnpm start --port 3100",
     url: "http://localhost:3100",
     reuseExistingServer: true,
   },
