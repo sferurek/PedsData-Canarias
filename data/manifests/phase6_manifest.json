@@ -1,0 +1,85 @@
+{
+  "parser_version": "phase6-v1",
+  "sources": {
+    "consultations": {
+      "path": "data/raw/phase6/siap_consultations_1_1.csv",
+      "source_url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E54086A_000005/1.1.csv",
+      "dataset_version": "1.1",
+      "checksum": "0918db3dab0ede536f57176f40634e5538ecf71980d3b68649ffab36e507edda",
+      "retrieved_at": "2026-09-28T10:43:46.906341+00:00",
+      "producer": "ISTAC",
+      "license_url": "https://www.gobiernodecanarias.org/istac/aviso_legal.html"
+    },
+    "distinct_persons": {
+      "path": "data/raw/phase6/siap_users_1_1.csv",
+      "source_url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E54086A_000007/1.1.csv",
+      "dataset_version": "1.1",
+      "checksum": "9e648085116b93f93f6b1b1bebe2cfb01993c4f41102fde53e6ce8e368064eca",
+      "retrieved_at": "2026-09-28T10:43:46.907221+00:00",
+      "producer": "ISTAC",
+      "license_url": "https://www.gobiernodecanarias.org/istac/aviso_legal.html"
+    },
+    "frequentation": {
+      "path": "data/raw/phase6/siap_frequency_1_1.csv",
+      "source_url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E54086A_000009/1.1.csv",
+      "dataset_version": "1.1",
+      "checksum": "cabfed254e7d144e9fd060cb8f22047ed9a56f026ee1f577beaa4022e6fbd7f4",
+      "retrieved_at": "2026-09-28T10:43:46.907616+00:00",
+      "producer": "ISTAC",
+      "license_url": "https://www.gobiernodecanarias.org/istac/aviso_legal.html"
+    },
+    "outpatient": {
+      "path": "data/raw/phase6/waiting_outpatient_1_3.csv",
+      "source_url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/C00045A_000002/1.3.csv",
+      "dataset_version": "1.3",
+      "checksum": "14eb84d8467658ac174de5625f0e2a85d55b460bb2531397b6e27a3b7db6648e",
+      "retrieved_at": "2026-09-28T10:43:46.908563+00:00",
+      "producer": "ISTAC",
+      "license_url": "https://www.gobiernodecanarias.org/istac/aviso_legal.html"
+    },
+    "surgical": {
+      "path": "data/raw/phase6/waiting_surgical_1_3.csv",
+      "source_url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/C00045A_000001/1.3.csv",
+      "dataset_version": "1.3",
+      "checksum": "dcbae55b6b9be1fb5d9e205cbb34035ccfb5b08cf9c420bdae2a5809e2eb546e",
+      "retrieved_at": "2026-09-28T10:43:46.912461+00:00",
+      "producer": "ISTAC",
+      "license_url": "https://www.gobiernodecanarias.org/istac/aviso_legal.html"
+    },
+    "hbsc": {
+      "path": "data/raw/phase6/hbsc_canarias_2022.pdf",
+      "source_url": "https://www.sanidad.gob.es/areas/promocionPrevencion/entornosSaludables/escuela/estudioHBSC/2022/docs/HBSC2022_Canarias.pdf",
+      "dataset_version": "2022_report_citation_2025_nipo_2026",
+      "checksum": "2bd8bc694536cc0a2dc477e3c5b5a0d358a45bbd6a63596f5e73391882b5d052",
+      "retrieved_at": "2026-09-28T10:43:46.919532+00:00",
+      "producer": "Ministerio de Sanidad",
+      "license_url": "https://www.sanidad.gob.es/avisoLegal/home.htm"
+    }
+  },
+  "admission": {
+    "siap": "ADMIT_WITH_LIMITATIONS",
+    "waiting_regional": "ADMIT_WITH_LIMITATIONS",
+    "waiting_island": "HOLD",
+    "hbsc": "ADMIT_WITH_LIMITATIONS",
+    "bdcap": "HOLD",
+    "vaccination": "HOLD",
+    "screening": "HOLD",
+    "esde_estudes": "HOLD",
+    "hospital_enrichment": "HOLD",
+    "early_intervention": "RESEARCH_ONLY"
+  },
+  "outputs": {
+    "data/curated/pediatric_primary_care_activity.csv": {
+      "sha256": "a2855f08fff041cf1367fdd6cdf3bebba903ca26dec433a2561be4db5495296f",
+      "rows": 1134
+    },
+    "data/curated/pediatric_waiting_list.csv": {
+      "sha256": "1b6e4dbff032b21df56c2f32f2a79387ff336a94aa03aabbc5dcb088bd5491af",
+      "rows": 90
+    },
+    "data/curated/adolescent_survey_indicator.csv": {
+      "sha256": "422797d058621bc06e7d6a4aa40c5ef09266b6e42669f331ff3c64f5cb7db917",
+      "rows": 20
+    }
+  }
+}

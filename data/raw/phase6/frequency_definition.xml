@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sr:concept xmlns:cdomain="http://www.siemac.org/metamac/rest/common/v1.0/domain" xmlns:sr="http://www.siemac.org/metamac/rest/structural-resources/v1.0/domain" kind="structuralResources#concept">
+    <sr:id>FRECUENTACION_GENERAL</sr:id>
+    <sr:urn>urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ISTAC:CSM_E54086A(01.000).FRECUENTACION_GENERAL</sr:urn>
+    <sr:uri>https://datos.canarias.es/api/estadisticas/structural-resources/v1.0/conceptschemes/ISTAC/CSM_E54086A/01.000/concepts/FRECUENTACION_GENERAL</sr:uri>
+    <sr:selfLink kind="structuralResources#concept" href="https://datos.canarias.es/api/estadisticas/structural-resources/v1.0/conceptschemes/ISTAC/CSM_E54086A/01.000/concepts/FRECUENTACION_GENERAL"/>
+    <sr:parentLink kind="structuralResources#concepts" href="https://datos.canarias.es/api/estadisticas/structural-resources/v1.0/conceptschemes/ISTAC/CSM_E54086A/01.000/concepts"/>
+    <sr:name>
+        <cdomain:text xml:lang="es">Frecuentación general</cdomain:text>
+    </sr:name>
+    <sr:description>
+        <cdomain:text xml:lang="es">Es la media de consultas ordinarias por habitante (población asignada) y año. Se calcula mediante el cociente entre el número de consultas ordinarias y de la población asignada.</cdomain:text>
+    </sr:description>
+    <sr:visualizerHtmlLink>https://www3.gobiernodecanarias.org/aplicaciones/appsistac/activos-semanticos/concepts/concepts/ISTAC/CSM_E54086A/FRECUENTACION_GENERAL/01.000/detail</sr:visualizerHtmlLink>
+    <sr:pluralName>
+        <cdomain:text xml:lang="es">Frecuentación general</cdomain:text>
+    </sr:pluralName>
+    <sr:quantity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sr:QuantityRatio">
+        <sr:unitCode kind="structuralResources#code">
+            <cdomain:id>NUMERO</cdomain:id>
+            <cdomain:urn>urn:sdmx:org.sdmx.infomodel.codelist.Code=ISTAC:CL_UNIDADES_MEDIDA(03.005).NUMERO</cdomain:urn>
+            <cdomain:selfLink kind="structuralResources#code" href="https://datos.canarias.es/api/estadisticas/structural-resources/v1.0/codelists/ISTAC/CL_UNIDADES_MEDIDA/03.005/codes/NUMERO"/>
+            <cdomain:name>
+                <cdomain:text xml:lang="es">Número</cdomain:text>
+                <cdomain:text xml:lang="ca">Nombre</cdomain:text>
+                <cdomain:text xml:lang="en">Number</cdomain:text>
+            </cdomain:name>
+        </sr:unitCode>
+        <sr:unitSymbolPosition>END</sr:unitSymbolPosition>
+        <sr:decimalPlaces>2</sr:decimalPlaces>
+        <sr:unitMultiplier kind="structuralResources#code">
+            <cdomain:id>0</cdomain:id>
+            <cdomain:urn>urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_UNIT_MULT(1.1).0</cdomain:urn>
+            <cdomain:selfLink kind="structuralResources#code" href="https://datos.canarias.es/api/estadisticas/structural-resources/v1.0/codelists/SDMX/CL_UNIT_MULT/1.1/codes/0"/>
+            <cdomain:name>
+                <cdomain:text xml:lang="es">Unidades</cdomain:text>
+                <cdomain:text xml:lang="en">Units</cdomain:text>
+            </cdomain:name>
+        </sr:unitMultiplier>
+        <sr:isPercentage>true</sr:isPercentage>
+    </sr:quantity>
+</sr:concept>
