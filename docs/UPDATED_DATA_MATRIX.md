@@ -1,14 +1,14 @@
-# Matriz de datos actualizada — Fase 4
+# Matriz de datos actualizada — Fase 5
 
 | Dominio | El Hierro | La Gomera | La Palma | Tenerife | Gran Canaria | Fuerteventura | Lanzarote |
 |---|---|---|---|---|---|---|---|
-| Renta municipal 2023 | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE |
-| Densidad infantil 2024 | ESTIMATED | ESTIMATED | ESTIMATED | ESTIMATED | ESTIMATED | ESTIMATED | ESTIMATED |
-| DEGURBA 2021 + población infantil | ESTIMATED | ESTIMATED | ESTIMATED | ESTIMATED | ESTIMATED | ESTIMATED | ESTIMATED |
-| Estaciones de aire 2025 | COMPLETE | COMPLETE | COMPLETE | PARTIAL | PARTIAL | COMPLETE | COMPLETE |
-| Observaciones de aire validadas | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE |
-| Estaciones meteorológicas | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE |
-| Observaciones meteorológicas | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE |
-| Eventos de calima confirmados | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE |
+| Accesibilidad 0–14 | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE |
+| Renta/contexto | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE |
+| Hospitalización edad × diagnóstico | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE |
+| Hospitalización Canarias | ADMIT_WITH_LIMITATIONS | ADMIT_WITH_LIMITATIONS | ADMIT_WITH_LIMITATIONS | ADMIT_WITH_LIMITATIONS | ADMIT_WITH_LIMITATIONS | ADMIT_WITH_LIMITATIONS | ADMIT_WITH_LIMITATIONS |
+| Prematuridad por isla | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE | COMPLETE |
+| Mortalidad 2020–2024 | PARTIAL | PARTIAL | PARTIAL | PARTIAL | PARTIAL | PARTIAL | PARTIAL |
+| Urgencias hospitalarias | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | NOT AVAILABLE | PARTIAL | NOT AVAILABLE | NOT AVAILABLE |
+| ESC 2021 directa | ISLAND_GROUP | ISLAND_GROUP | ISLAND_GROUP | COMPLETE | COMPLETE | ISLAND_GROUP | ISLAND_GROUP |
 
-`PARTIAL` en aire indica estaciones sin coordenada oficial reutilizable validada; no elimina observaciones ni islas. Gate B de ZBS permanece RED.
+Hospitalización regional no se atribuye a las islas. `PARTIAL` en mortalidad refleja supresión 1–4 y estabilidad limitada.

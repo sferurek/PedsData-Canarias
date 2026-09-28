@@ -1,13 +1,10 @@
 # Siguiente paso recomendado
 
-## Revisión RC2
+1. revisión clínica de los grupos diagnósticos agregados y del lenguaje de episodios;
+2. solicitar al SCS un extracto agregado CMBD por isla de residencia, edad y diagnóstico;
+3. obtener definiciones homogéneas de Urgencias Pediátricas de los nueve hospitales;
+4. completar el crosswalk ESC 2009/2015/2021 con n, pesos y errores;
+5. incorporar denominadores etarios anuales antes de publicar tasas de hospitalización o mortalidad;
+6. mantener el análisis respiratorio × ambiente desactivado hasta disponer de geografía y periodicidad compatibles.
 
-1. revisión pediátrica del lenguaje y de la lectura no causal;
-2. revisión metodológica de la ponderación insular de renta y DEGURBA;
-3. contraste institucional de las dos estaciones de aire sin coordenada reutilizable;
-4. solicitud de api-key gratuita a SITCAN para una ventana meteorológica congelada;
-5. adopción de una fuente validada de episodios naturales antes de activar calima.
-
-## Fase 5 propuesta
-
-No incorporar dominios clínicos hasta cerrar su comparabilidad. Priorizar revisión RC2, optimización de la malla a vector tiles si la telemetría lo exige y protocolo de actualización. Gate B de ZBS permanece RED y no debe reactivarse sin geometría oficial vigente.
+Gate ZBS permanece RED. RC3 sigue siendo preview para revisión técnica, clínica y metodológica.

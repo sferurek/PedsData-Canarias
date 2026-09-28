@@ -253,3 +253,27 @@ Complemento documental de estaciones; no inventario operativo completo.
 [Población TIS ZBS Gran Canaria 2023](https://www3.gobiernodecanarias.org/sanidad/scs/scs/as/gc/30/memorias/23/complejo/ainfluencia.pdf)
 
 Tabla TIS 0–14 por ZBS localizada; requiere extracción y revisión visual, no atribuible a E54086B.
+
+## S43 — Hospitalización de residentes por edad y diagnóstico
+
+[ISTAC E30414A_000009](https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E30414A_000009/~latest.csv)
+
+Altas, estancias y estancia media 2020–2024; edad y diagnóstico principal a nivel Canarias. No contiene isla.
+
+## S44 — Nacimientos según madurez del parto
+
+[ISTAC E30304A_000008](https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E30304A_000008/~latest.csv)
+
+Nacimientos totales y prematuros por isla de residencia materna, 1999–2024.
+
+## S45 — Mortalidad por edad, causa e isla
+
+[ISTAC E30417A_000001](https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E30417A_000001/~latest.csv)
+
+Defunciones de residentes por grandes grupos CIE-10, edad, sexo e isla, 1999–2024.
+
+## S46 — ESC 2021, problemas de salud en menores
+
+[ISTAC C00035A_000465](https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/C00035A_000465/~latest.csv)
+
+Estimaciones para menores de 16 años. Algunas islas solo aparecen en grupos publicados.
