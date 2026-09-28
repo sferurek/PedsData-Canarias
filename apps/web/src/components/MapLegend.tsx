@@ -1,13 +1,21 @@
-export type ContextLayer = "accessibility" | "income" | "density" | "PM10" | "PM2.5" | "NO2";
+export type ContextLayer = "accessibility" | "income" | "density" | "degurba" | "pediatricians_ap" | "pediatric_frequentation" | "preterm_rate" | "PM10" | "PM2.5" | "NO2";
 export const legendItems = [["under_5","<5 min"],["5_to_under_10","5–<10"],["10_to_under_15","10–<15"],["15_to_under_20","15–<20"],["20_to_under_30","20–<30"],["30_or_more","≥30"],["requires_interisland_transfer","Transferencia interinsular"],["not_evaluated","No evaluable"]] as const;
-const context:Record<Exclude<ContextLayer,"accessibility">,{label:string;unit:string;items:[string,string][]}>={
- income:{label:"Renta neta media por persona · 2023",unit:"€/persona",items:[["context-1","<10.000"],["context-2","10.000–12.000"],["context-3","12.000–14.000"],["context-4","≥14.000"]]},
- density:{label:"Densidad infantil · 2024",unit:"niños/km²",items:[["context-1","<25"],["context-2","25–100"],["context-3","100–300"],["context-4","≥300"]]},
- PM10:{label:"Última observación validada PM10 · 2025",unit:"µg/m³",items:[["air-1","<10"],["air-2","10–20"],["air-3","20–40"],["air-4","≥40"]]},
- "PM2.5":{label:"Última observación validada PM2,5 · 2025",unit:"µg/m³",items:[["air-1","<5"],["air-2","5–10"],["air-3","10–20"],["air-4","≥20"]]},
- NO2:{label:"Última observación validada NO₂ · 2025",unit:"µg/m³",items:[["air-1","<10"],["air-2","10–20"],["air-3","20–40"],["air-4","≥40"]]},
+const labels: Record<ContextLayer,{label:string;unit:string;method:string}> = {
+ accessibility:{label:"Accesibilidad pediátrica · 2024",unit:"minutos",method:"fixed_thresholds"},
+ income:{label:"Renta media por persona · 2023",unit:"€/persona",method:"quantile"},
+ density:{label:"Densidad infantil · 2024",unit:"niños/km²",method:"quantile"},
+ degurba:{label:"Urbanización DEGURBA · 2021",unit:"categoría dominante",method:"categorical"},
+ pediatricians_ap:{label:"Pediatras AP",unit:"profesionales",method:"equal_interval"},
+ pediatric_frequentation:{label:"Frecuentación pediátrica",unit:"consultas/persona/año",method:"equal_interval"},
+ preterm_rate:{label:"Prematuridad",unit:"%",method:"fixed_thresholds"},
+ PM10:{label:"PM10 observado · 2025",unit:"µg/m³",method:"fixed_thresholds"},
+ "PM2.5":{label:"PM2,5 observado · 2025",unit:"µg/m³",method:"fixed_thresholds"},
+ NO2:{label:"NO₂ observado · 2025",unit:"µg/m³",method:"fixed_thresholds"}
 };
-export function MapLegend({layer="accessibility"}:{layer?:ContextLayer}){
- if(layer==="accessibility") return <div className="legend" aria-label="Leyenda de tiempo estimado">{legendItems.map(([key,label])=><span key={key}><i className={`swatch swatch-${key}`}/>{label}</span>)}</div>;
- const selected=context[layer]; return <div className="legend context-legend" aria-label={`Leyenda ${selected.label}`}><strong>{selected.label}</strong>{selected.items.map(([key,label])=><span key={key}><i className={`swatch swatch-${key}`}/>{label} {selected.unit}</span>)}</div>;
+export function MapLegend({layer="accessibility",year,breaks=[]}:{layer?:ContextLayer;year?:number;breaks?:number[]}){
+ if(layer==="accessibility") return <div className="legend" aria-label="Leyenda de tiempo estimado">{legendItems.map(([key,label])=><span key={key}><i className={"swatch swatch-"+key}/>{label}</span>)}</div>;
+ if(layer==="degurba") return <div className="legend context-legend" aria-label="Leyenda Urbanización DEGURBA"><strong>Urbanización DEGURBA · 2021 · categorical</strong>{[["#385e8d","Centro urbano"],["#6f91b8","Agrupación urbana"],["#c9a662","Rural"]].map(([color,label])=><span key={label}><i className="swatch" style={{background:color}}/>{label}</span>)}</div>;
+ const selected=labels[layer],colors=["#d9e2f2","#9eb8d7","#607fae","#3f326d"];
+ const text=(index:number)=>index===0?(breaks[0]===undefined?"Dato observado":"< "+breaks[0].toLocaleString("es-ES")):index===colors.length-1?(breaks[index-1]===undefined?"":"≥ "+breaks[index-1].toLocaleString("es-ES")):(breaks[index-1]?.toLocaleString("es-ES")??"")+"–"+(breaks[index]?.toLocaleString("es-ES")??"");
+ return <div className="legend context-legend" aria-label={"Leyenda "+selected.label}><strong>{selected.label}{year?" · "+year:""} · {selected.method}</strong>{colors.map((color,index)=><span key={color}><i className="swatch" style={{background:color}}/>{text(index)} {selected.unit}</span>)}</div>;
 }
