@@ -1,4 +1,4 @@
-# Matriz de datos actualizada — Fase 5
+# Matriz de datos actualizada — Fase 6 / 6B
 
 | Dominio | El Hierro | La Gomera | La Palma | Tenerife | Gran Canaria | Fuerteventura | Lanzarote |
 |---|---|---|---|---|---|---|---|
@@ -20,6 +20,10 @@ Hospitalización regional no se atribuye a las islas. `PARTIAL` en mortalidad re
 | SIAP actividad | 2007–2024 | 7 islas | 1134 | ADMIT_WITH_LIMITATIONS |
 | Espera especialidad | 2017–2025 | Canarias | 90 | ADMIT_WITH_LIMITATIONS; isla HOLD |
 | HBSC hábitos/salud percibida | 2022 | Canarias | 20 | SURVEY_ESTIMATE |
-| BDCAP / vacunas / cribados / ESdE / ESTUDES | Variable | Regional candidato | 0 nuevas | HOLD |
+| BDCAP obesidad registrada | 2011–2024 | Canarias | 14 | ADMIT_WITH_LIMITATIONS |
+| Cribado metabólico | 2024 | Canarias | 12 | ADMIT_WITH_LIMITATIONS |
+| ESdE pantallas | 2023 | Canarias | 18 | SURVEY_ESTIMATE |
+| ESTUDES sustancias | 2023 | Canarias | 9 | SURVEY_ESTIMATE |
+| SIVAMIN / cribado auditivo | Variable | Canarias candidato | 0 | HOLD |
 
-Ver PHASE6_DATA_ADMISSION_MATRIX.md y PHASE6_REPORT.md. Ningún dato previo se sustituye.
+Ver PHASE6_DATA_ADMISSION_MATRIX.md y PHASE6B_REPORT.md. Ningún dato regional se atribuye a las islas.
