@@ -44,7 +44,7 @@ Los informes incluyen resumen ejecutivo, índice, dominios disponibles, contexto
 
 ## QA
 
-- 42 tests unitarios, incluidos planner, geografía, La Graciosa, provenance y parser;
+- 43 tests unitarios, incluidos planner, geografía, La Graciosa, provenance y parser;
 - 19 E2E aprobados y 1 skip esperado en el fichero específico, cubriendo Gran Canaria, Lanzarote, El Hierro, Telde, La Graciosa, territorio inexistente, contexto regional, provenance, Ask, móvil y print;
 - build estático: 267 páginas, incluidos 97 informes.
 
