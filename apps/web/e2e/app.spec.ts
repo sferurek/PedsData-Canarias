@@ -71,7 +71,7 @@ test("municipal context keeps scale and provenance visible", async ({ page }) =>
   await page.goto("/municipios/35001");
   await expect(page.getByText("Renta por persona")).toBeVisible();
   await expect(page.getByText("Densidad infantil")).toBeVisible();
-  await expect(page.getByText("Fuente y metodología")).toBeVisible();
+  await expect(page.getByText("Fuente y metodología").first()).toBeVisible();
 });
 
 
@@ -83,7 +83,7 @@ test("clinical outcomes preserve geography and status", async ({ page }, testInf
   await page.getByLabel("Edad hospitalización").selectOption("Y5T14");
   await expect(page.getByText("SURVEY_ESTIMATE", { exact: true })).toBeVisible();
   await expect(page.getByText(/Suprimido 1–4/).first()).toBeVisible();
-  await expect(page.getByText("Fuente y metodología")).toBeVisible();
+  await expect(page.getByText("Fuente y metodología").first()).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
   await page.screenshot({ path: `test-results/phase5-clinical-${testInfo.project.name}.png`, fullPage: true });
 });
