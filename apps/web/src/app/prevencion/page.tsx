@@ -9,7 +9,7 @@ export default function Page(){
  const invalid=value("first_invalid_sample");
  const traceability=value("traceability");
  return <><section className="clinical-hero">
-  <span className="eyebrow">Prevención · RC4.1</span>
+  <span className="eyebrow">Prevención · escala regional</span>
   <h1>Procesos preventivos<br/><em>con denominador.</em></h1>
   <p>Indicadores regionales publicados sin convertir proceso en prevalencia.</p>
  </section><div className="clinical-shell"><section className="clinical-module">
