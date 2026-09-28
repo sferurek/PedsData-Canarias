@@ -40,6 +40,7 @@ test("small municipality keeps its profile but withholds detailed indicators", a
 });
 
 test("visual QA has no horizontal clipping across home and seven profiles", async ({ page }, testInfo) => {
+  test.setTimeout(90000);
   await page.goto("/");
   await page.locator("#mapa").scrollIntoViewIfNeeded();
   await expect(page.locator(".map-shell")).toBeVisible();
@@ -50,6 +51,8 @@ test("visual QA has no horizontal clipping across home and seven profiles", asyn
   for (const slug of ["el-hierro", "la-gomera", "la-palma", "tenerife", "gran-canaria", "fuerteventura", "lanzarote"]) {
     await page.goto(`/islas/${slug}`);
     await expect(page.locator("h1")).toBeVisible();
+    await page.locator(".lazy-map-anchor").scrollIntoViewIfNeeded();
+    await expect(page.locator(".map-shell")).toBeVisible();
     await expect(page.getByText("Cargando capa validada…")).toBeHidden({ timeout: 15000 });
     await page.waitForTimeout(650);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
