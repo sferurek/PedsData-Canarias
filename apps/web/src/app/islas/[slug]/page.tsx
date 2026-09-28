@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AccessibilityMap } from "@/components/AccessibilityMap";
+import { LazyAccessibilityMap } from "@/components/LazyAccessibilityMap";
 import { DataBadge } from "@/components/DataBadge";
 import { Metric } from "@/components/Metric";
 import { SourceMethodPanel } from "@/components/SourceMethodPanel";
@@ -39,7 +39,7 @@ export default async function IslandPage({ params }: { params: Promise<{ slug: s
     <section className="island-clinical" aria-label="Resultados clínicos disponibles"><div><span className="eyebrow">Resultados de salud · escala insular</span><h2>Perinatalidad y mortalidad segura</h2></div><div className="clinical-kpis"><div><span>Nacimientos 2024</span><strong>{formatNumber(clinicalSummary.births_2024)}</strong><small>Residencia materna</small></div><div><span>Prematuridad 2024</span><strong>{clinicalSummary.preterm_rate_2024?.toLocaleString("es-ES")} %</strong><small>{clinicalSummary.preterm_births_2024} nacimientos</small></div><div><span>Defunciones 0–14</span><strong>{clinicalSummary.pediatric_deaths_2020_2024 ?? "Suprimido"}</strong><small>2020–2024 · {clinicalSummary.mortality_status}</small></div></div><p>Hospitalización pediátrica disponible únicamente a nivel Canarias. Urgencias comparables no disponibles para el perfil insular.</p><Link className="primary-link" href="/resultados">Ver resultados y método</Link></section>
     {isLanzarote && <aside className="transfer-note"><strong>La Graciosa</strong><p>Transferencia interinsular requerida; tiempo terrestre no estimado. 91 niños permanecen fuera del denominador evaluable.</p></aside>}
     <section className="map-section compact-map"><div className="section-heading"><div><span className="eyebrow">Mapa insular</span><h2>Accesibilidad a Pediatría AP</h2></div><p>{formatPercent(island.pct_20_or_more_total)} de la población está a 20 minutos o más.</p></div>
-      <AccessibilityMap municipalities={municipalities} initialIsland={island.island_id} /><SourceMethodPanel />
+      <LazyAccessibilityMap municipalities={municipalities} initialIsland={island.island_id} /><SourceMethodPanel />
     </section>
     <section className="section"><div className="section-heading"><div><span className="eyebrow">Municipios</span><h2>Perfiles con regla de publicación</h2></div><p>Los perfiles restringidos siguen visibles con su motivo.</p></div>
       <div className="municipality-list">{municipalities.map((item) => <Link key={item.municipality_id} href={`/municipios/${item.municipality_id}`}><span>{item.municipality_name}</span><small>{item.publication_status === "publishable" ? "Ver perfil" : "Datos limitados"}</small></Link>)}</div>

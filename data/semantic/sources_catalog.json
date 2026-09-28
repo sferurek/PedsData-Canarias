@@ -222,7 +222,7 @@
       "version_used": "2024",
       "integration_status": "integrada",
       "last_acquired_at": "2026-09-27",
-      "official_url": "https://datos.canarias.es/catalogos/estadisticas/dataset/malla-de-poblacion-de-canarias",
+      "official_url": "https://datos.canarias.es/catalogos/estadisticas/dataset/indicadores-demograficos-malla-de-250m-canarias-01-01-2024",
       "used_in": [
         "accessibility_ap",
         "child_density",
@@ -247,7 +247,7 @@
       "version_used": "2021",
       "integration_status": "integrada",
       "last_acquired_at": "2026-09-28",
-      "official_url": "https://datos.canarias.es/catalogos/estadisticas/dataset/grado-de-urbanizacion",
+      "official_url": "https://datos.canarias.es/catalogos/estadisticas/dataset/grado-de-urbanizacion-en-canarias-2021-celdas-base-250-m-de-lado",
       "used_in": [
         "child_density",
         "degurba"
@@ -317,7 +317,7 @@
       "version_used": "canary-islands-260926",
       "integration_status": "integrada",
       "last_acquired_at": "2026-09-26",
-      "official_url": "https://download.geofabrik.de/europe/spain/canary-islands.html",
+      "official_url": "https://download.geofabrik.de/africa/canary-islands.html",
       "used_in": [
         "accessibility_ap"
       ],

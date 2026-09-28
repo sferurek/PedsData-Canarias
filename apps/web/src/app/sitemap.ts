@@ -1,0 +1,6 @@
+import type {MetadataRoute} from "next";
+import {metrics} from "@/lib/semantic";
+import {sources} from "@/lib/provenance";
+import {profiles} from "@/lib/data";
+const base="https://web-sferureks-projects.vercel.app";
+export default function sitemap():MetadataRoute.Sitemap{const staticRoutes=["","/evolucion","/comparar","/explorar","/pregunta","/fuentes","/resultados","/utilizacion","/prevencion","/adolescencia","/aviso","/licencias","/citar"];return [...staticRoutes.map(path=>({url:base+path,lastModified:new Date("2026-09-28"),changeFrequency:"monthly" as const,priority:path===""?1:.7})),...profiles.islands.map(item=>({url:`${base}/islas/${item.slug}`,lastModified:new Date("2026-09-28"),changeFrequency:"yearly" as const,priority:.7})),...profiles.municipalities.map(item=>({url:`${base}/municipios/${item.municipality_id}`,lastModified:new Date("2026-09-28"),changeFrequency:"yearly" as const,priority:.5})),...metrics.map(item=>({url:`${base}/indicadores/${item.metric_id}`,lastModified:new Date("2026-09-28"),changeFrequency:"monthly" as const,priority:.6})),...sources.map(item=>({url:`${base}/fuentes/${encodeURIComponent(item.source_id)}`,lastModified:new Date("2026-09-28"),changeFrequency:"monthly" as const,priority:.5}))]}

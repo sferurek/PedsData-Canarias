@@ -1,32 +1,60 @@
 # PedsData Canarias
 
-Observatorio Pediátrico de Canarias · **FASE 0 — Pediatric Data & Architecture Discovery** · 27/09/2026.
+**PedsData Canarias — Public Beta** es un observatorio independiente de salud infantil en Canarias basado en datos públicos, metodología reproducible y trazabilidad explícita.
 
-Cobertura obligatoria: **El Hierro, La Gomera, La Palma, Tenerife, Gran Canaria, Fuerteventura y Lanzarote**. Ninguna isla se elimina por falta de datos. Alcance exclusivamente pediátrico/perinatal; datos generales solo como auxiliares.
+Cubre siempre **El Hierro, La Gomera, La Palma, Tenerife, Gran Canaria, Fuerteventura y Lanzarote**. La aplicación permite explorar accesibilidad pediátrica, evolución temporal, comparación territorial, contexto social y ambiental, resultados sanitarios y utilización asistencial respetando la escala real de cada fuente.
 
-Esta versión contiene investigación, contratos y pruebas de fuentes. **No contiene una aplicación ni tiempos de acceso calculados.**
+## Principios
 
-- [Resumen ejecutivo, viabilidad y dictamen](docs/EXECUTIVE_SUMMARY.md)
-- [Visión](docs/PROJECT_VISION.md)
-- [Inventario pediátrico](docs/PEDIATRIC_DATA_INVENTORY.md)
-- [Matriz de variables y metodología](docs/PEDIATRIC_DATA_MATRIX.md)
-- [Cobertura de las siete islas](docs/ISLAND_COVERAGE_MATRIX.md)
-- [Wish list institucional](docs/PEDIATRIC_DATA_WISHLIST.md)
-- [Gaps por isla](docs/DATA_GAPS.md)
-- [Arquitectura](docs/ARCHITECTURE.md)
-- [Modelo de datos](docs/DATA_MODEL.md)
-- [Plan MVP archipelágico](docs/MVP_PLAN.md)
-- [Investigación](docs/RESEARCH_OPPORTUNITIES.md)
-- [Riesgos](docs/RISKS.md)
-- [Hospitales](docs/HOSPITAL_COVERAGE.md)
-- [22 preguntas del brief](docs/DISCOVERY_QUESTIONS.md)
-- [Fuentes oficiales y primarias](docs/SOURCES.md)
-- [Pruebas ejecutadas](docs/VALIDATION_REPORT.md)
-- [Licencias y atribución](docs/DATA_LICENSES.md)
-- [Prompt recomendado para la siguiente fase](docs/NEXT_IMPLEMENTATION_PROMPT.md)
+- Pediatría y salud perinatal como único foco visible.
+- Ninguna isla desaparece por disponibilidad desigual.
+- Ningún dato se convierte de regional a insular o municipal.
+- `null`, `no_route`, `not_available` y `requires_interisland_transfer` no equivalen a cero.
+- Cada número visible enlaza su fuente, periodo, geografía, versión, método y limitaciones.
+- Los análisis territoriales son descriptivos; no estiman riesgo individual ni causalidad.
 
-Dictamen actual: **NO-GO para publicar MVP 0**, con **56% de preparación estimada (5/9)**; no es probabilidad de éxito. Población 0–14 y SIAP insular están comprobados; faltan recursos geocodificados vigentes, geometría ZBS y routing validado. El proyecto conserva cobertura de las siete islas.
+## Ejecutar la aplicación
 
-Verificación local sin red: `python3 scripts/verify_phase0.py`. Reconsulta opcional de malla: `python3 scripts/recheck_grid.py`.
+Requisitos: Node.js 24 y pnpm 11.
 
-Fuente de las evidencias tabulares: Instituto Canario de Estadística (ISTAC), descarga 27/09/2026. Véanse periodos, versiones y hashes en el manifiesto. Este proyecto no implica respaldo institucional.
+```bash
+cd apps/web
+pnpm install --frozen-lockfile
+pnpm dev
+```
+
+Validación:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests
+cd apps/web
+pnpm test
+pnpm lint
+pnpm typecheck
+pnpm build
+pnpm test:e2e
+```
+
+## Reproducibilidad y fuentes
+
+- [Arquitectura de trazabilidad](docs/DATA_PROVENANCE_ARCHITECTURE.md)
+- [Métodos de accesibilidad](docs/ACCESSIBILITY_PUBLICATION_METHODS.md)
+- [Catálogo semántico](docs/SEMANTIC_METRICS_CATALOG.md)
+- [Catálogo público de fuentes](https://web-sferureks-projects.vercel.app/fuentes)
+- [Checklist de beta pública](docs/PUBLIC_BETA_CHECKLIST.md)
+
+Los datasets de terceros conservan sus propias licencias y atribuciones. La aplicación enlaza la fuente oficial exacta desde cada indicador y resultado.
+
+## Límites conocidos
+
+No se publican perfiles por Zona Básica de Salud porque no existe una geometría oficial vigente reutilizable validada para las siete islas. La Graciosa permanece como componente terrestre separado y su acceso figura como transferencia interinsular requerida, sin tiempo clínico inventado. Los datos hospitalarios, encuestas y estaciones ambientales mantienen sus universos y geografías originales.
+
+## Citación
+
+PedsData Canarias. *Observatorio independiente de salud infantil en Canarias*. Versión 0.9.0-beta.1. Consultado el [fecha] en https://web-sferureks-projects.vercel.app. Código: https://github.com/sferurek/PedsData-Canarias.
+
+No existe DOI asignado en esta versión.
+
+## Licencia
+
+El código propio se distribuye bajo licencia [MIT](LICENSE). Esta licencia no cubre ni sustituye las licencias de datos de terceros. Véanse [licencias y atribuciones](docs/DATA_LICENSES.md).
