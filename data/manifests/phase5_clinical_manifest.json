@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-09-28T07:37:18.787953+00:00",
+  "pipeline": "etl/build_phase5_clinical.py",
+  "sources": {
+    "hospitalization": {
+      "source_id": "ISTAC:E30414A_000009",
+      "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E30414A_000009/~latest.csv",
+      "sha256": "fb0682109de1f708c1f623b7d3757798ad5a2ce0b08700e7cef0eb58c1030a0c"
+    },
+    "perinatal": {
+      "source_id": "ISTAC:E30304A_000008",
+      "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E30304A_000008/~latest.csv",
+      "sha256": "5eec3ff99c5550b78f5abec31493259a5f05eeac47f3d0f9627bc050c0310bba"
+    },
+    "mortality": {
+      "source_id": "ISTAC:E30417A_000001",
+      "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/E30417A_000001/~latest.csv",
+      "sha256": "941eb24f71928c817ee0d47ac827a7f24c37683c4b2075a4bbfb97a6c838b0d5"
+    },
+    "survey": {
+      "source_id": "ISTAC:C00035A_000465",
+      "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/datasets/ISTAC/C00035A_000465/~latest.csv",
+      "sha256": "49d40bb5d131d8adfa4b5850126f66dd43e02d079cbb6c775097bcb6d198d4ac"
+    }
+  },
+  "outputs": {
+    "data/curated/pediatric_hospital_indicators.csv": {
+      "sha256": "84aa5bbeef2fa0dc4e39a166e8eccc6576dd97e316492d51120eddc09bbd2146",
+      "rows": 405
+    },
+    "data/curated/perinatal_indicators.csv": {
+      "sha256": "f968f485dc9aaed2aaf20f08031b51f919ae4d93c60c7c6f57458b84eab64936",
+      "rows": 624
+    },
+    "data/curated/pediatric_mortality.csv": {
+      "sha256": "77fe995ae8b687e01f06298812d1a3ae0990a77feed12e060de17fbf75f221b0",
+      "rows": 147
+    },
+    "data/curated/child_health_survey_indicators.csv": {
+      "sha256": "dccf35acbcee672cb054edb5067338e29a3034403bf93fc2849d6bb97429790b",
+      "rows": 45
+    },
+    "data/curated/pediatric_emergency_activity.csv": {
+      "sha256": "e26f7d30ce31deb5cdd165188b905ffeb930b660fa5a26c496304a2afb019287",
+      "rows": 4
+    },
+    "data/curated/clinical_data_quality.csv": {
+      "sha256": "be31d681e29f55c98511fa2d1d4cb979cbeb2a923dd6116ba19f0e5695b21cf0",
+      "rows": 5
+    },
+    "data/reference/pediatric_diagnosis_groups.csv": {
+      "sha256": "7c297cf660f17991c63dce8f115f844f3aadbe5a9896c7975b4db33f62f1b864",
+      "rows": 9
+    }
+  },
+  "rules": {
+    "islands": 7,
+    "mortality_window": "2020-2024",
+    "small_number_suppression": "1-4",
+    "hospital_geography": "Canarias only",
+    "survey_status": "SURVEY_ESTIMATE"
+  }
+}

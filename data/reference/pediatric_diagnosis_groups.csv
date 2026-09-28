@@ -1,0 +1,10 @@
+group_id,group_name,coding_system,source_group_code,code_start,code_end,include,exclude,clinical_notes,version
+infectious,Enfermedades infecciosas,CIE-10 / agrupación EMH,0100,A00,B99,A00-B99,,Capítulo oficial agregado.,phase5-v1
+diabetes,Diabetes,CIE-10 / agrupación EMH,0401,E08,E13,E08-E13,,No separa cetoacidosis.,phase5-v1
+mental_health,Salud mental,CIE-10 / agrupación EMH,0500,F01,F99,F01-F99,,Capítulo agregado.,phase5-v1
+epilepsy,Epilepsia,CIE-10 / agrupación EMH,0603,G40,G40,G40,,Categoría oficial.,phase5-v1
+pneumonia,Neumonía,CIE-10 / agrupación EMH,1002,J12,J18,J12-J18,,Categoría oficial.,phase5-v1
+lower_respiratory,Infecciones respiratorias bajas,CIE-10 / agrupación EMH,1003,J20,J22,J20-J22,,Incluye bronquitis aguda y bronquiolitis; no permite aislar bronquiolitis.,phase5-v1
+asthma,Asma,CIE-10 / agrupación EMH,1007,J45,J45,J45,,Categoría oficial.,phase5-v1
+appendix,Enfermedades del apéndice,CIE-10 / agrupación EMH,1106,K35,K38,K35-K38,,Incluye apendicitis y otras enfermedades del apéndice.,phase5-v1
+injury,Lesiones y traumatismos,CIE-10 / agrupación EMH,1900,S00,T98,S00-T98,,Capítulo oficial agregado.,phase5-v1

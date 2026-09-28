@@ -1,0 +1,6 @@
+domain,admission_status,geography,period,limitation
+hospitalization,ADMIT_WITH_LIMITATIONS,Canarias,2020-2024,Edad × diagnóstico solo para Canarias.
+perinatal,ADMIT,Canarias/isla,1999-2024,Residencia materna.
+emergency,ADMIT_WITH_LIMITATIONS,hospital,2024,Solo CHUIMI; no comparar hospitales.
+mortality,ADMIT_WITH_LIMITATIONS,isla,2020-2024,Ventana quinquenal; 1-4 suprimidos.
+survey,ADMIT_WITH_LIMITATIONS,Canarias/isla/grupo de islas,2021,Estimación; n/error no publicados por celda.
