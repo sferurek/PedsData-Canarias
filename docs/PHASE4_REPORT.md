@@ -28,3 +28,13 @@ No se publica pobreza infantil, exposición individual al aire, interpolación a
 ## Dictamen
 
 **RC2 READY FOR REVIEW** condicionado a que el preview Vercel reproduzca el build y la navegación validados localmente. Sigue siendo una candidata de revisión, no una release final.
+
+## Preview RC2
+
+- URL: https://web-luttkl7hg-sferureks-projects.vercel.app
+- Deployment: `dpl_AcDjJCm3fUnT7VwULLXUhKeL1As5`
+- Commit desplegado: `c87cb8151ad1f1726f3488092362bf780a61217f`
+- Target Vercel: `preview`
+- Estado remoto: `READY`, build de 98 páginas y comprobaciones HTTP 200 en home y capa de aire.
+
+RC1 conserva su deployment anterior. RC2 no se ha promovido a producción.
