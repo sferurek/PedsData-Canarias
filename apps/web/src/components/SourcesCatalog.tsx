@@ -1,0 +1,10 @@
+"use client";
+import {useMemo,useState} from "react";
+import Link from "next/link";
+import type {SourceDefinition} from "@/lib/provenance";
+const domains=["Todos","Demografía","Atención Primaria","Hospitalización","Perinatal","Mortalidad","Prevención","Adolescencia","Socioeconómico","Ambiental","Geográfico"];
+export function SourcesCatalog({sources}:{sources:SourceDefinition[]}){
+ const [query,setQuery]=useState(""),[domain,setDomain]=useState("Todos");
+ const filtered=useMemo(()=>sources.filter(source=>(domain==="Todos"||source.domain===domain)&&[source.name,source.organization,source.description,source.contains,source.source_id].join(" ").toLocaleLowerCase("es").includes(query.toLocaleLowerCase("es"))),[sources,query,domain]);
+ return <><div className="source-search"><label>Buscar fuentes<input type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="ISTAC, prematuridad, aire…"/></label><label>Dominio<select value={domain} onChange={event=>setDomain(event.target.value)}>{domains.map(item=><option key={item}>{item}</option>)}</select></label></div><p className="catalog-count" aria-live="polite">{filtered.length} fuentes registradas</p><div className="source-catalog">{filtered.map(source=><article key={source.source_id}><div><span className="eyebrow">{source.domain}</span><b className={"source-status status-"+source.integration_status.replaceAll(" ","-")}>{source.integration_status}</b></div><h2><Link href={"/fuentes/"+encodeURIComponent(source.source_id)}>{source.name}</Link></h2><p>{source.description}</p><dl><div><dt>Organismo</dt><dd>{source.organization}</dd></div><div><dt>Geografía</dt><dd>{source.geographic_disaggregation}</dd></div><div><dt>Periodo</dt><dd>{source.available_period}</dd></div><div><dt>Formato</dt><dd>{source.format}</dd></div></dl><Link className="text-link" href={"/fuentes/"+encodeURIComponent(source.source_id)}>Ver provenance completa →</Link></article>)}</div>{!filtered.length&&<div className="viz-empty">No hay fuentes para este filtro.</div>}</>;
+}
