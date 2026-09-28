@@ -23,7 +23,25 @@ Los admitidos conservan escala regional, edad original, estado muestral/proceso 
 
 Main remoto quedó en 3987e36 y phase6-rc4 se conserva. El webhook de main lanzó un intento con target Production que falló antes de publicar: estado ERROR, sin alias y sin promoción. El preview RC4 sigue disponible y no se modificó.
 
-RC4.1 se desplegará únicamente como preview después de QA final. No se cambia producción.
+RC4.1 se desplegó únicamente como preview desde la rama `phase6b-hold-resolution`:
+
+- URL: https://web-qhvea596s-sferureks-projects.vercel.app
+- deployment: `dpl_5reUFap1aviVpsiWmrY6Qn5WMyNb`
+- target: `preview`
+- estado: `Ready`
+- commit desplegado: `9b7850e`
+
+La verificación remota autenticada confirmó Home, Resultados/BDCAP, Prevención/cribado metabólico y Adolescencia/ESdE/ESTUDES. La aplicación conserva las etiquetas visibles `RC4.1 · preview`. No se cambió ni promocionó producción.
+
+## QA final
+
+- 66 tests Python superados.
+- 16 tests web unitarios superados.
+- lint y typecheck superados.
+- build Next.js superado: 102 páginas.
+- 23 pruebas Playwright superadas y 1 omitida por diseño según viewport.
+- QA E2E ejecutado en escritorio e iPhone.
+- Build Vercel superado y rutas nuevas verificadas sobre el preview protegido.
 
 ## Conclusión
 
