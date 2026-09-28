@@ -1,0 +1,2 @@
+import {TemporalWorkbench} from "@/components/TemporalWorkbench";
+export default function ExplorePage(){return <><section className="semantic-hero"><span className="eyebrow">Explorar datos</span><h1>Indicador, territorio,<br/><em>periodo y visual.</em></h1><p>El explorador funciona con el catálogo semántico y sin depender de lenguaje natural.</p></section><main className="semantic-shell"><TemporalWorkbench mode="explore"/></main></>}

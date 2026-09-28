@@ -1,0 +1,1066 @@
+{
+  "version": "phase8-v1",
+  "metrics": [
+    {
+      "metric_id": "child_population_assigned_0_14",
+      "label": "Población asignada 0–14",
+      "description": "Suma de los grupos originales 0–4, 5–9 y 10–14, sexo total.",
+      "geography_levels": [
+        "island"
+      ],
+      "time_start": 2004,
+      "time_end": 2024,
+      "unit": "personas",
+      "chart_types": [
+        "line",
+        "bar",
+        "small_multiples",
+        "heatmap",
+        "slope"
+      ],
+      "map_allowed": true,
+      "map_geography": "island",
+      "classification_method": "quantile",
+      "color_scale": "sequential_blue",
+      "compatible_metrics": [
+        "pediatricians_ap",
+        "pediatric_consultations"
+      ],
+      "source_id": "ISTAC:E54086A_000002",
+      "method_id": "siap_assigned_population_sum_0_14_v1",
+      "status": "OBSERVED",
+      "source_ids": [
+        "ISTAC:E54086A_000002"
+      ],
+      "formula": {
+        "expression": "Y0T4 + Y5T9 + Y10T14",
+        "inputs": [
+          {
+            "metric": "Población asignada 0–4",
+            "source_id": "ISTAC:E54086A_000002"
+          },
+          {
+            "metric": "Población asignada 5–9",
+            "source_id": "ISTAC:E54086A_000002"
+          },
+          {
+            "metric": "Población asignada 10–14",
+            "source_id": "ISTAC:E54086A_000002"
+          }
+        ],
+        "transformations": [
+          "Filtrar sexo total",
+          "Sumar grupos etarios originales sin interpolar"
+        ],
+        "rounding": "entero publicado"
+      },
+      "transformations": [
+        "Filtrar sexo total",
+        "Sumar grupos etarios originales sin interpolar"
+      ],
+      "rounding": "entero publicado",
+      "limitations": [
+        "Suma de los grupos originales 0–4, 5–9 y 10–14, sexo total.",
+        "No se representa por debajo de island."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "pediatricians_ap",
+      "label": "Pediatras de Atención Primaria",
+      "description": "Profesionales de Pediatría AP publicados por SIAP.",
+      "geography_levels": [
+        "island"
+      ],
+      "time_start": 2004,
+      "time_end": 2024,
+      "unit": "profesionales",
+      "chart_types": [
+        "line",
+        "bar",
+        "small_multiples",
+        "heatmap",
+        "slope"
+      ],
+      "map_allowed": true,
+      "map_geography": "island",
+      "classification_method": "equal_interval",
+      "color_scale": "sequential_teal",
+      "compatible_metrics": [
+        "child_population_assigned_0_14",
+        "pediatric_consultations"
+      ],
+      "source_id": "ISTAC:E54086A_000001",
+      "method_id": "siap_pediatricians_original_v1",
+      "status": "OBSERVED",
+      "source_ids": [
+        "ISTAC:E54086A_000001"
+      ],
+      "formula": null,
+      "transformations": [
+        "Filtrado y selección sin alterar la escala publicada"
+      ],
+      "rounding": "precisión publicada; formato UI máximo 2 decimales",
+      "limitations": [
+        "Profesionales de Pediatría AP publicados por SIAP.",
+        "No se representa por debajo de island."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "assigned_children_per_pediatrician",
+      "label": "Población asignada por pediatra",
+      "description": "Ratio por profesional publicado por SIAP; no es población censal.",
+      "geography_levels": [
+        "island"
+      ],
+      "time_start": 2004,
+      "time_end": 2024,
+      "unit": "personas asignadas/profesional",
+      "chart_types": [
+        "line",
+        "bar",
+        "small_multiples",
+        "heatmap"
+      ],
+      "map_allowed": true,
+      "map_geography": "island",
+      "classification_method": "quantile",
+      "color_scale": "sequential_violet",
+      "compatible_metrics": [
+        "pediatricians_ap"
+      ],
+      "source_id": "ISTAC:E54086A_000001",
+      "method_id": "siap_published_ratio_v1",
+      "status": "DERIVED_RATE",
+      "source_ids": [
+        "ISTAC:E54086A_000001",
+        "ISTAC:E54086A_000002"
+      ],
+      "formula": {
+        "expression": "población asignada al servicio / profesionales de Pediatría AP",
+        "inputs": [
+          {
+            "metric": "Población asignada",
+            "source_id": "ISTAC:E54086A_000002"
+          },
+          {
+            "metric": "Pediatras AP",
+            "source_id": "ISTAC:E54086A_000001"
+          }
+        ],
+        "transformations": [
+          "Se conserva el ratio publicado por SIAP"
+        ],
+        "rounding": "precisión publicada"
+      },
+      "transformations": [
+        "Se conserva el ratio publicado por SIAP"
+      ],
+      "rounding": "precisión publicada",
+      "limitations": [
+        "Ratio por profesional publicado por SIAP; no es población censal.",
+        "No se representa por debajo de island."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "pediatric_consultations",
+      "label": "Consultas de Pediatría AP",
+      "description": "Consultas totales del servicio de Pediatría AP.",
+      "geography_levels": [
+        "island"
+      ],
+      "time_start": 2007,
+      "time_end": 2024,
+      "unit": "consultas",
+      "chart_types": [
+        "line",
+        "bar",
+        "small_multiples",
+        "heatmap",
+        "slope"
+      ],
+      "map_allowed": true,
+      "map_geography": "island",
+      "classification_method": "quantile",
+      "color_scale": "sequential_blue",
+      "compatible_metrics": [
+        "pediatricians_ap",
+        "child_population_assigned_0_14",
+        "pediatric_distinct_users"
+      ],
+      "source_id": "ISTAC:E54086A_000005",
+      "method_id": "siap_original_service_v1",
+      "status": "OBSERVED",
+      "source_ids": [
+        "ISTAC:E54086A_000005"
+      ],
+      "formula": null,
+      "transformations": [
+        "Filtrado y selección sin alterar la escala publicada"
+      ],
+      "rounding": "precisión publicada; formato UI máximo 2 decimales",
+      "limitations": [
+        "Consultas totales del servicio de Pediatría AP.",
+        "No se representa por debajo de island."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "pediatric_distinct_users",
+      "label": "Personas distintas atendidas",
+      "description": "Personas distintas publicadas para Pediatría AP; no equivale a consultas.",
+      "geography_levels": [
+        "island"
+      ],
+      "time_start": 2007,
+      "time_end": 2024,
+      "unit": "personas",
+      "chart_types": [
+        "line",
+        "bar",
+        "small_multiples",
+        "heatmap"
+      ],
+      "map_allowed": false,
+      "map_geography": null,
+      "classification_method": null,
+      "color_scale": null,
+      "compatible_metrics": [
+        "pediatric_consultations"
+      ],
+      "source_id": "ISTAC:E54086A_000007",
+      "method_id": "siap_original_service_v1",
+      "status": "OBSERVED",
+      "source_ids": [
+        "ISTAC:E54086A_000007"
+      ],
+      "formula": null,
+      "transformations": [
+        "Filtrado y selección sin alterar la escala publicada"
+      ],
+      "rounding": "precisión publicada; formato UI máximo 2 decimales",
+      "limitations": [
+        "Personas distintas publicadas para Pediatría AP; no equivale a consultas.",
+        "No se representa por debajo de island."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "pediatric_frequentation",
+      "label": "Frecuentación pediátrica",
+      "description": "Consultas por persona asignada y año según definición SIAP.",
+      "geography_levels": [
+        "island"
+      ],
+      "time_start": 2007,
+      "time_end": 2024,
+      "unit": "consultas/persona asignada/año",
+      "chart_types": [
+        "line",
+        "bar",
+        "small_multiples",
+        "heatmap",
+        "slope"
+      ],
+      "map_allowed": true,
+      "map_geography": "island",
+      "classification_method": "equal_interval",
+      "color_scale": "sequential_violet",
+      "compatible_metrics": [
+        "pediatricians_ap",
+        "pediatric_consultations"
+      ],
+      "source_id": "ISTAC:E54086A_000009",
+      "method_id": "siap_original_service_v1",
+      "status": "OBSERVED",
+      "source_ids": [
+        "ISTAC:E54086A_000009",
+        "ISTAC:E54086A_000005",
+        "ISTAC:E54086A_000002"
+      ],
+      "formula": {
+        "expression": "consultas de Pediatría AP / población asignada / año",
+        "inputs": [
+          {
+            "metric": "Consultas",
+            "source_id": "ISTAC:E54086A_000005"
+          },
+          {
+            "metric": "Población asignada",
+            "source_id": "ISTAC:E54086A_000002"
+          }
+        ],
+        "transformations": [
+          "Se conserva el indicador publicado"
+        ],
+        "rounding": "2 decimales publicados"
+      },
+      "transformations": [
+        "Se conserva el indicador publicado"
+      ],
+      "rounding": "2 decimales publicados",
+      "limitations": [
+        "Consultas por persona asignada y año según definición SIAP.",
+        "No se representa por debajo de island."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "consultations_per_pediatrician",
+      "label": "Consultas por pediatra",
+      "description": "Consultas totales divididas por profesionales del mismo año e isla.",
+      "geography_levels": [
+        "island"
+      ],
+      "time_start": 2007,
+      "time_end": 2024,
+      "unit": "consultas/profesional",
+      "chart_types": [
+        "line",
+        "bar",
+        "small_multiples",
+        "heatmap"
+      ],
+      "map_allowed": false,
+      "map_geography": null,
+      "classification_method": null,
+      "color_scale": null,
+      "compatible_metrics": [
+        "pediatricians_ap",
+        "pediatric_consultations"
+      ],
+      "source_id": "ISTAC:E54086A",
+      "method_id": "consultations_divided_by_pediatricians_v1",
+      "status": "DERIVED_RATE",
+      "source_ids": [
+        "ISTAC:E54086A_000005",
+        "ISTAC:E54086A_000001"
+      ],
+      "formula": {
+        "expression": "consultas totales de Pediatría AP / pediatras AP",
+        "inputs": [
+          {
+            "metric": "Consultas",
+            "source_id": "ISTAC:E54086A_000005"
+          },
+          {
+            "metric": "Pediatras AP",
+            "source_id": "ISTAC:E54086A_000001"
+          }
+        ],
+        "transformations": [
+          "Unir por isla y año",
+          "Excluir denominadores nulos o cero"
+        ],
+        "rounding": "4 decimales en datos; 2 en UI"
+      },
+      "transformations": [
+        "Unir por isla y año",
+        "Excluir denominadores nulos o cero"
+      ],
+      "rounding": "4 decimales en datos; 2 en UI",
+      "limitations": [
+        "Consultas totales divididas por profesionales del mismo año e isla.",
+        "No se representa por debajo de island."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "births",
+      "label": "Nacimientos",
+      "description": "Nacimientos de madres residentes.",
+      "geography_levels": [
+        "island"
+      ],
+      "time_start": 1999,
+      "time_end": 2024,
+      "unit": "nacimientos",
+      "chart_types": [
+        "line",
+        "bar",
+        "small_multiples",
+        "heatmap",
+        "slope"
+      ],
+      "map_allowed": true,
+      "map_geography": "island",
+      "classification_method": "quantile",
+      "color_scale": "sequential_blue",
+      "compatible_metrics": [
+        "preterm_rate"
+      ],
+      "source_id": "ISTAC:E30304A_000008",
+      "method_id": "istac_birth_maturity_v1",
+      "status": "OBSERVED",
+      "source_ids": [
+        "ISTAC:E30304A_000008"
+      ],
+      "formula": null,
+      "transformations": [
+        "Filtrado y selección sin alterar la escala publicada"
+      ],
+      "rounding": "precisión publicada; formato UI máximo 2 decimales",
+      "limitations": [
+        "Nacimientos de madres residentes.",
+        "No se representa por debajo de island."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "preterm_rate",
+      "label": "Prematuridad",
+      "description": "Nacimientos prematuros sobre nacimientos de madres residentes.",
+      "geography_levels": [
+        "island"
+      ],
+      "time_start": 1999,
+      "time_end": 2024,
+      "unit": "%",
+      "chart_types": [
+        "line",
+        "bar",
+        "small_multiples",
+        "heatmap",
+        "slope"
+      ],
+      "map_allowed": true,
+      "map_geography": "island",
+      "classification_method": "fixed_thresholds",
+      "color_scale": "sequential_violet",
+      "compatible_metrics": [
+        "births"
+      ],
+      "source_id": "ISTAC:E30304A_000008",
+      "method_id": "istac_birth_maturity_v1",
+      "status": "DERIVED_RATE",
+      "source_ids": [
+        "ISTAC:E30304A_000008"
+      ],
+      "formula": {
+        "expression": "nacimientos prematuros / nacimientos × 100",
+        "inputs": [
+          {
+            "metric": "Nacimientos prematuros",
+            "source_id": "ISTAC:E30304A_000008"
+          },
+          {
+            "metric": "Nacimientos",
+            "source_id": "ISTAC:E30304A_000008"
+          }
+        ],
+        "transformations": [
+          "Misma isla y año"
+        ],
+        "rounding": "2 decimales"
+      },
+      "transformations": [
+        "Misma isla y año"
+      ],
+      "rounding": "2 decimales",
+      "limitations": [
+        "Nacimientos prematuros sobre nacimientos de madres residentes.",
+        "No se representa por debajo de island."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "pediatric_outpatient_waiting_stock",
+      "label": "Stock de espera en Pediatría",
+      "description": "Pacientes pendientes a fecha de corte; solo regional por semántica territorial no resuelta.",
+      "geography_levels": [
+        "autonomous_community"
+      ],
+      "time_start": 2017,
+      "time_end": 2025,
+      "unit": "pacientes pendientes",
+      "chart_types": [
+        "line",
+        "bar"
+      ],
+      "map_allowed": false,
+      "map_geography": null,
+      "classification_method": null,
+      "color_scale": null,
+      "compatible_metrics": [],
+      "source_id": "ISTAC:C00045A_000002",
+      "method_id": "waiting_regional_stock_v1",
+      "status": "ADMINISTRATIVE_STOCK",
+      "source_ids": [
+        "ISTAC:C00045A_000002"
+      ],
+      "formula": null,
+      "transformations": [
+        "Filtrado y selección sin alterar la escala publicada"
+      ],
+      "rounding": "precisión publicada; formato UI máximo 2 decimales",
+      "limitations": [
+        "Pacientes pendientes a fecha de corte; solo regional por semántica territorial no resuelta.",
+        "No se representa por debajo de autonomous_community."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "pediatric_hospital_discharges_selected",
+      "label": "Altas pediátricas en diagnósticos seleccionados",
+      "description": "Suma regional por grupos diagnósticos seleccionados y edades pediátricas originales.",
+      "geography_levels": [
+        "autonomous_community"
+      ],
+      "time_start": 2020,
+      "time_end": 2024,
+      "unit": "altas",
+      "chart_types": [
+        "line",
+        "bar"
+      ],
+      "map_allowed": false,
+      "map_geography": null,
+      "classification_method": null,
+      "color_scale": null,
+      "compatible_metrics": [],
+      "source_id": "ISTAC:E30414A_000009",
+      "method_id": "selected_diagnosis_age_sum_v1",
+      "status": "OBSERVED",
+      "source_ids": [
+        "ISTAC:E30414A_000009"
+      ],
+      "formula": null,
+      "transformations": [
+        "Filtrado y selección sin alterar la escala publicada"
+      ],
+      "rounding": "precisión publicada; formato UI máximo 2 decimales",
+      "limitations": [
+        "Suma regional por grupos diagnósticos seleccionados y edades pediátricas originales.",
+        "No se representa por debajo de autonomous_community."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "income_mean_per_person",
+      "label": "Renta media por persona",
+      "description": "Renta general municipal; no equivale a renta infantil.",
+      "geography_levels": [
+        "municipality"
+      ],
+      "time_start": 2023,
+      "time_end": 2023,
+      "unit": "€/persona",
+      "chart_types": [
+        "bar",
+        "map",
+        "table"
+      ],
+      "map_allowed": true,
+      "map_geography": "municipality",
+      "classification_method": "quantile",
+      "color_scale": "sequential_blue",
+      "compatible_metrics": [
+        "child_density"
+      ],
+      "source_id": "INE:ADRH",
+      "method_id": "ine_adrh_municipality_v1",
+      "status": "COMPLETE",
+      "source_ids": [
+        "INE:ADRH"
+      ],
+      "formula": null,
+      "transformations": [
+        "Filtrado y selección sin alterar la escala publicada"
+      ],
+      "rounding": "precisión publicada; formato UI máximo 2 decimales",
+      "limitations": [
+        "Renta general municipal; no equivale a renta infantil.",
+        "No se representa por debajo de municipality."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "child_density",
+      "label": "Densidad infantil",
+      "description": "Población 0–14 por superficie municipal.",
+      "geography_levels": [
+        "municipality"
+      ],
+      "time_start": 2024,
+      "time_end": 2024,
+      "unit": "niños/km²",
+      "chart_types": [
+        "bar",
+        "map",
+        "table"
+      ],
+      "map_allowed": true,
+      "map_geography": "municipality",
+      "classification_method": "quantile",
+      "color_scale": "sequential_teal",
+      "compatible_metrics": [
+        "income_mean_per_person"
+      ],
+      "source_id": "ISTAC:grid+DEGURBA",
+      "method_id": "child_density_municipality_v1",
+      "status": "ESTIMATED",
+      "source_ids": [
+        "ISTAC:GRID_2024",
+        "ISTAC:DEGURBA_2021"
+      ],
+      "formula": {
+        "expression": "población infantil 0–14 / superficie municipal km²",
+        "inputs": [
+          {
+            "metric": "Población 0–14",
+            "source_id": "ISTAC:GRID_2024"
+          },
+          {
+            "metric": "Superficie municipal",
+            "source_id": "ISTAC:DEGURBA_2021"
+          }
+        ],
+        "transformations": [
+          "Intersección espacial y agregación municipal"
+        ],
+        "rounding": "3 decimales"
+      },
+      "transformations": [
+        "Intersección espacial y agregación municipal"
+      ],
+      "rounding": "3 decimales",
+      "limitations": [
+        "Población 0–14 por superficie municipal.",
+        "No se representa por debajo de municipality."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "degurba",
+      "label": "Urbanización DEGURBA",
+      "description": "Categoría territorial oficial dominante; capa categórica municipal.",
+      "geography_levels": [
+        "municipality"
+      ],
+      "time_start": 2021,
+      "time_end": 2021,
+      "unit": "categoría",
+      "chart_types": [
+        "map",
+        "table"
+      ],
+      "map_allowed": true,
+      "map_geography": "municipality",
+      "classification_method": "categorical",
+      "color_scale": "categorical_degurba",
+      "compatible_metrics": [],
+      "source_id": "ISTAC:DEGURBA",
+      "method_id": "dominant_child_degurba_v1",
+      "status": "ESTIMATED",
+      "source_ids": [
+        "ISTAC:DEGURBA_2021",
+        "ISTAC:GRID_2024"
+      ],
+      "formula": {
+        "expression": "argmax(% centro urbano, % agrupación urbana, % rural)",
+        "inputs": [
+          {
+            "metric": "DEGURBA por celda",
+            "source_id": "ISTAC:DEGURBA_2021"
+          },
+          {
+            "metric": "Población 0–14",
+            "source_id": "ISTAC:GRID_2024"
+          }
+        ],
+        "transformations": [
+          "Ponderar categorías por niños",
+          "Seleccionar categoría dominante"
+        ],
+        "rounding": "categórico"
+      },
+      "transformations": [
+        "Ponderar categorías por niños",
+        "Seleccionar categoría dominante"
+      ],
+      "rounding": "categórico",
+      "limitations": [
+        "Categoría territorial oficial dominante; capa categórica municipal.",
+        "No se representa por debajo de municipality."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "PM10",
+      "label": "PM10 observado",
+      "description": "Valor observado en estación; no representa homogéneamente una isla.",
+      "geography_levels": [
+        "station"
+      ],
+      "time_start": 2025,
+      "time_end": 2025,
+      "unit": "µg/m³",
+      "chart_types": [
+        "map",
+        "table"
+      ],
+      "map_allowed": true,
+      "map_geography": "station",
+      "classification_method": "fixed_thresholds",
+      "color_scale": "sequential_orange",
+      "compatible_metrics": [],
+      "source_id": "GobiernoCanarias:AIR",
+      "method_id": "station_observation_v1",
+      "status": "PROVISIONAL",
+      "source_ids": [
+        "GOB_CAN:AIR_2025"
+      ],
+      "formula": null,
+      "transformations": [
+        "Filtrado y selección sin alterar la escala publicada"
+      ],
+      "rounding": "precisión publicada; formato UI máximo 2 decimales",
+      "limitations": [
+        "Valor observado en estación; no representa homogéneamente una isla.",
+        "No se representa por debajo de station."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "PM2.5",
+      "label": "PM2,5 observado",
+      "description": "Valor observado en estación; no se interpola.",
+      "geography_levels": [
+        "station"
+      ],
+      "time_start": 2025,
+      "time_end": 2025,
+      "unit": "µg/m³",
+      "chart_types": [
+        "map",
+        "table"
+      ],
+      "map_allowed": true,
+      "map_geography": "station",
+      "classification_method": "fixed_thresholds",
+      "color_scale": "sequential_orange",
+      "compatible_metrics": [],
+      "source_id": "GobiernoCanarias:AIR",
+      "method_id": "station_observation_v1",
+      "status": "PROVISIONAL",
+      "source_ids": [
+        "GOB_CAN:AIR_2025"
+      ],
+      "formula": null,
+      "transformations": [
+        "Filtrado y selección sin alterar la escala publicada"
+      ],
+      "rounding": "precisión publicada; formato UI máximo 2 decimales",
+      "limitations": [
+        "Valor observado en estación; no se interpola.",
+        "No se representa por debajo de station."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "NO2",
+      "label": "NO₂ observado",
+      "description": "Valor observado en estación; no se interpola.",
+      "geography_levels": [
+        "station"
+      ],
+      "time_start": 2025,
+      "time_end": 2025,
+      "unit": "µg/m³",
+      "chart_types": [
+        "map",
+        "table"
+      ],
+      "map_allowed": true,
+      "map_geography": "station",
+      "classification_method": "fixed_thresholds",
+      "color_scale": "sequential_orange",
+      "compatible_metrics": [],
+      "source_id": "GobiernoCanarias:AIR",
+      "method_id": "station_observation_v1",
+      "status": "PROVISIONAL",
+      "source_ids": [
+        "GOB_CAN:AIR_2025"
+      ],
+      "formula": null,
+      "transformations": [
+        "Filtrado y selección sin alterar la escala publicada"
+      ],
+      "rounding": "precisión publicada; formato UI máximo 2 decimales",
+      "limitations": [
+        "Valor observado en estación; no se interpola.",
+        "No se representa por debajo de station."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "accessibility_ap",
+      "label": "Accesibilidad a Pediatría AP",
+      "description": "Tiempo estimado por carretera al destino verificado más próximo.",
+      "geography_levels": [
+        "grid_250m"
+      ],
+      "time_start": 2024,
+      "time_end": 2024,
+      "unit": "bandas de minutos",
+      "chart_types": [
+        "map",
+        "table"
+      ],
+      "map_allowed": true,
+      "map_geography": "grid_250m",
+      "classification_method": "fixed_thresholds",
+      "color_scale": "accessibility_fixed",
+      "compatible_metrics": [],
+      "source_id": "PedsData:ACCESS",
+      "method_id": "osrm_accessibility_v1",
+      "status": "VALIDATED",
+      "source_ids": [
+        "ISTAC:GRID_2024",
+        "SCS:REGCESS_U20",
+        "OSM:CANARY_2026_09_26",
+        "OSRM:5.27.1"
+      ],
+      "formula": {
+        "expression": "min(tiempo OSRM por carretera desde representative_point de celda hasta destino VERIFIED del mismo componente terrestre)",
+        "inputs": [
+          {
+            "metric": "Población origen 0–14",
+            "source_id": "ISTAC:GRID_2024"
+          },
+          {
+            "metric": "Recurso destino pediátrico",
+            "source_id": "SCS:REGCESS_U20"
+          },
+          {
+            "metric": "Red viaria",
+            "source_id": "OSM:CANARY_2026_09_26"
+          },
+          {
+            "metric": "Motor de rutas",
+            "source_id": "OSRM:5.27.1"
+          }
+        ],
+        "transformations": [
+          "Punto representativo de celda",
+          "Preselección de destinos por isla",
+          "Matrices OSRM",
+          "La Graciosa = requires_interisland_transfer"
+        ],
+        "rounding": "segundos internos; minutos UI a 1 decimal"
+      },
+      "transformations": [
+        "Punto representativo de celda",
+        "Preselección de destinos por isla",
+        "Matrices OSRM",
+        "La Graciosa = requires_interisland_transfer"
+      ],
+      "rounding": "segundos internos; minutos UI a 1 decimal",
+      "limitations": [
+        "Tiempo estimado por carretera al destino verificado más próximo.",
+        "No se representa por debajo de grid_250m."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "child_population_grid_0_14",
+      "label": "Población infantil 0–14",
+      "description": "Población residente 0–14 observada en la malla ISTAC 2024.",
+      "geography_levels": [
+        "grid_250m",
+        "municipality",
+        "island"
+      ],
+      "time_start": 2024,
+      "time_end": 2024,
+      "unit": "niños",
+      "chart_types": [
+        "bar",
+        "map",
+        "table"
+      ],
+      "map_allowed": true,
+      "map_geography": "grid_250m",
+      "classification_method": "fixed_thresholds",
+      "color_scale": "sequential_blue",
+      "compatible_metrics": [
+        "accessibility_ap"
+      ],
+      "source_id": "ISTAC:GRID_2024",
+      "method_id": "istac_grid_children_0_14_v1",
+      "status": "OBSERVED",
+      "source_ids": [
+        "ISTAC:GRID_2024"
+      ],
+      "formula": null,
+      "transformations": [
+        "Filtrado y selección sin alterar la escala publicada"
+      ],
+      "rounding": "precisión publicada; formato UI máximo 2 decimales",
+      "limitations": [
+        "Población residente 0–14 observada en la malla ISTAC 2024.",
+        "No se representa por debajo de grid_250m, municipality, island."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    },
+    {
+      "metric_id": "verified_pediatric_facilities",
+      "label": "Recursos pediátricos AP verificados",
+      "description": "Centros U20 verificados y elegibles como destinos de Pediatría AP.",
+      "geography_levels": [
+        "facility",
+        "municipality",
+        "island"
+      ],
+      "time_start": 2026,
+      "time_end": 2026,
+      "unit": "recursos",
+      "chart_types": [
+        "bar",
+        "map",
+        "table"
+      ],
+      "map_allowed": true,
+      "map_geography": "facility",
+      "classification_method": "categorical",
+      "color_scale": "categorical_status",
+      "compatible_metrics": [
+        "accessibility_ap"
+      ],
+      "source_id": "SCS:REGCESS_U20",
+      "method_id": "verified_facility_catalog_v2",
+      "status": "OBSERVED",
+      "source_ids": [
+        "SCS:REGCESS_U20"
+      ],
+      "formula": null,
+      "transformations": [
+        "Filtrado y selección sin alterar la escala publicada"
+      ],
+      "rounding": "precisión publicada; formato UI máximo 2 decimales",
+      "limitations": [
+        "Centros U20 verificados y elegibles como destinos de Pediatría AP.",
+        "No se representa por debajo de facility, municipality, island."
+      ],
+      "visualizations": [
+        "series",
+        "compare",
+        "explorer",
+        "map"
+      ],
+      "lineage_version": "phase8-v1"
+    }
+  ]
+}

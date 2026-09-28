@@ -33,4 +33,4 @@ test("phase6 adolescence and prevention keep admission boundaries",async({page})
  await expect(page.getByText(/SIVAMIN no ofrece aún/)).toBeVisible();
  await page.screenshot({path:"test-results/phase6-prevention-"+test.info().project.name+".png",fullPage:true});
 });
-test("mobile navigation reaches new modules",async({page},info)=>{test.skip(info.project.name!=="iphone");await page.goto("/");await page.getByText("Explorar",{exact:true}).click();await page.getByRole("navigation",{name:"Navegación móvil"}).getByRole("link",{name:"Utilización",exact:true}).click();await expect(page).toHaveURL(/utilizacion/);});
+test("mobile navigation reaches new modules",async({page},info)=>{test.skip(info.project.name!=="iphone");await page.goto("/");await page.locator("summary").filter({hasText:"Explorar"}).click();await page.getByRole("navigation",{name:"Navegación móvil"}).getByRole("link",{name:"Utilización",exact:true}).click();await expect(page).toHaveURL(/utilizacion/);});

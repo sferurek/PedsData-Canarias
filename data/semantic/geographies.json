@@ -1,0 +1,46 @@
+{
+  "version": "phase8-v1",
+  "islands": [
+    {
+      "id": "el-hierro",
+      "label": "El Hierro"
+    },
+    {
+      "id": "la-gomera",
+      "label": "La Gomera"
+    },
+    {
+      "id": "la-palma",
+      "label": "La Palma"
+    },
+    {
+      "id": "tenerife",
+      "label": "Tenerife"
+    },
+    {
+      "id": "gran-canaria",
+      "label": "Gran Canaria"
+    },
+    {
+      "id": "fuerteventura",
+      "label": "Fuerteventura"
+    },
+    {
+      "id": "lanzarote",
+      "label": "Lanzarote"
+    }
+  ],
+  "special_geographies": [
+    {
+      "id": "canarias",
+      "label": "Canarias",
+      "level": "autonomous_community"
+    },
+    {
+      "id": "la-graciosa",
+      "label": "La Graciosa",
+      "level": "land_component",
+      "query_status": "INSUFFICIENT_DATA"
+    }
+  ]
+}

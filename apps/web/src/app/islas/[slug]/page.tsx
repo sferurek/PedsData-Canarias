@@ -23,19 +23,18 @@ export default async function IslandPage({ params }: { params: Promise<{ slug: s
       <p>{formatNumber(island.children_0_14)} niños de 0–14 años · {island.eligible_pediatric_facilities} destinos AP elegibles · {island.pediatricians_ap_2024} pediatras AP SIAP.</p>
     </section>
     <section className="profile-metrics">
-      <Metric label="Mediana" value={island.median_travel_minutes} suffix=" min" detail="Ponderada por niños" />
-      <Metric label="P90" value={island.p90_travel_minutes} suffix=" min" detail="Ponderado por niños" />
-      <Metric label="Población a <15 min" value={island.pct_under_15_total} suffix=" %" detail="Denominador total" />
-      <Metric label="Población a ≥30 min" value={island.pct_30_or_more_total} suffix=" %" detail="Denominador total" />
-      <Metric label="No evaluable" value={island.population_not_evaluated} detail="Niños" />
-      <Metric label="Transferencia" value={island.population_requires_interisland_transfer} detail="Tiempo desconocido" />
+      <Metric metricId="accessibility_ap" label="Mediana" value={island.median_travel_minutes} suffix=" min" detail="Ponderada por niños" />
+      <Metric metricId="accessibility_ap" label="P90" value={island.p90_travel_minutes} suffix=" min" detail="Ponderado por niños" />
+      <Metric metricId="accessibility_ap" label="Población a <15 min" value={island.pct_under_15_total} suffix=" %" detail="Denominador total" />
+      <Metric metricId="accessibility_ap" label="Población a ≥30 min" value={island.pct_30_or_more_total} suffix=" %" detail="Denominador total" />
+      <Metric metricId="accessibility_ap" label="No evaluable" value={island.population_not_evaluated} detail="Niños" />
+      <Metric metricId="accessibility_ap" label="Transferencia" value={island.population_requires_interisland_transfer} detail="Tiempo desconocido" />
     </section>
     <section className="profile-context" aria-label="Contexto territorial">
-      <Metric label="Renta por persona" value={island.income_mean_per_person_2023} suffix=" €" detail="Media municipal ponderada por niños · 2023" />
-      <Metric label="Densidad infantil" value={island.child_density_per_km2} suffix=" /km²" detail="0–14 · 2024" />
-      <Metric label="Niños en celdas rurales" value={island.rural_children_pct} suffix=" %" detail="DEGURBA 2021" />
-      <Metric label="Estaciones de aire" value={island.air_station_count} detail="Inventario 2025" />
-      <Metric label="Estaciones meteo" value={island.weather_station_count} detail="Observaciones pendientes" />
+      <Metric metricId="income_mean_per_person" label="Renta por persona" value={island.income_mean_per_person_2023} suffix=" €" detail="Media municipal ponderada por niños · 2023" />
+      <Metric metricId="child_density" label="Densidad infantil" value={island.child_density_per_km2} suffix=" /km²" detail="0–14 · 2024" />
+      <Metric metricId="degurba" label="Niños en celdas rurales" value={island.rural_children_pct} suffix=" %" detail="DEGURBA 2021" />
+      <Metric metricId="PM10" label="Estaciones de aire" value={island.air_station_count} detail="Inventario 2025" />
     </section>
     <section className="island-clinical" aria-label="Resultados clínicos disponibles"><div><span className="eyebrow">Resultados de salud · escala insular</span><h2>Perinatalidad y mortalidad segura</h2></div><div className="clinical-kpis"><div><span>Nacimientos 2024</span><strong>{formatNumber(clinicalSummary.births_2024)}</strong><small>Residencia materna</small></div><div><span>Prematuridad 2024</span><strong>{clinicalSummary.preterm_rate_2024?.toLocaleString("es-ES")} %</strong><small>{clinicalSummary.preterm_births_2024} nacimientos</small></div><div><span>Defunciones 0–14</span><strong>{clinicalSummary.pediatric_deaths_2020_2024 ?? "Suprimido"}</strong><small>2020–2024 · {clinicalSummary.mortality_status}</small></div></div><p>Hospitalización pediátrica disponible únicamente a nivel Canarias. Urgencias comparables no disponibles para el perfil insular.</p><Link className="primary-link" href="/resultados">Ver resultados y método</Link></section>
     {isLanzarote && <aside className="transfer-note"><strong>La Graciosa</strong><p>Transferencia interinsular requerida; tiempo terrestre no estimado. 91 niños permanecen fuera del denominador evaluable.</p></aside>}

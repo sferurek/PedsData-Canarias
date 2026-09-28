@@ -1,0 +1,39 @@
+{
+  "version": "phase8-v1",
+  "inputs": [
+    {
+      "path": "docs/evidence/siap_population.csv",
+      "sha256": "ff655c1d8c77961fa9d1297b65acddb22d1501312375d9fcfec94a75fd2e8fc7"
+    },
+    {
+      "path": "docs/evidence/siap_professionals.csv",
+      "sha256": "ca254c7076a698e953937b876b63fd5623acf64a14ea45dead0b5a40e9c1389f"
+    },
+    {
+      "path": "data/curated/pediatric_primary_care_activity.csv",
+      "sha256": "a2855f08fff041cf1367fdd6cdf3bebba903ca26dec433a2561be4db5495296f"
+    },
+    {
+      "path": "data/curated/perinatal_indicators.csv",
+      "sha256": "f968f485dc9aaed2aaf20f08031b51f919ae4d93c60c7c6f57458b84eab64936"
+    },
+    {
+      "path": "data/curated/pediatric_waiting_list.csv",
+      "sha256": "1b6e4dbff032b21df56c2f32f2a79387ff336a94aa03aabbc5dcb088bd5491af"
+    },
+    {
+      "path": "data/curated/pediatric_hospital_indicators.csv",
+      "sha256": "84aa5bbeef2fa0dc4e39a166e8eccc6576dd97e316492d51120eddc09bbd2146"
+    }
+  ],
+  "outputs": {
+    "time_series_points": 1372,
+    "metrics": 18,
+    "islands": 7
+  },
+  "rules": [
+    "source geography preserved",
+    "no arbitrary SQL",
+    "one thematic fill layer at a time"
+  ]
+}

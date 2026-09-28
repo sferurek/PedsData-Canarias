@@ -1,0 +1,2 @@
+import {TemporalWorkbench} from "@/components/TemporalWorkbench";
+export default function ComparePage(){return <><section className="semantic-hero"><span className="eyebrow">Comparar territorios</span><h1>Dos a siete islas,<br/><em>la misma definición.</em></h1><p>Compara observaciones compatibles y cuantifica diferencias sin convertirlas en rankings.</p></section><main className="semantic-shell"><TemporalWorkbench mode="compare"/></main></>}

@@ -1,0 +1,72 @@
+{
+  "version": "phase8-v1",
+  "valid_pairs": [
+    [
+      "child_population_assigned_0_14",
+      "pediatricians_ap"
+    ],
+    [
+      "child_population_assigned_0_14",
+      "pediatric_consultations"
+    ],
+    [
+      "pediatric_consultations",
+      "pediatricians_ap"
+    ],
+    [
+      "assigned_children_per_pediatrician",
+      "pediatricians_ap"
+    ],
+    [
+      "pediatric_consultations",
+      "pediatric_distinct_users"
+    ],
+    [
+      "pediatric_frequentation",
+      "pediatricians_ap"
+    ],
+    [
+      "pediatric_consultations",
+      "pediatric_frequentation"
+    ],
+    [
+      "consultations_per_pediatrician",
+      "pediatricians_ap"
+    ],
+    [
+      "consultations_per_pediatrician",
+      "pediatric_consultations"
+    ],
+    [
+      "births",
+      "preterm_rate"
+    ],
+    [
+      "child_density",
+      "income_mean_per_person"
+    ]
+  ],
+  "invalid_pairs": [
+    {
+      "metrics": [
+        "PM10",
+        "pediatric_hospital_discharges_selected"
+      ],
+      "reason": "Estación y hospitalización regional no comparten geografía para mapa directo."
+    },
+    {
+      "metrics": [
+        "pediatric_hospital_discharges_selected",
+        "income_mean_per_person"
+      ],
+      "reason": "La hospitalización regional no puede asignarse a municipios."
+    },
+    {
+      "metrics": [
+        "pediatric_outpatient_waiting_stock",
+        "pediatricians_ap"
+      ],
+      "reason": "El stock es regional y la dotación insular; la semántica territorial de espera no está resuelta."
+    }
+  ]
+}
