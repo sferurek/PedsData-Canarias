@@ -1,0 +1,265 @@
+municipality_id,municipality_name,island_id,indicator,period_start,period_end,value,unit,status,geography_level,source_id,dataset_version,retrieved_at
+35001,Agaete,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,35502.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35001,Agaete,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,14183.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35001,Agaete,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,18550.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35002,Agüimes,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,36840.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35002,Agüimes,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,13266.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35002,Agüimes,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,18550.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35003,Antigua,fuerteventura,net_income_mean_per_household,2023-01-01,2023-12-31,33154.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35003,Antigua,fuerteventura,net_income_mean_per_person,2023-01-01,2023-12-31,12607.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35003,Antigua,fuerteventura,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35004,Arrecife,lanzarote,net_income_mean_per_household,2023-01-01,2023-12-31,35247.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35004,Arrecife,lanzarote,net_income_mean_per_person,2023-01-01,2023-12-31,12079.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35004,Arrecife,lanzarote,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35005,Artenara,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,37468.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35005,Artenara,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,16305.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35005,Artenara,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,20650.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35006,Arucas,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,37373.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35006,Arucas,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,13772.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35006,Arucas,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,18550.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35007,Betancuria,fuerteventura,net_income_mean_per_household,2023-01-01,2023-12-31,38635.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35007,Betancuria,fuerteventura,net_income_mean_per_person,2023-01-01,2023-12-31,15454.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35007,Betancuria,fuerteventura,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,20650.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35008,Firgas,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,36870.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35008,Firgas,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,13444.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35008,Firgas,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,18550.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35009,Gáldar,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,34745.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35009,Gáldar,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,13113.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35009,Gáldar,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35010,Haría,lanzarote,net_income_mean_per_household,2023-01-01,2023-12-31,37216.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35010,Haría,lanzarote,net_income_mean_per_person,2023-01-01,2023-12-31,14985.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35010,Haría,lanzarote,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,19950.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35011,Ingenio,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,35479.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35011,Ingenio,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,12747.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35011,Ingenio,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35012,Mogán,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,32869.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35012,Mogán,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,12113.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35012,Mogán,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35013,Moya,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,32650.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35013,Moya,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,13041.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35013,Moya,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35014,La Oliva,fuerteventura,net_income_mean_per_household,2023-01-01,2023-12-31,33606.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35014,La Oliva,fuerteventura,net_income_mean_per_person,2023-01-01,2023-12-31,12260.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35014,La Oliva,fuerteventura,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35015,Pájara,fuerteventura,net_income_mean_per_household,2023-01-01,2023-12-31,33165.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35015,Pájara,fuerteventura,net_income_mean_per_person,2023-01-01,2023-12-31,12552.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35015,Pájara,fuerteventura,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35016,Las Palmas de Gran Canaria,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,39148.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35016,Las Palmas de Gran Canaria,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,14968.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35016,Las Palmas de Gran Canaria,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,18550.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35017,Puerto del Rosario,fuerteventura,net_income_mean_per_household,2023-01-01,2023-12-31,37142.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35017,Puerto del Rosario,fuerteventura,net_income_mean_per_person,2023-01-01,2023-12-31,13593.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35017,Puerto del Rosario,fuerteventura,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35018,San Bartolomé,lanzarote,net_income_mean_per_household,2023-01-01,2023-12-31,39459.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35018,San Bartolomé,lanzarote,net_income_mean_per_person,2023-01-01,2023-12-31,14824.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35018,San Bartolomé,lanzarote,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,19950.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35019,San Bartolomé de Tirajana,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,34193.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35019,San Bartolomé de Tirajana,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,13866.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35019,San Bartolomé de Tirajana,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17150.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35020,La Aldea de San Nicolás,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,32201.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35020,La Aldea de San Nicolás,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,11942.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35020,La Aldea de San Nicolás,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15750.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35021,Santa Brígida,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,49767.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35021,Santa Brígida,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,17397.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35021,Santa Brígida,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,23450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35022,Santa Lucía de Tirajana,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,33026.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35022,Santa Lucía de Tirajana,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,11566.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35022,Santa Lucía de Tirajana,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35023,Santa María de Guía de Gran Canaria,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,34486.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35023,Santa María de Guía de Gran Canaria,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,13253.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35023,Santa María de Guía de Gran Canaria,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35024,Teguise,lanzarote,net_income_mean_per_household,2023-01-01,2023-12-31,44950.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35024,Teguise,lanzarote,net_income_mean_per_person,2023-01-01,2023-12-31,16026.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35024,Teguise,lanzarote,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,22050.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35025,Tejeda,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,32839.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35025,Tejeda,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,15760.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35025,Tejeda,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,19950.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35026,Telde,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,34808.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35026,Telde,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,13303.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35026,Telde,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35027,Teror,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,35505.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35027,Teror,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,13557.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35027,Teror,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35028,Tías,lanzarote,net_income_mean_per_household,2023-01-01,2023-12-31,38929.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35028,Tías,lanzarote,net_income_mean_per_person,2023-01-01,2023-12-31,13735.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35028,Tías,lanzarote,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35029,Tinajo,lanzarote,net_income_mean_per_household,2023-01-01,2023-12-31,42550.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35029,Tinajo,lanzarote,net_income_mean_per_person,2023-01-01,2023-12-31,14106.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35029,Tinajo,lanzarote,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,19950.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35030,Tuineje,fuerteventura,net_income_mean_per_household,2023-01-01,2023-12-31,38027.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35030,Tuineje,fuerteventura,net_income_mean_per_person,2023-01-01,2023-12-31,12909.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35030,Tuineje,fuerteventura,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,18550.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35031,Valsequillo de Gran Canaria,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,37168.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35031,Valsequillo de Gran Canaria,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,13381.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35031,Valsequillo de Gran Canaria,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35032,Valleseco,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,35646.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35032,Valleseco,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,14167.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35032,Valleseco,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,18550.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35033,Vega de San Mateo,gran-canaria,net_income_mean_per_household,2023-01-01,2023-12-31,32930.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35033,Vega de San Mateo,gran-canaria,net_income_mean_per_person,2023-01-01,2023-12-31,13472.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35033,Vega de San Mateo,gran-canaria,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17150.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35034,Yaiza,lanzarote,net_income_mean_per_household,2023-01-01,2023-12-31,38884.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35034,Yaiza,lanzarote,net_income_mean_per_person,2023-01-01,2023-12-31,13379.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+35034,Yaiza,lanzarote,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38001,Adeje,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,33398.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38001,Adeje,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,12060.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38001,Adeje,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15750.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38002,Agulo,la-gomera,net_income_mean_per_household,2023-01-01,2023-12-31,32739.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38002,Agulo,la-gomera,net_income_mean_per_person,2023-01-01,2023-12-31,14664.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38002,Agulo,la-gomera,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,19250.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38003,Alajeró,la-gomera,net_income_mean_per_household,2023-01-01,2023-12-31,33176.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38003,Alajeró,la-gomera,net_income_mean_per_person,2023-01-01,2023-12-31,14306.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38003,Alajeró,la-gomera,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,19250.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38004,Arafo,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,36435.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38004,Arafo,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,13371.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38004,Arafo,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38005,Arico,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,29362.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38005,Arico,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,12195.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38005,Arico,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38006,Arona,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,30042.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38006,Arona,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,11184.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38006,Arona,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15050.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38007,Barlovento,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,32458.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38007,Barlovento,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,12510.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38007,Barlovento,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15050.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38008,Breña Alta,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,41375.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38008,Breña Alta,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,15396.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38008,Breña Alta,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,19250.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38009,Breña Baja,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,44111.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38009,Breña Baja,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,16662.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38009,Breña Baja,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,20650.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38010,Buenavista del Norte,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,30558.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38010,Buenavista del Norte,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,11531.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38010,Buenavista del Norte,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15750.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38011,Candelaria,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,38582.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38011,Candelaria,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,15334.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38011,Candelaria,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,19950.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38012,Fasnia,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,31773.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38012,Fasnia,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,13412.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38012,Fasnia,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38013_2007,Frontera,el-hierro,net_income_mean_per_household,2023-01-01,2023-12-31,33599.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38013_2007,Frontera,el-hierro,net_income_mean_per_person,2023-01-01,2023-12-31,11737.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38013_2007,Frontera,el-hierro,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15750.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38014,Fuencaliente de La Palma,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,28457.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38014,Fuencaliente de La Palma,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,12676.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38014,Fuencaliente de La Palma,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38015,Garachico,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,32085.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38015,Garachico,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,11650.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38015,Garachico,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15750.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38016,Garafía,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,24335.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38016,Garafía,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,10321.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38016,Garafía,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,12950.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38017,Granadilla de Abona,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,33490.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38017,Granadilla de Abona,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,11489.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38017,Granadilla de Abona,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15750.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38018,La Guancha,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,32283.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38018,La Guancha,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,11717.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38018,La Guancha,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38019,Guía de Isora,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,33068.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38019,Guía de Isora,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,11649.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38019,Guía de Isora,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38020,Güímar,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,34496.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38020,Güímar,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,13074.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38020,Güímar,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38021,Hermigua,la-gomera,net_income_mean_per_household,2023-01-01,2023-12-31,33155.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38021,Hermigua,la-gomera,net_income_mean_per_person,2023-01-01,2023-12-31,13692.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38021,Hermigua,la-gomera,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,18550.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38022,Icod de los Vinos,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,30225.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38022,Icod de los Vinos,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,11084.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38022,Icod de los Vinos,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15050.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38023,San Cristóbal de La Laguna,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,36633.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38023,San Cristóbal de La Laguna,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,13863.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38023,San Cristóbal de La Laguna,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38024,Los Llanos de Aridane,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,36279.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38024,Los Llanos de Aridane,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,13170.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38024,Los Llanos de Aridane,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38025,La Matanza de Acentejo,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,34628.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38025,La Matanza de Acentejo,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,12328.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38025,La Matanza de Acentejo,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17150.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38026,La Orotava,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,34805.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38026,La Orotava,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,12366.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38026,La Orotava,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38027,El Paso,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,39352.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38027,El Paso,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,13943.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38027,El Paso,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17150.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38028,Puerto de la Cruz,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,32185.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38028,Puerto de la Cruz,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,13871.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38028,Puerto de la Cruz,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38029,Puntagorda,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,31077.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38029,Puntagorda,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,10939.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38029,Puntagorda,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,13650.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38030,Puntallana,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,38687.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38030,Puntallana,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,13698.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38030,Puntallana,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38031,Los Realejos,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,32945.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38031,Los Realejos,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,11695.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38031,Los Realejos,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38032,El Rosario,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,46886.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38032,El Rosario,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,17109.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38032,El Rosario,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,22050.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38033,San Andrés y Sauces,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,38064.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38033,San Andrés y Sauces,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,13996.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38033,San Andrés y Sauces,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17150.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38034,San Juan de la Rambla,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,31495.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38034,San Juan de la Rambla,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,11614.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38034,San Juan de la Rambla,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38035,San Miguel de Abona,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,33528.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38035,San Miguel de Abona,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,11842.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38035,San Miguel de Abona,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38036,San Sebastián de La Gomera,la-gomera,net_income_mean_per_household,2023-01-01,2023-12-31,39171.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38036,San Sebastián de La Gomera,la-gomera,net_income_mean_per_person,2023-01-01,2023-12-31,14782.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38036,San Sebastián de La Gomera,la-gomera,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,19950.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38037,Santa Cruz de La Palma,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,42144.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38037,Santa Cruz de La Palma,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,15511.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38037,Santa Cruz de La Palma,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,19250.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38038,Santa Cruz de Tenerife,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,39072.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38038,Santa Cruz de Tenerife,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,15110.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38038,Santa Cruz de Tenerife,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,18550.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38039,Santa Úrsula,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,32989.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38039,Santa Úrsula,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,12710.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38039,Santa Úrsula,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38040,Santiago del Teide,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,31966.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38040,Santiago del Teide,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,11280.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38040,Santiago del Teide,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15750.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38041,El Sauzal,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,39975.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38041,El Sauzal,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,14373.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38041,El Sauzal,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,18550.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38042,Los Silos,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,30775.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38042,Los Silos,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,11053.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38042,Los Silos,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15050.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38043,Tacoronte,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,37994.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38043,Tacoronte,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,13864.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38043,Tacoronte,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38044,El Tanque,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,30676.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38044,El Tanque,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,10932.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38044,El Tanque,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15750.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38045,Tazacorte,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,30805.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38045,Tazacorte,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,12756.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38045,Tazacorte,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15750.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38046,Tegueste,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,43325.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38046,Tegueste,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,15490.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38046,Tegueste,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,20650.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38047,Tijarafe,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,34002.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38047,Tijarafe,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,14001.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38047,Tijarafe,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17150.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38048,Valverde,el-hierro,net_income_mean_per_household,2023-01-01,2023-12-31,35734.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38048,Valverde,el-hierro,net_income_mean_per_person,2023-01-01,2023-12-31,14908.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38048,Valverde,el-hierro,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,19250.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38049,Valle Gran Rey,la-gomera,net_income_mean_per_household,2023-01-01,2023-12-31,31175.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38049,Valle Gran Rey,la-gomera,net_income_mean_per_person,2023-01-01,2023-12-31,12663.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38049,Valle Gran Rey,la-gomera,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15750.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38050,Vallehermoso,la-gomera,net_income_mean_per_household,2023-01-01,2023-12-31,27502.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38050,Vallehermoso,la-gomera,net_income_mean_per_person,2023-01-01,2023-12-31,12958.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38050,Vallehermoso,la-gomera,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,16450.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38051,La Victoria de Acentejo,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,29516.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38051,La Victoria de Acentejo,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,11153.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38051,La Victoria de Acentejo,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,15050.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38052,Vilaflor de Chasna,tenerife,net_income_mean_per_household,2023-01-01,2023-12-31,32751.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38052,Vilaflor de Chasna,tenerife,net_income_mean_per_person,2023-01-01,2023-12-31,12862.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38052,Vilaflor de Chasna,tenerife,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17150.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38053,Villa de Mazo,la-palma,net_income_mean_per_household,2023-01-01,2023-12-31,37233.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38053,Villa de Mazo,la-palma,net_income_mean_per_person,2023-01-01,2023-12-31,13874.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38053,Villa de Mazo,la-palma,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17850.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38901,El Pinar de El Hierro,el-hierro,net_income_mean_per_household,2023-01-01,2023-12-31,32670.0,EUR/hogar,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38901,El Pinar de El Hierro,el-hierro,net_income_mean_per_person,2023-01-01,2023-12-31,13089.0,EUR/persona,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00
+38901,El Pinar de El Hierro,el-hierro,net_income_median_per_consumption_unit,2023-01-01,2023-12-31,17150.0,EUR/unidad_consumo,COMPLETE,municipality,ine-adrh,ADRH-2023,2026-09-28T00:00:00+00:00

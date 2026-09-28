@@ -1,0 +1,89 @@
+municipality_id,municipality_name,island_id,period_start,period_end,children_0_14,area_km2,child_density_per_km2,populated_child_cells,children_per_populated_cell,degurba_urban_centre_children_pct,degurba_urban_cluster_children_pct,degurba_rural_children_pct,degurba_unclassified_children_pct,status,geography_level,source_id,dataset_version,retrieved_at
+35001,Agaete,gran-canaria,2024-01-01,2024-12-31,521,44.5116,11.705,41,12.707,0.0,86.76,13.24,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35002,Agüimes,gran-canaria,2024-01-01,2024-12-31,4401,78.8972,55.781,119,36.983,2.02,89.96,8.02,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35003,Antigua,fuerteventura,2024-01-01,2024-12-31,1541,250.248,6.158,137,11.248,0.0,80.01,19.01,0.97,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35004,Arrecife,lanzarote,2024-01-01,2024-12-31,9363,24.2754,385.699,127,73.724,92.81,6.76,0.43,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35005,Artenara,gran-canaria,2024-01-01,2024-12-31,43,66.419,0.647,14,3.071,0.0,0.0,100.0,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35006,Arucas,gran-canaria,2024-01-01,2024-12-31,4438,32.8387,135.145,226,19.637,0.0,99.21,0.79,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35007,Betancuria,fuerteventura,2024-01-01,2024-12-31,97,103.709,0.935,23,4.217,0.0,0.0,100.0,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35008,Firgas,gran-canaria,2024-01-01,2024-12-31,803,16.0278,50.1,91,8.824,0.0,95.27,4.73,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35009,Gáldar,gran-canaria,2024-01-01,2024-12-31,2543,62.5451,40.659,175,14.531,0.0,92.1,7.9,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35010,Haría,lanzarote,2024-01-01,2024-12-31,542,145.653,3.721,83,6.53,0.0,66.05,32.47,1.48,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35011,Ingenio,gran-canaria,2024-01-01,2024-12-31,4005,39.0881,102.461,123,32.561,0.0,97.15,2.77,0.07,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35012,Mogán,gran-canaria,2024-01-01,2024-12-31,2460,171.42,14.351,159,15.472,0.0,83.41,16.59,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35013,Moya,gran-canaria,2024-01-01,2024-12-31,854,32.2046,26.518,112,7.625,0.0,89.81,10.19,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35014,La Oliva,fuerteventura,2024-01-01,2024-12-31,3756,355.334,10.57,268,14.015,0.0,78.57,21.41,0.03,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35015,Pájara,fuerteventura,2024-01-01,2024-12-31,2984,384.938,7.752,110,27.127,0.0,93.63,5.26,1.11,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35016,Las Palmas de Gran Canaria,gran-canaria,2024-01-01,2024-12-31,39915,103.316,386.339,743,53.721,87.07,12.48,0.45,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35017,Puerto del Rosario,fuerteventura,2024-01-01,2024-12-31,6265,290.771,21.546,242,25.888,0.0,86.66,13.33,0.02,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35018,San Bartolomé,lanzarote,2024-01-01,2024-12-31,2532,40.7611,62.118,109,23.229,0.0,94.79,5.21,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35019,San Bartolomé de Tirajana,gran-canaria,2024-01-01,2024-12-31,5739,332.419,17.264,278,20.644,0.0,90.1,9.84,0.05,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35020,La Aldea de San Nicolás,gran-canaria,2024-01-01,2024-12-31,703,123.708,5.683,85,8.271,0.0,71.98,27.6,0.43,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35021,Santa Brígida,gran-canaria,2024-01-01,2024-12-31,1947,23.8319,81.697,199,9.784,0.0,94.3,5.7,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35022,Santa Lucía de Tirajana,gran-canaria,2024-01-01,2024-12-31,10201,62.5283,163.142,147,69.395,95.1,4.44,0.46,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35023,Santa María de Guía de Gran Canaria,gran-canaria,2024-01-01,2024-12-31,1357,42.6182,31.841,133,10.203,0.0,79.81,20.19,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35024,Teguise,lanzarote,2024-01-01,2024-12-31,2971,224.006,13.263,289,10.28,0.0,73.88,26.12,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35025,Tejeda,gran-canaria,2024-01-01,2024-12-31,103,103.863,0.992,38,2.711,0.0,54.37,45.63,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35026,Telde,gran-canaria,2024-01-01,2024-12-31,11710,100.331,116.714,428,27.36,85.31,11.87,2.76,0.06,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35027,Teror,gran-canaria,2024-01-01,2024-12-31,1298,25.8073,50.296,146,8.89,0.0,86.52,13.48,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35028,Tías,lanzarote,2024-01-01,2024-12-31,2584,64.3205,40.174,228,11.333,0.0,86.49,13.47,0.04,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35029,Tinajo,lanzarote,2024-01-01,2024-12-31,942,135.779,6.938,114,8.263,0.0,65.82,34.08,0.11,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35030,Tuineje,fuerteventura,2024-01-01,2024-12-31,2302,276.298,8.332,143,16.098,0.0,65.73,34.01,0.26,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35031,Valsequillo de Gran Canaria,gran-canaria,2024-01-01,2024-12-31,1125,38.8013,28.994,118,9.534,0.0,85.42,14.58,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35032,Valleseco,gran-canaria,2024-01-01,2024-12-31,307,22.1289,13.873,59,5.203,0.0,66.45,33.55,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35033,Vega de San Mateo,gran-canaria,2024-01-01,2024-12-31,735,38.2139,19.234,99,7.424,0.0,70.75,29.25,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+35034,Yaiza,lanzarote,2024-01-01,2024-12-31,2499,212.094,11.783,153,16.333,0.0,84.91,15.09,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38001,Adeje,tenerife,2024-01-01,2024-12-31,6516,105.952,61.5,245,26.596,0.0,94.81,5.17,0.02,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38002,Agulo,la-gomera,2024-01-01,2024-12-31,63,25.0041,2.52,10,6.3,0.0,85.71,14.29,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38003,Alajeró,la-gomera,2024-01-01,2024-12-31,175,49.6068,3.528,23,7.609,0.0,49.14,50.86,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38004,Arafo,tenerife,2024-01-01,2024-12-31,694,34.3618,20.197,75,9.253,0.0,78.53,21.47,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38005,Arico,tenerife,2024-01-01,2024-12-31,1042,178.934,5.823,121,8.612,0.0,74.38,25.43,0.19,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38006,Arona,tenerife,2024-01-01,2024-12-31,10456,81.5985,128.14,369,28.336,0.0,97.23,2.72,0.06,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38007,Barlovento,la-palma,2024-01-01,2024-12-31,180,43.4952,4.138,44,4.091,0.0,37.78,55.56,6.67,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38008,Breña Alta,la-palma,2024-01-01,2024-12-31,931,30.8934,30.136,115,8.096,0.0,92.37,7.63,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38009,Breña Baja,la-palma,2024-01-01,2024-12-31,750,14.1588,52.971,85,8.824,0.0,93.87,6.13,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38010,Buenavista del Norte,tenerife,2024-01-01,2024-12-31,426,66.3641,6.419,54,7.889,0.0,77.7,21.83,0.47,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38011,Candelaria,tenerife,2024-01-01,2024-12-31,3580,49.4805,72.352,179,20.0,0.0,94.13,5.87,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38012,Fasnia,tenerife,2024-01-01,2024-12-31,270,45.2491,5.967,51,5.294,0.0,54.44,45.56,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38013_2007,Frontera,el-hierro,2024-01-01,2024-12-31,515,81.509,6.318,56,9.196,0.0,73.98,26.02,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38014,Fuencaliente de La Palma,la-palma,2024-01-01,2024-12-31,191,55.9002,3.417,34,5.618,0.0,49.21,50.79,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38015,Garachico,tenerife,2024-01-01,2024-12-31,518,27.432,18.883,49,10.571,0.0,88.22,11.78,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38016,Garafía,la-palma,2024-01-01,2024-12-31,179,102.584,1.745,36,4.972,0.0,33.52,63.69,2.79,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38017,Granadilla de Abona,tenerife,2024-01-01,2024-12-31,7867,162.504,48.411,263,29.913,0.0,92.81,7.19,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38018,La Guancha,tenerife,2024-01-01,2024-12-31,657,23.8047,27.6,53,12.396,0.0,94.82,5.18,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38019,Guía de Isora,tenerife,2024-01-01,2024-12-31,2833,144.102,19.66,145,19.538,0.0,89.87,10.06,0.07,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38020,Güímar,tenerife,2024-01-01,2024-12-31,2648,102.888,25.737,180,14.711,0.0,86.82,13.07,0.11,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38021,Hermigua,la-gomera,2024-01-01,2024-12-31,122,39.1587,3.116,31,3.935,0.0,46.72,53.28,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38022,Icod de los Vinos,tenerife,2024-01-01,2024-12-31,2685,95.858,28.01,248,10.827,0.0,93.74,6.26,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38023,San Cristóbal de La Laguna,tenerife,2024-01-01,2024-12-31,17011,102.452,166.039,691,24.618,75.76,22.72,1.52,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38024,Los Llanos de Aridane,la-palma,2024-01-01,2024-12-31,2345,35.6043,65.863,177,13.249,0.0,90.75,9.13,0.13,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38025,La Matanza de Acentejo,tenerife,2024-01-01,2024-12-31,1137,14.0507,80.921,79,14.392,0.0,93.49,6.51,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38026,La Orotava,tenerife,2024-01-01,2024-12-31,5008,206.887,24.206,315,15.898,14.84,81.99,3.17,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38027,El Paso,la-palma,2024-01-01,2024-12-31,882,135.94,6.488,156,5.654,0.0,77.78,22.22,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38028,Puerto de la Cruz,tenerife,2024-01-01,2024-12-31,2947,8.8259,333.904,107,27.542,89.07,10.82,0.1,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38029,Puntagorda,la-palma,2024-01-01,2024-12-31,247,30.8058,8.018,52,4.75,0.0,78.54,21.46,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38030,Puntallana,la-palma,2024-01-01,2024-12-31,303,35.0504,8.645,70,4.329,0.0,47.52,50.83,1.65,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38031,Los Realejos,tenerife,2024-01-01,2024-12-31,4368,56.4681,77.353,231,18.909,80.2,15.84,3.96,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38032,El Rosario,tenerife,2024-01-01,2024-12-31,2090,39.3115,53.165,194,10.773,0.53,88.61,10.86,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38033,San Andrés y Sauces,la-palma,2024-01-01,2024-12-31,374,42.8729,8.723,54,6.926,0.0,85.83,14.17,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38034,San Juan de la Rambla,tenerife,2024-01-01,2024-12-31,579,20.6052,28.1,59,9.814,0.0,92.92,7.08,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38035,San Miguel de Abona,tenerife,2024-01-01,2024-12-31,3331,42.0366,79.24,136,24.493,0.0,92.79,7.21,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38036,San Sebastián de La Gomera,la-gomera,2024-01-01,2024-12-31,1104,113.134,9.758,64,17.25,0.0,91.12,8.15,0.72,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38037,Santa Cruz de La Palma,la-palma,2024-01-01,2024-12-31,1331,43.4121,30.66,53,25.113,0.0,93.31,6.69,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38038,Santa Cruz de Tenerife,tenerife,2024-01-01,2024-12-31,22573,150.44,150.047,418,54.002,93.82,4.94,1.22,0.02,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38039,Santa Úrsula,tenerife,2024-01-01,2024-12-31,1883,22.3731,84.164,98,19.214,0.0,99.04,0.96,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38040,Santiago del Teide,tenerife,2024-01-01,2024-12-31,1617,51.9876,31.104,69,23.435,0.0,88.62,11.38,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38041,El Sauzal,tenerife,2024-01-01,2024-12-31,1119,18.2011,61.48,103,10.864,0.0,98.21,1.79,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38042,Los Silos,tenerife,2024-01-01,2024-12-31,455,24.4968,18.574,37,12.297,0.0,89.23,10.77,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38043,Tacoronte,tenerife,2024-01-01,2024-12-31,3007,29.9964,100.245,264,11.39,0.0,98.17,1.83,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38044,El Tanque,tenerife,2024-01-01,2024-12-31,327,26.0648,12.546,42,7.786,0.0,68.2,31.8,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38045,Tazacorte,la-palma,2024-01-01,2024-12-31,376,11.5638,32.515,33,11.394,0.0,95.21,4.79,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38046,Tegueste,tenerife,2024-01-01,2024-12-31,1333,26.4448,50.407,124,10.75,0.0,93.55,6.45,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38047,Tijarafe,la-palma,2024-01-01,2024-12-31,223,53.5489,4.164,79,2.823,0.0,26.46,73.54,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38048,Valverde,el-hierro,2024-01-01,2024-12-31,538,103.685,5.189,91,5.912,0.0,50.19,49.44,0.37,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38049,Valle Gran Rey,la-gomera,2024-01-01,2024-12-31,376,32.2082,11.674,49,7.673,0.0,87.23,12.77,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38050,Vallehermoso,la-gomera,2024-01-01,2024-12-31,169,108.542,1.557,43,3.93,0.0,55.62,44.38,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38051,La Victoria de Acentejo,tenerife,2024-01-01,2024-12-31,1035,18.0863,57.226,58,17.845,0.0,98.74,1.26,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38052,Vilaflor de Chasna,tenerife,2024-01-01,2024-12-31,170,56.2711,3.021,35,4.857,0.0,43.53,56.47,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38053,Villa de Mazo,la-palma,2024-01-01,2024-12-31,511,70.672,7.231,125,4.088,0.0,39.73,60.27,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00
+38901,El Pinar de El Hierro,el-hierro,2024-01-01,2024-12-31,161,82.7368,1.946,18,8.944,0.0,94.41,5.59,0.0,ESTIMATED,municipality,istac-grid-degurba,grid-2024+degurba-2021,2026-09-28T00:00:00+00:00

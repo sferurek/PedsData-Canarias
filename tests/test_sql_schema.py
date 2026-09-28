@@ -16,7 +16,9 @@ class PostGISSchemaTests(unittest.TestCase):
         tables = ("island", "municipality", "health_area", "health_zone",
                   "child_population_grid", "pediatric_facility", "pediatric_resource",
                   "source", "dataset_version", "coverage_status", "routing_snapshot",
-                  "accessibility_result")
+                  "accessibility_result", "socioeconomic_indicator", "territorial_indicator",
+                  "air_station", "air_observation", "weather_station",
+                  "weather_observation", "environment_event")
         for table in tables:
             self.assertIn(f"CREATE TABLE {table}", self.sql)
 
