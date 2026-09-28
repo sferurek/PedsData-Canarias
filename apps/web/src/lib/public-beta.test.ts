@@ -1,0 +1,12 @@
+import {describe,expect,it} from "vitest";
+import {askPedsData,metrics} from "./semantic";
+import {sources} from "./provenance";
+
+const publicQueries=[
+ "Evolución de pediatras en Lanzarote","Evolución de pediatras en Tenerife","Evolución de pediatras en El Hierro","Compara consultas entre Tenerife y Gran Canaria","Compara consultas entre Lanzarote y Fuerteventura","Cómo ha cambiado la frecuentación pediátrica en El Hierro","Cómo ha cambiado la frecuentación pediátrica en La Gomera","Último valor de pediatras en La Palma","Último valor de consultas en Gran Canaria","Evolución de población infantil en Tenerife","Compara población infantil y pediatras en Lanzarote desde 2010","Compara pediatras y consultas en Tenerife desde 2010","Mapa de renta en Canarias","Mapa de renta en Fuerteventura","Mapa de accesibilidad pediátrica de Fuerteventura","Mapa de accesibilidad pediátrica de Lanzarote","Mapa de densidad infantil en Canarias","Mapa de urbanización en Canarias","Mapa de pediatras en Canarias","Mapa de frecuentación en Canarias","Mapa de prematuridad en Canarias","Mapa de PM10 en Canarias","Mapa de PM2,5 en Canarias","Mapa de NO2 en Canarias","Mapa de hospitalización pediátrica","Evolución de pediatras en Lanzarote desde 1990","Muéstrame alergias por municipio","Compara renta y hospitalización","Evolución de pediatras en La Graciosa","Evolución de consultas en Atlantis"
+];
+
+describe("public beta Ask PedsData QA",()=>{
+ it("checks 30 supported and controlled-error questions",()=>{expect(publicQueries).toHaveLength(30);for(const question of publicQueries){const result=askPedsData(question);if(result.ok){expect(result.source_ids.length,question).toBeGreaterThan(0);expect(result.metrics.every(metric=>metric.source_ids.length>0),question).toBe(true)}else{expect(["METRIC_NOT_FOUND","GEOGRAPHY_NOT_SUPPORTED","TIME_RANGE_NOT_AVAILABLE","INCOMPATIBLE_METRICS","NOT_MAPPABLE","INSUFFICIENT_DATA"],question).toContain(result.error)}}});
+ it("requires sources and formulas throughout the metric registry",()=>{const sourceIds=new Set(sources.map(source=>source.source_id));for(const metric of metrics){expect(metric.source_ids.length,metric.metric_id).toBeGreaterThan(0);for(const id of metric.source_ids)expect(sourceIds.has(id),`${metric.metric_id}: ${id}`).toBe(true);if(metric.status==="DERIVED_RATE"||metric.formula)expect(metric.formula,metric.metric_id).not.toBeNull();if(metric.map_allowed){expect(metric.map_geography,metric.metric_id).toBeTruthy();expect(metric.classification_method,metric.metric_id).toBeTruthy()}}});
+});

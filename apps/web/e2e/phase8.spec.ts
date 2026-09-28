@@ -11,10 +11,11 @@ test("temporal explorer compares registered island series with provenance",async
 
 test("thematic map keeps one scale and exposes method",async({page})=>{
  await page.goto("/#mapa");
+ await page.locator("#mapa").scrollIntoViewIfNeeded();
  const layer=page.getByLabel("Capa principal",{exact:true});
  await layer.selectOption("income");
  await expect(page.getByText(/Renta media por persona/)).toBeVisible();
- await expect(page.getByText(/quantile/)).toBeVisible();
+ await expect(page.getByText(/quantile/).first()).toBeVisible();
  await layer.selectOption("pediatricians_ap");
  await expect(page.getByLabel("Año de la capa")).toBeEnabled();
  await layer.selectOption("PM10");

@@ -4,8 +4,9 @@ const islands = ["El Hierro", "La Gomera", "La Palma", "Tenerife", "Gran Canaria
 
 test("home exposes seven islands, bands and provenance", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { name: /Territorio infantil/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Salud infantil/i })).toBeVisible();
   for (const island of islands) await expect(page.getByRole("heading", { name: island, exact: true })).toBeVisible();
+  await page.locator("#mapa").scrollIntoViewIfNeeded();
   await expect(page.getByLabel("Mapa temático pediátrico de Canarias")).toBeVisible();
   await expect(page.getByText("Transferencia interinsular", { exact: true })).toBeVisible();
   await expect(page.getByText("Fuente y metodología").first()).toBeVisible();
@@ -14,6 +15,7 @@ test("home exposes seven islands, bands and provenance", async ({ page }) => {
 
 test("island filters and profiles remain navigable", async ({ page }) => {
   await page.goto("/#mapa");
+  await page.locator("#mapa").scrollIntoViewIfNeeded();
   const islandFilter = page.getByLabel("Ámbito insular");
   await islandFilter.selectOption("el-hierro");
   await expect(islandFilter).toHaveValue("el-hierro");
@@ -33,12 +35,13 @@ test("Lanzarote treats La Graciosa as transfer, never a road time", async ({ pag
 test("small municipality keeps its profile but withholds detailed indicators", async ({ page }) => {
   await page.goto("/municipios/35007");
   await expect(page.getByRole("heading", { name: "Betancuria" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: /Perfil no publicable/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Detalle no publicable/i })).toBeVisible();
   await expect(page.getByText(/umbral conservador de 100/i)).toBeVisible();
 });
 
 test("visual QA has no horizontal clipping across home and seven profiles", async ({ page }, testInfo) => {
   await page.goto("/");
+  await page.locator("#mapa").scrollIntoViewIfNeeded();
   await expect(page.locator(".map-shell")).toBeVisible();
   await expect(page.getByText("Cargando capa validada…")).toBeHidden({ timeout: 15000 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
@@ -57,6 +60,7 @@ test("visual QA has no horizontal clipping across home and seven profiles", asyn
 
 test("social and environmental layers remain navigable", async ({ page }) => {
   await page.goto("/#mapa");
+  await page.locator("#mapa").scrollIntoViewIfNeeded();
   const layer = page.getByLabel("Capa principal", { exact: true });
   await layer.selectOption("income");
   await expect(page.getByText(/Renta media por persona/)).toBeVisible();
