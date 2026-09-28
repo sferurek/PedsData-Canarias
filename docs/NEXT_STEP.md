@@ -8,3 +8,7 @@
 6. mantener el análisis respiratorio × ambiente desactivado hasta disponer de geografía y periodicidad compatibles.
 
 Gate ZBS permanece RED. RC3 sigue siendo preview para revisión técnica, clínica y metodológica.
+
+## Después de Fase 6
+
+Revisar RC4 clínica y metodológicamente. Prioridad: aclarar semántica territorial C00045A; export BDCAP pediátrico y SIVAMIN con cohortes/denominadores; extracción doble de cribados. No activar ZBS ni espera insular. HBSC no se encadena con ESdE/ESTUDES. No enviar solicitudes sin autorización y no promover preview a producción automáticamente.
