@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-28T02:31:47.565946+00:00",
+  "created_at": "2026-09-28T03:16:48.326266+00:00",
   "parser_version": "phase4-v1",
   "causality_claimed": false,
   "air_interpolation": false,
@@ -8,26 +8,32 @@
   "sources": {
     "income_las_palmas": {
       "path": "data/raw/ine_adrh_2023_las_palmas.json",
+      "source_url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/31151?nult=1",
       "checksum_sha256": "2c3688e54a95b2b7fa54fec46db65e6fb5dfbd202539786bd1bbd8614852603f"
     },
     "income_santa_cruz": {
       "path": "data/raw/ine_adrh_2023_santa_cruz_tenerife.json",
+      "source_url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/31187?nult=1",
       "checksum_sha256": "0a6ee84fa2c1c3b53e39cca77f8e1b887fd46daef72bb68e855c85162c918bd4"
     },
     "degurba": {
       "path": "data/raw/istac_degurba_1km_2021.geojson",
+      "source_url": "https://datos.canarias.es/catalogos/estadisticas/dataset/925b847c-6754-47db-9d73-93f94afb7c1a/resource/de634983-bce7-464d-9ffb-5ce3410e7874/download/degurba_1km2021.json",
       "checksum_sha256": "064c675f671435b5cde9b0e9fe6ee1895518fe248a9c67bbc3db0c72349d8952"
     },
     "air_daily": {
       "path": "data/raw/canarias_air_quality_2025/Datos diarios_2025.xlsx",
+      "source_url": "https://www3.gobiernodecanarias.org/medioambiente/calidaddelaire/documentos/Datos2025.zip",
       "checksum_sha256": "dd9798ea80d49f53dd5ccabcd6b5923cfbae56ee638ecd2424b9bfbf607260f5"
     },
     "air_coordinates": {
       "path": "data/raw/canarias_air_station_summary_2024.pdf",
+      "source_url": "https://www3.gobiernodecanarias.org/medioambiente/calidaddelaire/documentos/Resumen_Evaluacion_2024.pdf",
       "checksum_sha256": "be0a76fcfdc73316c2b5fc5576f590a3fc3a96cc6f761e3f93e1b3e0725ae717"
     },
     "weather_stations": {
       "path": "data/raw/sitcan_weather_stations.csv",
+      "source_url": "https://opendata.sitcan.es/upload/meteorologia/estaciones.csv",
       "checksum_sha256": "d86e665c80dea1bb3cf84c41cf1f2ddd90fc11a2774a429a6b2a08e1acf726fb"
     }
   },
