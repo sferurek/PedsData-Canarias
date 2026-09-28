@@ -29,6 +29,15 @@ La ruta `/resultados` separa los datos clínicos del mapa inicial y ofrece filtr
 - build Next.js verde con 99 páginas;
 - paquete clínico específico de ruta: 419.384 bytes sin comprimir.
 
+## Preview RC3
+
+- URL: `https://web-dy4ml0fr9-sferureks-projects.vercel.app`;
+- deployment: `dpl_4gH4LMGmGTqY5EVMCZqmLJWv1u29`;
+- commit de aplicación desplegado: `b3486fc5ee0a692fd4ffe77666ca600ba2874b0a`;
+- estado Vercel: `READY`, target `preview`;
+- build: 99 páginas;
+- RC1 y RC2 se conservan como previews independientes.
+
 ## Dictamen
 
-**RC3 READY FOR REVIEW**, condicionado a verificar el preview remoto. No es una release final y no habilita comparaciones hospitalarias ni causalidad.
+**RC3 READY FOR REVIEW**. El preview remoto fue verificado en resultados clínicos, perfiles insulares, perfiles municipales y tratamiento de La Graciosa. No es una release final y no habilita comparaciones hospitalarias ni causalidad.
