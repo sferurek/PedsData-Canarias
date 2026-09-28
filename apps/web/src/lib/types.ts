@@ -1,4 +1,4 @@
-export type DataStatus = "VALIDATED" | "PARTIAL" | "PENDING OFFICIAL GEOMETRY" | "COMPLETE" | "ESTIMATED" | "PROVISIONAL" | "NOT AVAILABLE";
+export type DataStatus = "VALIDATED" | "PARTIAL" | "PENDING OFFICIAL GEOMETRY" | "COMPLETE" | "ESTIMATED" | "PROVISIONAL" | "NOT AVAILABLE" | "OBSERVED" | "SURVEY_ESTIMATE" | "DERIVED_RATE" | "MULTIYEAR_AGGREGATE" | "NOT_COMPARABLE";
 export type ContextFields = {
   income_mean_per_person_2023: number;
   income_mean_per_household_2023: number;
