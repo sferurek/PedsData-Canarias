@@ -898,7 +898,9 @@
       "label": "Accesibilidad a Pediatría AP",
       "description": "Tiempo estimado por carretera al destino verificado más próximo.",
       "geography_levels": [
-        "grid_250m"
+        "grid_250m",
+        "municipality",
+        "island"
       ],
       "time_start": 2024,
       "time_end": 2024,
@@ -958,7 +960,7 @@
       "rounding": "segundos internos; minutos UI a 1 decimal",
       "limitations": [
         "Tiempo estimado por carretera al destino verificado más próximo.",
-        "No se representa por debajo de grid_250m."
+        "La malla se agrega por población infantil a municipio e isla; no se desagrega por debajo de 250 m."
       ],
       "visualizations": [
         "series",

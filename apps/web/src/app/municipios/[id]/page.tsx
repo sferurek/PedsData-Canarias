@@ -16,7 +16,7 @@ export default async function MunicipalityPage({ params }: { params: Promise<{ i
   return <>
     <section className="profile-hero"><Link className="back-link" href={`/islas/${island.slug}`}>← {islandName(municipality.island_id)}</Link>
       <div className="profile-title"><div><span className="eyebrow">Perfil municipal</span><h1>{municipality.municipality_name}</h1></div><DataBadge status={publishable ? "VALIDATED" : "PARTIAL"} /></div>
-      <p>Acceso geográfico potencial a Pediatría AP · población 0–14 · 2024.</p>
+      <p>Acceso geográfico potencial a Pediatría AP · población 0–14 · 2024.</p><Link className="primary-link report-cta" href={`/informes/${municipality.municipality_id}`}>Generar informe territorial</Link>
     </section>
     {publishable ? <>
       <section className="profile-metrics">
