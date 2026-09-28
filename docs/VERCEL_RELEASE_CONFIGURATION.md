@@ -21,4 +21,4 @@ GitHub desplegaba desde la raíz del monorepo y no encontraba Next.js. Se fijó 
 
 ## Política de apertura
 
-Los previews permanecen protegidos. Antes del despliegue público se cambia Vercel Authentication a `deploymentType=preview`: protege previews y deja producción accesible. No se promueve un preview anterior ni se reutiliza un alias de RC. La producción se verifica con `curl` sin bypass en Home, sitemap, robots y rutas críticas.
+Los previews permanecen protegidos. Vercel Authentication quedó fijada en `deploymentType=preview`: protege previews y deja producción accesible. No se promueve un preview anterior ni se reutiliza un alias de RC. La producción `https://web-sferureks-projects.vercel.app` se verificó con `curl` sin bypass en Home, sitemap, robots y rutas críticas; 11 rutas devolvieron HTTP 200.

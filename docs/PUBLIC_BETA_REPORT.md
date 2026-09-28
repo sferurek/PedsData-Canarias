@@ -23,4 +23,4 @@ ZBS permanece fuera por falta de geometría oficial vigente. La Graciosa no reci
 
 ## Dictamen
 
-**PUBLIC_BETA_READY**, condicionado a que la suite final sobre el commit de release, el preview Vercel y el smoke público de producción permanezcan verdes. La URL y el commit desplegado se incorporan al cierre.
+**PUBLIC_BETA_READY**. La suite final, el preview Vercel y el smoke público permanecen verdes. Producción: `https://web-sferureks-projects.vercel.app`; deployment inicial del merge: `56068b372511318bfaed1b3d823ea040b29780c7`. Vercel Authentication protege únicamente previews.

@@ -22,7 +22,7 @@ Versión: `v0.9.0-beta.1`. Fecha: 28/09/2026.
 - [x] 15/15 enlaces oficiales accesibles.
 - [x] branding y lenguaje público sin RC/preview visible.
 - [x] página de citación sin DOI inventado.
-- [ ] merge final, tag, GitHub release y deployment de producción.
-- [ ] smoke público sin autenticación y verificación final de alias.
+- [x] merge final y deployment de producción; tag y GitHub release se crean sobre este cierre documental.
+- [x] smoke público sin autenticación: 11 rutas HTTP 200 y 8/8 E2E en iPhone y escritorio.
 
-Los dos últimos checks se ejecutan únicamente después del gate `PUBLIC_BETA_READY` sobre la rama validada.
+URL pública validada: `https://web-sferureks-projects.vercel.app`. Los previews permanecen protegidos.
