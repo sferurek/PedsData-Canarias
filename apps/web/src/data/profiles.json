@@ -48,7 +48,12 @@
       "slug": "el-hierro",
       "pediatricians_ap_2024": 1,
       "pct_under_15_total": 59.72,
-      "pct_20_or_more_total": 10.38
+      "pct_20_or_more_total": 10.38,
+      "income_mean_per_person_2023": 13321.57,
+      "child_density_per_km2": 4.53,
+      "rural_children_pct": 33.69,
+      "air_station_count": 1,
+      "weather_station_count": 4
     },
     {
       "island_id": "fuerteventura",
@@ -90,7 +95,12 @@
       "slug": "fuerteventura",
       "pediatricians_ap_2024": 19,
       "pct_under_15_total": 80.54,
-      "pct_20_or_more_total": 12.24
+      "pct_20_or_more_total": 12.24,
+      "income_mean_per_person_2023": 12927.81,
+      "child_density_per_km2": 10.2,
+      "rural_children_pct": 17.52,
+      "air_station_count": 5,
+      "weather_station_count": 8
     },
     {
       "island_id": "gran-canaria",
@@ -132,7 +142,12 @@
       "slug": "gran-canaria",
       "pediatricians_ap_2024": 110,
       "pct_under_15_total": 98.83,
-      "pct_20_or_more_total": 0.66
+      "pct_20_or_more_total": 0.66,
+      "income_mean_per_person_2023": 13897.82,
+      "child_density_per_km2": 60.97,
+      "rural_children_pct": 3.93,
+      "air_station_count": 13,
+      "weather_station_count": 12
     },
     {
       "island_id": "la-gomera",
@@ -174,7 +189,12 @@
       "slug": "la-gomera",
       "pediatricians_ap_2024": 1,
       "pct_under_15_total": 5.82,
-      "pct_20_or_more_total": 87.51
+      "pct_20_or_more_total": 87.51,
+      "income_mean_per_person_2023": 14103.03,
+      "child_density_per_km2": 5.46,
+      "rural_children_pct": 18.72,
+      "air_station_count": 3,
+      "weather_station_count": 5
     },
     {
       "island_id": "la-palma",
@@ -216,7 +236,12 @@
       "slug": "la-palma",
       "pediatricians_ap_2024": 13,
       "pct_under_15_total": 78.37,
-      "pct_20_or_more_total": 10.8
+      "pct_20_or_more_total": 10.8,
+      "income_mean_per_person_2023": 14085.02,
+      "child_density_per_km2": 12.49,
+      "rural_children_pct": 19.01,
+      "air_station_count": 4,
+      "weather_station_count": 5
     },
     {
       "island_id": "lanzarote",
@@ -258,7 +283,12 @@
       "slug": "lanzarote",
       "pediatricians_ap_2024": 26,
       "pct_under_15_total": 86.29,
-      "pct_20_or_more_total": 7.48
+      "pct_20_or_more_total": 7.48,
+      "income_mean_per_person_2023": 13464.21,
+      "child_density_per_km2": 25.31,
+      "rural_children_pct": 10.13,
+      "air_station_count": 4,
+      "weather_station_count": 6
     },
     {
       "island_id": "tenerife",
@@ -300,7 +330,12 @@
       "slug": "tenerife",
       "pediatricians_ap_2024": 148,
       "pct_under_15_total": 99.9,
-      "pct_20_or_more_total": 0.03
+      "pct_20_or_more_total": 0.03,
+      "income_mean_per_person_2023": 13179.12,
+      "child_density_per_km2": 54.18,
+      "rural_children_pct": 4.54,
+      "air_station_count": 21,
+      "weather_station_count": 17
     }
   ],
   "municipalities": [
@@ -344,7 +379,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38013_2007",
       "pct_under_15_total": 5.44,
-      "pct_20_or_more_total": 24.47
+      "pct_20_or_more_total": 24.47,
+      "income_mean_per_person_2023": 11737.0,
+      "income_mean_per_household_2023": 33599.0,
+      "income_median_per_consumption_unit_2023": 15750.0,
+      "child_density_per_km2": 6.318,
+      "rural_children_pct": 26.02,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "el-hierro",
@@ -386,7 +427,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38048",
       "pct_under_15_total": 99.63,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 14908.0,
+      "income_mean_per_household_2023": 35734.0,
+      "income_median_per_consumption_unit_2023": 19250.0,
+      "child_density_per_km2": 5.189,
+      "rural_children_pct": 49.44,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "el-hierro",
@@ -428,7 +475,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38901",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13089.0,
+      "income_mean_per_household_2023": 32670.0,
+      "income_median_per_consumption_unit_2023": 17150.0,
+      "child_density_per_km2": 1.946,
+      "rural_children_pct": 5.59,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "fuerteventura",
@@ -470,7 +523,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35003",
       "pct_under_15_total": 25.63,
-      "pct_20_or_more_total": 33.35
+      "pct_20_or_more_total": 33.35,
+      "income_mean_per_person_2023": 12607.0,
+      "income_mean_per_household_2023": 33154.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 6.158,
+      "rural_children_pct": 19.01,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "fuerteventura",
@@ -478,7 +537,13 @@
       "municipality_name": "Betancuria",
       "publication_status": "not_publishable",
       "publication_reason": "population_below_100",
-      "slug": "35007"
+      "slug": "35007",
+      "income_mean_per_person_2023": 15454.0,
+      "income_mean_per_household_2023": 38635.0,
+      "income_median_per_consumption_unit_2023": 20650.0,
+      "child_density_per_km2": 0.935,
+      "rural_children_pct": 100.0,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "fuerteventura",
@@ -520,7 +585,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35014",
       "pct_under_15_total": 91.35,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 12260.0,
+      "income_mean_per_household_2023": 33606.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 10.57,
+      "rural_children_pct": 21.41,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "fuerteventura",
@@ -562,7 +633,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35015",
       "pct_under_15_total": 99.52,
-      "pct_20_or_more_total": 0.07
+      "pct_20_or_more_total": 0.07,
+      "income_mean_per_person_2023": 12552.0,
+      "income_mean_per_household_2023": 33165.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 7.752,
+      "rural_children_pct": 5.26,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "fuerteventura",
@@ -604,7 +681,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35017",
       "pct_under_15_total": 98.62,
-      "pct_20_or_more_total": 0.4
+      "pct_20_or_more_total": 0.4,
+      "income_mean_per_person_2023": 13593.0,
+      "income_mean_per_household_2023": 37142.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 21.546,
+      "rural_children_pct": 13.33,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "fuerteventura",
@@ -646,7 +729,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35030",
       "pct_under_15_total": 28.71,
-      "pct_20_or_more_total": 64.2
+      "pct_20_or_more_total": 64.2,
+      "income_mean_per_person_2023": 12909.0,
+      "income_mean_per_household_2023": 38027.0,
+      "income_median_per_consumption_unit_2023": 18550.0,
+      "child_density_per_km2": 8.332,
+      "rural_children_pct": 34.01,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -688,7 +777,13 @@
       "pct_not_evaluated_total": 0.77,
       "slug": "35001",
       "pct_under_15_total": 95.01,
-      "pct_20_or_more_total": 0.19
+      "pct_20_or_more_total": 0.19,
+      "income_mean_per_person_2023": 14183.0,
+      "income_mean_per_household_2023": 35502.0,
+      "income_median_per_consumption_unit_2023": 18550.0,
+      "child_density_per_km2": 11.705,
+      "rural_children_pct": 13.24,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -730,7 +825,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35002",
       "pct_under_15_total": 99.59,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13266.0,
+      "income_mean_per_household_2023": 36840.0,
+      "income_median_per_consumption_unit_2023": 18550.0,
+      "child_density_per_km2": 55.781,
+      "rural_children_pct": 8.02,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -738,7 +839,13 @@
       "municipality_name": "Artenara",
       "publication_status": "not_publishable",
       "publication_reason": "population_below_100",
-      "slug": "35005"
+      "slug": "35005",
+      "income_mean_per_person_2023": 16305.0,
+      "income_mean_per_household_2023": 37468.0,
+      "income_median_per_consumption_unit_2023": 20650.0,
+      "child_density_per_km2": 0.647,
+      "rural_children_pct": 100.0,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -780,7 +887,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35006",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13772.0,
+      "income_mean_per_household_2023": 37373.0,
+      "income_median_per_consumption_unit_2023": 18550.0,
+      "child_density_per_km2": 135.145,
+      "rural_children_pct": 0.79,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -822,7 +935,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35008",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13444.0,
+      "income_mean_per_household_2023": 36870.0,
+      "income_median_per_consumption_unit_2023": 18550.0,
+      "child_density_per_km2": 50.1,
+      "rural_children_pct": 4.73,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -864,7 +983,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35009",
       "pct_under_15_total": 98.5,
-      "pct_20_or_more_total": 0.04
+      "pct_20_or_more_total": 0.04,
+      "income_mean_per_person_2023": 13113.0,
+      "income_mean_per_household_2023": 34745.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 40.659,
+      "rural_children_pct": 7.9,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -906,7 +1031,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35011",
       "pct_under_15_total": 99.89,
-      "pct_20_or_more_total": 0.05
+      "pct_20_or_more_total": 0.05,
+      "income_mean_per_person_2023": 12747.0,
+      "income_mean_per_household_2023": 35479.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 102.461,
+      "rural_children_pct": 2.77,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -948,7 +1079,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35012",
       "pct_under_15_total": 94.32,
-      "pct_20_or_more_total": 4.18
+      "pct_20_or_more_total": 4.18,
+      "income_mean_per_person_2023": 12113.0,
+      "income_mean_per_household_2023": 32869.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 14.351,
+      "rural_children_pct": 16.59,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -990,7 +1127,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35013",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13041.0,
+      "income_mean_per_household_2023": 32650.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 26.518,
+      "rural_children_pct": 10.19,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -1032,7 +1175,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35016",
       "pct_under_15_total": 99.99,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 14968.0,
+      "income_mean_per_household_2023": 39148.0,
+      "income_median_per_consumption_unit_2023": 18550.0,
+      "child_density_per_km2": 386.339,
+      "rural_children_pct": 0.45,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -1074,7 +1223,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35019",
       "pct_under_15_total": 90.56,
-      "pct_20_or_more_total": 5.53
+      "pct_20_or_more_total": 5.53,
+      "income_mean_per_person_2023": 13866.0,
+      "income_mean_per_household_2023": 34193.0,
+      "income_median_per_consumption_unit_2023": 17150.0,
+      "child_density_per_km2": 17.264,
+      "rural_children_pct": 9.84,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -1116,7 +1271,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35020",
       "pct_under_15_total": 94.31,
-      "pct_20_or_more_total": 5.69
+      "pct_20_or_more_total": 5.69,
+      "income_mean_per_person_2023": 11942.0,
+      "income_mean_per_household_2023": 32201.0,
+      "income_median_per_consumption_unit_2023": 15750.0,
+      "child_density_per_km2": 5.683,
+      "rural_children_pct": 27.6,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -1158,7 +1319,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35021",
       "pct_under_15_total": 99.99,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 17397.0,
+      "income_mean_per_household_2023": 49767.0,
+      "income_median_per_consumption_unit_2023": 23450.0,
+      "child_density_per_km2": 81.697,
+      "rural_children_pct": 5.7,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -1200,7 +1367,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35022",
       "pct_under_15_total": 99.04,
-      "pct_20_or_more_total": 0.09
+      "pct_20_or_more_total": 0.09,
+      "income_mean_per_person_2023": 11566.0,
+      "income_mean_per_household_2023": 33026.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 163.142,
+      "rural_children_pct": 0.46,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -1242,7 +1415,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35023",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13253.0,
+      "income_mean_per_household_2023": 34486.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 31.841,
+      "rural_children_pct": 20.19,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -1284,7 +1463,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35025",
       "pct_under_15_total": 0.0,
-      "pct_20_or_more_total": 99.03
+      "pct_20_or_more_total": 99.03,
+      "income_mean_per_person_2023": 15760.0,
+      "income_mean_per_household_2023": 32839.0,
+      "income_median_per_consumption_unit_2023": 19950.0,
+      "child_density_per_km2": 0.992,
+      "rural_children_pct": 45.63,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -1326,7 +1511,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35026",
       "pct_under_15_total": 99.91,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13303.0,
+      "income_mean_per_household_2023": 34808.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 116.714,
+      "rural_children_pct": 2.76,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -1368,7 +1559,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35027",
       "pct_under_15_total": 99.77,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13557.0,
+      "income_mean_per_household_2023": 35505.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 50.296,
+      "rural_children_pct": 13.48,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -1410,7 +1607,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35031",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13381.0,
+      "income_mean_per_household_2023": 37168.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 28.994,
+      "rural_children_pct": 14.58,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -1452,7 +1655,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35032",
       "pct_under_15_total": 95.76,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 14167.0,
+      "income_mean_per_household_2023": 35646.0,
+      "income_median_per_consumption_unit_2023": 18550.0,
+      "child_density_per_km2": 13.873,
+      "rural_children_pct": 33.55,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "gran-canaria",
@@ -1494,7 +1703,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35033",
       "pct_under_15_total": 95.65,
-      "pct_20_or_more_total": 0.68
+      "pct_20_or_more_total": 0.68,
+      "income_mean_per_person_2023": 13472.0,
+      "income_mean_per_household_2023": 32930.0,
+      "income_median_per_consumption_unit_2023": 17150.0,
+      "child_density_per_km2": 19.234,
+      "rural_children_pct": 29.25,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-gomera",
@@ -1502,7 +1717,13 @@
       "municipality_name": "Agulo",
       "publication_status": "not_publishable",
       "publication_reason": "population_below_100",
-      "slug": "38002"
+      "slug": "38002",
+      "income_mean_per_person_2023": 14664.0,
+      "income_mean_per_household_2023": 32739.0,
+      "income_median_per_consumption_unit_2023": 19250.0,
+      "child_density_per_km2": 2.52,
+      "rural_children_pct": 14.29,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-gomera",
@@ -1544,7 +1765,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38003",
       "pct_under_15_total": 38.29,
-      "pct_20_or_more_total": 60.0
+      "pct_20_or_more_total": 60.0,
+      "income_mean_per_person_2023": 14306.0,
+      "income_mean_per_household_2023": 33176.0,
+      "income_median_per_consumption_unit_2023": 19250.0,
+      "child_density_per_km2": 3.528,
+      "rural_children_pct": 50.86,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-gomera",
@@ -1586,7 +1813,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38021",
       "pct_under_15_total": 9.84,
-      "pct_20_or_more_total": 28.69
+      "pct_20_or_more_total": 28.69,
+      "income_mean_per_person_2023": 13692.0,
+      "income_mean_per_household_2023": 33155.0,
+      "income_median_per_consumption_unit_2023": 18550.0,
+      "child_density_per_km2": 3.116,
+      "rural_children_pct": 53.28,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-gomera",
@@ -1628,7 +1861,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38036",
       "pct_under_15_total": 0.91,
-      "pct_20_or_more_total": 95.38
+      "pct_20_or_more_total": 95.38,
+      "income_mean_per_person_2023": 14782.0,
+      "income_mean_per_household_2023": 39171.0,
+      "income_median_per_consumption_unit_2023": 19950.0,
+      "child_density_per_km2": 9.758,
+      "rural_children_pct": 8.15,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-gomera",
@@ -1670,7 +1909,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38049",
       "pct_under_15_total": 1.6,
-      "pct_20_or_more_total": 97.34
+      "pct_20_or_more_total": 97.34,
+      "income_mean_per_person_2023": 12663.0,
+      "income_mean_per_household_2023": 31175.0,
+      "income_median_per_consumption_unit_2023": 15750.0,
+      "child_density_per_km2": 11.674,
+      "rural_children_pct": 12.77,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-gomera",
@@ -1712,7 +1957,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38050",
       "pct_under_15_total": 13.02,
-      "pct_20_or_more_total": 81.66
+      "pct_20_or_more_total": 81.66,
+      "income_mean_per_person_2023": 12958.0,
+      "income_mean_per_household_2023": 27502.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 1.557,
+      "rural_children_pct": 44.38,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -1754,7 +2005,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38007",
       "pct_under_15_total": 0.0,
-      "pct_20_or_more_total": 100.0
+      "pct_20_or_more_total": 100.0,
+      "income_mean_per_person_2023": 12510.0,
+      "income_mean_per_household_2023": 32458.0,
+      "income_median_per_consumption_unit_2023": 15050.0,
+      "child_density_per_km2": 4.138,
+      "rural_children_pct": 55.56,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -1796,7 +2053,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38008",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 15396.0,
+      "income_mean_per_household_2023": 41375.0,
+      "income_median_per_consumption_unit_2023": 19250.0,
+      "child_density_per_km2": 30.136,
+      "rural_children_pct": 7.63,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -1838,7 +2101,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38009",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 16662.0,
+      "income_mean_per_household_2023": 44111.0,
+      "income_median_per_consumption_unit_2023": 20650.0,
+      "child_density_per_km2": 52.971,
+      "rural_children_pct": 6.13,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -1880,7 +2149,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38014",
       "pct_under_15_total": 0.0,
-      "pct_20_or_more_total": 100.0
+      "pct_20_or_more_total": 100.0,
+      "income_mean_per_person_2023": 12676.0,
+      "income_mean_per_household_2023": 28457.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 3.417,
+      "rural_children_pct": 50.79,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -1922,7 +2197,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38016",
       "pct_under_15_total": 0.0,
-      "pct_20_or_more_total": 96.09
+      "pct_20_or_more_total": 96.09,
+      "income_mean_per_person_2023": 10321.0,
+      "income_mean_per_household_2023": 24335.0,
+      "income_median_per_consumption_unit_2023": 12950.0,
+      "child_density_per_km2": 1.745,
+      "rural_children_pct": 63.69,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -1964,7 +2245,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38024",
       "pct_under_15_total": 95.78,
-      "pct_20_or_more_total": 0.51
+      "pct_20_or_more_total": 0.51,
+      "income_mean_per_person_2023": 13170.0,
+      "income_mean_per_household_2023": 36279.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 65.863,
+      "rural_children_pct": 9.13,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -2006,7 +2293,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38027",
       "pct_under_15_total": 42.29,
-      "pct_20_or_more_total": 0.22
+      "pct_20_or_more_total": 0.22,
+      "income_mean_per_person_2023": 13943.0,
+      "income_mean_per_household_2023": 39352.0,
+      "income_median_per_consumption_unit_2023": 17150.0,
+      "child_density_per_km2": 6.488,
+      "rural_children_pct": 22.22,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -2048,7 +2341,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38029",
       "pct_under_15_total": 14.57,
-      "pct_20_or_more_total": 4.05
+      "pct_20_or_more_total": 4.05,
+      "income_mean_per_person_2023": 10939.0,
+      "income_mean_per_household_2023": 31077.0,
+      "income_median_per_consumption_unit_2023": 13650.0,
+      "child_density_per_km2": 8.018,
+      "rural_children_pct": 21.46,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -2090,7 +2389,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38030",
       "pct_under_15_total": 82.84,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13698.0,
+      "income_mean_per_household_2023": 38687.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 8.645,
+      "rural_children_pct": 50.83,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -2132,7 +2437,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38033",
       "pct_under_15_total": 0.0,
-      "pct_20_or_more_total": 97.59
+      "pct_20_or_more_total": 97.59,
+      "income_mean_per_person_2023": 13996.0,
+      "income_mean_per_household_2023": 38064.0,
+      "income_median_per_consumption_unit_2023": 17150.0,
+      "child_density_per_km2": 8.723,
+      "rural_children_pct": 14.17,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -2174,7 +2485,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38037",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 15511.0,
+      "income_mean_per_household_2023": 42144.0,
+      "income_median_per_consumption_unit_2023": 19250.0,
+      "child_density_per_km2": 30.66,
+      "rural_children_pct": 6.69,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -2216,7 +2533,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38045",
       "pct_under_15_total": 96.28,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 12756.0,
+      "income_mean_per_household_2023": 30805.0,
+      "income_median_per_consumption_unit_2023": 15750.0,
+      "child_density_per_km2": 32.515,
+      "rural_children_pct": 4.79,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -2258,7 +2581,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38047",
       "pct_under_15_total": 99.55,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 14001.0,
+      "income_mean_per_household_2023": 34002.0,
+      "income_median_per_consumption_unit_2023": 17150.0,
+      "child_density_per_km2": 4.164,
+      "rural_children_pct": 73.54,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "la-palma",
@@ -2300,7 +2629,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38053",
       "pct_under_15_total": 80.82,
-      "pct_20_or_more_total": 4.11
+      "pct_20_or_more_total": 4.11,
+      "income_mean_per_person_2023": 13874.0,
+      "income_mean_per_household_2023": 37233.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 7.231,
+      "rural_children_pct": 60.27,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "lanzarote",
@@ -2342,7 +2677,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35004",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 12079.0,
+      "income_mean_per_household_2023": 35247.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 385.699,
+      "rural_children_pct": 0.43,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "lanzarote",
@@ -2384,7 +2725,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35010",
       "pct_under_15_total": 90.59,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 14985.0,
+      "income_mean_per_household_2023": 37216.0,
+      "income_median_per_consumption_unit_2023": 19950.0,
+      "child_density_per_km2": 3.721,
+      "rural_children_pct": 32.47,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "lanzarote",
@@ -2426,7 +2773,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35018",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 14824.0,
+      "income_mean_per_household_2023": 39459.0,
+      "income_median_per_consumption_unit_2023": 19950.0,
+      "child_density_per_km2": 62.118,
+      "rural_children_pct": 5.21,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "lanzarote",
@@ -2468,7 +2821,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35024",
       "pct_under_15_total": 91.76,
-      "pct_20_or_more_total": 0.98
+      "pct_20_or_more_total": 0.98,
+      "income_mean_per_person_2023": 16026.0,
+      "income_mean_per_household_2023": 44950.0,
+      "income_median_per_consumption_unit_2023": 22050.0,
+      "child_density_per_km2": 13.263,
+      "rural_children_pct": 26.12,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "lanzarote",
@@ -2510,7 +2869,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35028",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13735.0,
+      "income_mean_per_household_2023": 38929.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 40.174,
+      "rural_children_pct": 13.47,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "lanzarote",
@@ -2552,7 +2917,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35029",
       "pct_under_15_total": 31.1,
-      "pct_20_or_more_total": 11.04
+      "pct_20_or_more_total": 11.04,
+      "income_mean_per_person_2023": 14106.0,
+      "income_mean_per_household_2023": 42550.0,
+      "income_median_per_consumption_unit_2023": 19950.0,
+      "child_density_per_km2": 6.938,
+      "rural_children_pct": 34.08,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "lanzarote",
@@ -2594,7 +2965,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "35034",
       "pct_under_15_total": 20.21,
-      "pct_20_or_more_total": 58.82
+      "pct_20_or_more_total": 58.82,
+      "income_mean_per_person_2023": 13379.0,
+      "income_mean_per_household_2023": 38884.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 11.783,
+      "rural_children_pct": 15.09,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -2636,7 +3013,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38001",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 12060.0,
+      "income_mean_per_household_2023": 33398.0,
+      "income_median_per_consumption_unit_2023": 15750.0,
+      "child_density_per_km2": 61.5,
+      "rural_children_pct": 5.17,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -2678,7 +3061,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38004",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13371.0,
+      "income_mean_per_household_2023": 36435.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 20.197,
+      "rural_children_pct": 21.47,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -2720,7 +3109,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38005",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 12195.0,
+      "income_mean_per_household_2023": 29362.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 5.823,
+      "rural_children_pct": 25.43,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -2762,7 +3157,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38006",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 11184.0,
+      "income_mean_per_household_2023": 30042.0,
+      "income_median_per_consumption_unit_2023": 15050.0,
+      "child_density_per_km2": 128.14,
+      "rural_children_pct": 2.72,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -2804,7 +3205,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38010",
       "pct_under_15_total": 99.54,
-      "pct_20_or_more_total": 0.47
+      "pct_20_or_more_total": 0.47,
+      "income_mean_per_person_2023": 11531.0,
+      "income_mean_per_household_2023": 30558.0,
+      "income_median_per_consumption_unit_2023": 15750.0,
+      "child_density_per_km2": 6.419,
+      "rural_children_pct": 21.83,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -2846,7 +3253,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38011",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 15334.0,
+      "income_mean_per_household_2023": 38582.0,
+      "income_median_per_consumption_unit_2023": 19950.0,
+      "child_density_per_km2": 72.352,
+      "rural_children_pct": 5.87,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -2888,7 +3301,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38012",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13412.0,
+      "income_mean_per_household_2023": 31773.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 5.967,
+      "rural_children_pct": 45.56,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -2930,7 +3349,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38015",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 11650.0,
+      "income_mean_per_household_2023": 32085.0,
+      "income_median_per_consumption_unit_2023": 15750.0,
+      "child_density_per_km2": 18.883,
+      "rural_children_pct": 11.78,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -2972,7 +3397,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38017",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 11489.0,
+      "income_mean_per_household_2023": 33490.0,
+      "income_median_per_consumption_unit_2023": 15750.0,
+      "child_density_per_km2": 48.411,
+      "rural_children_pct": 7.19,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3014,7 +3445,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38018",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 11717.0,
+      "income_mean_per_household_2023": 32283.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 27.6,
+      "rural_children_pct": 5.18,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3056,7 +3493,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38019",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 11649.0,
+      "income_mean_per_household_2023": 33068.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 19.66,
+      "rural_children_pct": 10.06,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3098,7 +3541,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38020",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13074.0,
+      "income_mean_per_household_2023": 34496.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 25.737,
+      "rural_children_pct": 13.07,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3140,7 +3589,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38022",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 11084.0,
+      "income_mean_per_household_2023": 30225.0,
+      "income_median_per_consumption_unit_2023": 15050.0,
+      "child_density_per_km2": 28.01,
+      "rural_children_pct": 6.26,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3182,7 +3637,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38023",
       "pct_under_15_total": 99.94,
-      "pct_20_or_more_total": 0.01
+      "pct_20_or_more_total": 0.01,
+      "income_mean_per_person_2023": 13863.0,
+      "income_mean_per_household_2023": 36633.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 166.039,
+      "rural_children_pct": 1.52,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3224,7 +3685,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38025",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 12328.0,
+      "income_mean_per_household_2023": 34628.0,
+      "income_median_per_consumption_unit_2023": 17150.0,
+      "child_density_per_km2": 80.921,
+      "rural_children_pct": 6.51,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3266,7 +3733,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38026",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 12366.0,
+      "income_mean_per_household_2023": 34805.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 24.206,
+      "rural_children_pct": 3.17,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3308,7 +3781,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38028",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13871.0,
+      "income_mean_per_household_2023": 32185.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 333.904,
+      "rural_children_pct": 0.1,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3350,7 +3829,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38031",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 11695.0,
+      "income_mean_per_household_2023": 32945.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 77.353,
+      "rural_children_pct": 3.96,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3392,7 +3877,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38032",
       "pct_under_15_total": 99.99,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 17109.0,
+      "income_mean_per_household_2023": 46886.0,
+      "income_median_per_consumption_unit_2023": 22050.0,
+      "child_density_per_km2": 53.165,
+      "rural_children_pct": 10.86,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3434,7 +3925,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38034",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 11614.0,
+      "income_mean_per_household_2023": 31495.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 28.1,
+      "rural_children_pct": 7.08,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3476,7 +3973,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38035",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 11842.0,
+      "income_mean_per_household_2023": 33528.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 79.24,
+      "rural_children_pct": 7.21,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3518,7 +4021,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38038",
       "pct_under_15_total": 99.78,
-      "pct_20_or_more_total": 0.12
+      "pct_20_or_more_total": 0.12,
+      "income_mean_per_person_2023": 15110.0,
+      "income_mean_per_household_2023": 39072.0,
+      "income_median_per_consumption_unit_2023": 18550.0,
+      "child_density_per_km2": 150.047,
+      "rural_children_pct": 1.22,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3560,7 +4069,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38039",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 12710.0,
+      "income_mean_per_household_2023": 32989.0,
+      "income_median_per_consumption_unit_2023": 16450.0,
+      "child_density_per_km2": 84.164,
+      "rural_children_pct": 0.96,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3602,7 +4117,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38040",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 11280.0,
+      "income_mean_per_household_2023": 31966.0,
+      "income_median_per_consumption_unit_2023": 15750.0,
+      "child_density_per_km2": 31.104,
+      "rural_children_pct": 11.38,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3644,7 +4165,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38041",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 14373.0,
+      "income_mean_per_household_2023": 39975.0,
+      "income_median_per_consumption_unit_2023": 18550.0,
+      "child_density_per_km2": 61.48,
+      "rural_children_pct": 1.79,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3686,7 +4213,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38042",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 11053.0,
+      "income_mean_per_household_2023": 30775.0,
+      "income_median_per_consumption_unit_2023": 15050.0,
+      "child_density_per_km2": 18.574,
+      "rural_children_pct": 10.77,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3728,7 +4261,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38043",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 13864.0,
+      "income_mean_per_household_2023": 37994.0,
+      "income_median_per_consumption_unit_2023": 17850.0,
+      "child_density_per_km2": 100.245,
+      "rural_children_pct": 1.83,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3770,7 +4309,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38044",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 10932.0,
+      "income_mean_per_household_2023": 30676.0,
+      "income_median_per_consumption_unit_2023": 15750.0,
+      "child_density_per_km2": 12.546,
+      "rural_children_pct": 31.8,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3812,7 +4357,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38046",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 15490.0,
+      "income_mean_per_household_2023": 43325.0,
+      "income_median_per_consumption_unit_2023": 20650.0,
+      "child_density_per_km2": 50.407,
+      "rural_children_pct": 6.45,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3854,7 +4405,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38051",
       "pct_under_15_total": 100.0,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 11153.0,
+      "income_mean_per_household_2023": 29516.0,
+      "income_median_per_consumption_unit_2023": 15050.0,
+      "child_density_per_km2": 57.226,
+      "rural_children_pct": 1.26,
+      "territorial_status": "ESTIMATED"
     },
     {
       "island_id": "tenerife",
@@ -3896,7 +4453,13 @@
       "pct_not_evaluated_total": 0,
       "slug": "38052",
       "pct_under_15_total": 81.18,
-      "pct_20_or_more_total": 0.0
+      "pct_20_or_more_total": 0.0,
+      "income_mean_per_person_2023": 12862.0,
+      "income_mean_per_household_2023": 32751.0,
+      "income_median_per_consumption_unit_2023": 17150.0,
+      "child_density_per_km2": 3.021,
+      "rural_children_pct": 56.47,
+      "territorial_status": "ESTIMATED"
     }
   ],
   "metadata": {
@@ -3905,6 +4468,11 @@
     "engine": "OSRM",
     "engine_version": "5.27.1",
     "osm_snapshot": "canary-islands-260926",
-    "status": "RC1"
+    "status": "RC2",
+    "income_period": 2023,
+    "air_period": 2025,
+    "territorial_period": "2021/2024",
+    "weather_status": "PENDING OBSERVATIONS",
+    "calima_status": "PENDING VALIDATION"
   }
 }

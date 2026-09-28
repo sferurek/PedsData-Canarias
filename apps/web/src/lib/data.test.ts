@@ -29,4 +29,11 @@ describe("published profile data", () => {
     expect(profiles.metadata.engine_version).toBe("5.27.1");
     expect(profiles.metadata.osm_snapshot).toBeTruthy();
   });
+  it("adds social and environmental context without scores", () => {
+    expect(profiles.metadata.status).toBe("RC2");
+    expect(profiles.municipalities.every((item) => item.income_mean_per_person_2023 != null)).toBe(true);
+    expect(profiles.islands.every((item) => item.air_station_count > 0)).toBe(true);
+    expect(JSON.stringify(profiles)).not.toMatch(/composite_score|risk_score/i);
+  });
+
 });

@@ -19,6 +19,8 @@ describe("publication UI contracts", () => {
     expect(document.querySelectorAll(".legend > span")).toHaveLength(legendItems.length);
     expect(screen.getByText("Transferencia interinsular")).toBeInTheDocument();
     expect(screen.getByText("No evaluable")).toBeInTheDocument();
+    render(<MapLegend layer="income" />);
+    expect(screen.getByText(/Renta neta media por persona/)).toBeInTheDocument();
   });
 
   it("makes provenance and the clinical-time limitation visible", () => {

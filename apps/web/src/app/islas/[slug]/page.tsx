@@ -28,6 +28,13 @@ export default async function IslandPage({ params }: { params: Promise<{ slug: s
       <Metric label="No evaluable" value={island.population_not_evaluated} detail="Niños" />
       <Metric label="Transferencia" value={island.population_requires_interisland_transfer} detail="Tiempo desconocido" />
     </section>
+    <section className="profile-context" aria-label="Contexto territorial">
+      <Metric label="Renta por persona" value={island.income_mean_per_person_2023} suffix=" €" detail="Media municipal ponderada por niños · 2023" />
+      <Metric label="Densidad infantil" value={island.child_density_per_km2} suffix=" /km²" detail="0–14 · 2024" />
+      <Metric label="Niños en celdas rurales" value={island.rural_children_pct} suffix=" %" detail="DEGURBA 2021" />
+      <Metric label="Estaciones de aire" value={island.air_station_count} detail="Inventario 2025" />
+      <Metric label="Estaciones meteo" value={island.weather_station_count} detail="Observaciones pendientes" />
+    </section>
     {isLanzarote && <aside className="transfer-note"><strong>La Graciosa</strong><p>Transferencia interinsular requerida; tiempo terrestre no estimado. 91 niños permanecen fuera del denominador evaluable.</p></aside>}
     <section className="map-section compact-map"><div className="section-heading"><div><span className="eyebrow">Mapa insular</span><h2>Accesibilidad a Pediatría AP</h2></div><p>{formatPercent(island.pct_20_or_more_total)} de la población está a 20 minutos o más.</p></div>
       <AccessibilityMap municipalities={municipalities} initialIsland={island.island_id} /><SourceMethodPanel />

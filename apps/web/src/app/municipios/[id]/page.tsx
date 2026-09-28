@@ -26,8 +26,10 @@ export default async function MunicipalityPage({ params }: { params: Promise<{ i
         <Metric label="P90" value={municipality.p90_travel_minutes} suffix=" min" />
         <Metric label="Población a <15 min" value={municipality.pct_under_15_total} suffix=" %" />
         <Metric label="Población a ≥30 min" value={municipality.pct_30_or_more_total} suffix=" %" />
+        <Metric label="Renta por persona" value={municipality.income_mean_per_person_2023 ?? null} suffix=" €" detail="INE 2023" />
+        <Metric label="Densidad infantil" value={municipality.child_density_per_km2 ?? null} suffix=" /km²" detail="Derivada · 2024" />
       </section>
       <section className="section narrow"><h2>Lectura del indicador</h2><p>El destino más próximo se calcula por celda y puede estar fuera del municipio. El conteo de centros corresponde a infraestructura situada dentro del límite municipal; no infiere plantilla profesional municipal.</p><SourceMethodPanel /></section>
-    </> : <section className="restricted"><DataBadge status="PARTIAL" /><h2>Perfil no publicable en RC1</h2><p>La población infantil municipal es inferior al umbral conservador de 100. Los datos permanecen en el agregado trazable, pero esta pantalla no muestra indicadores detallados.</p><Link className="primary-link" href={`/islas/${island.slug}`}>Ver perfil de {island.name}</Link></section>}
+    </> : <section className="restricted"><DataBadge status="PARTIAL" /><h2>Perfil no publicable en RC2</h2><p>La población infantil municipal es inferior al umbral conservador de 100. Los datos permanecen en el agregado trazable, pero esta pantalla no muestra indicadores detallados.</p><Link className="primary-link" href={`/islas/${island.slug}`}>Ver perfil de {island.name}</Link></section>}
   </>;
 }

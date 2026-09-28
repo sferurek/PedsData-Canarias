@@ -1,50 +1,16 @@
-import { AccessGapTable } from "@/components/AccessGapTable";
-import { AccessibilityMap } from "@/components/AccessibilityMap";
-import { DataBadge } from "@/components/DataBadge";
-import { IslandCards } from "@/components/IslandCards";
-import { Metric } from "@/components/Metric";
-import { SourceMethodPanel } from "@/components/SourceMethodPanel";
-import { profiles } from "@/lib/data";
-
-export default function Home() {
-  const { summary, islands, municipalities, metadata } = profiles;
-  return <>
-    <section className="hero">
-      <div className="hero-copy"><div className="hero-badges"><DataBadge status="VALIDATED" /><span>7 islas · 2024</span></div>
-        <h1>Accesibilidad pediátrica<br /><em>basada en datos públicos.</em></h1>
-        <p>Tiempo estimado por carretera desde la población infantil al recurso de Pediatría de Atención Primaria verificado más próximo.</p>
-        <a className="primary-link" href="#mapa">Explorar el mapa <span aria-hidden="true">↓</span></a>
-      </div>
-      <div className="hero-note"><span className="note-number">01</span><div><strong>Acceso geográfico potencial</strong><p>No representa tiempo hasta recibir atención sanitaria.</p></div></div>
-    </section>
-
-    <section className="summary-strip" aria-label="Indicadores de Canarias">
-      <Metric label="Población infantil" value={summary.children_0_14} detail="0–14 · ISTAC 2024" />
-      <Metric label="Destinos pediátricos AP" value={summary.eligible_pediatric_facilities} detail="Centros verificados" />
-      <Metric label="Mediana de acceso" value={summary.median_travel_minutes} suffix=" min" detail="Ponderada por niños" />
-      <Metric label="Población a <15 min" value={summary.pct_under_15_total} suffix=" %" detail="Sobre población total" />
-      <Metric label="Población a ≥30 min" value={summary.pct_30_or_more_total} suffix=" %" detail="Sobre población total" />
-    </section>
-
-    <section className="map-section" id="mapa" aria-labelledby="map-title">
-      <div className="section-heading"><div><span className="eyebrow">Mapa principal</span><h2 id="map-title">La distancia asistencial cambia con el territorio</h2></div>
-        <p>Bandas discretas para evitar falsa precisión. Los puntos oscuros son destinos AP verificados.</p></div>
-      <AccessibilityMap municipalities={municipalities} />
-      <SourceMethodPanel />
-    </section>
-
-    <section className="section" id="islas" aria-labelledby="islands-title">
-      <div className="section-heading"><div><span className="eyebrow">Siete perfiles</span><h2 id="islands-title">Un archipiélago, siete contextos</h2></div><p>Ninguna isla desaparece por disponibilidad desigual.</p></div>
-      <IslandCards islands={islands} />
-    </section>
-
-    <AccessGapTable islands={islands} />
-
-    <section className="section split-section" id="metodologia">
-      <div><span className="eyebrow">Dotación · SIAP 2024</span><h2>{summary.pediatricians_ap_2024} pediatras AP</h2><p>La dotación profesional se muestra separada de los {summary.eligible_pediatric_facilities} centros. Profesionales y edificios no son conceptos intercambiables.</p></div>
-      <div className="method-callout"><DataBadge status="PENDING OFFICIAL GEOMETRY" /><h3>Perfiles ZBS no publicados</h3><p>Los perfiles por Zona Básica de Salud no se publican actualmente porque no existe una geometría oficial vigente reutilizable validada para las siete islas.</p></div>
-    </section>
-
-    <div className="data-ribbon"><span>{metadata.source_period} · población</span><span>2026 · catálogo</span><span>{metadata.osm_snapshot} · red</span><span>{metadata.status} · revisión</span></div>
-  </>;
-}
+import {AccessGapTable} from "@/components/AccessGapTable";
+import {AccessibilityMap} from "@/components/AccessibilityMap";
+import {DataBadge} from "@/components/DataBadge";
+import {IslandCards} from "@/components/IslandCards";
+import {Metric} from "@/components/Metric";
+import {SourceMethodPanel} from "@/components/SourceMethodPanel";
+import {profiles} from "@/lib/data";
+export default function Home(){const {summary,islands,municipalities,metadata}=profiles;const airStations=islands.reduce((n,i)=>n+i.air_station_count,0);const weatherStations=islands.reduce((n,i)=>n+i.weather_station_count,0);return <>
+<section className="hero"><div className="hero-copy"><div className="hero-badges"><DataBadge status="VALIDATED"/><span>7 islas · RC2</span></div><h1>Territorio infantil,<br/><em>datos con contexto.</em></h1><p>Accesibilidad pediátrica, renta, ruralidad y calidad del aire en sus escalas reales, con fuentes y límites visibles.</p><a className="primary-link" href="#mapa">Explorar capas <span aria-hidden="true">↓</span></a></div><div className="hero-note"><span className="note-number">02</span><div><strong>Lectura descriptiva</strong><p>La coexistencia territorial no prueba causalidad ni produce un ranking.</p></div></div></section>
+<section className="summary-strip" aria-label="Indicadores de Canarias"><Metric label="Población infantil" value={summary.children_0_14} detail="0–14 · ISTAC 2024"/><Metric label="Destinos pediátricos AP" value={summary.eligible_pediatric_facilities} detail="Centros verificados"/><Metric label="Mediana de acceso" value={summary.median_travel_minutes} suffix=" min" detail="Ponderada por niños"/><Metric label="Municipios con renta" value={88} detail="INE ADRH 2023"/><Metric label="Estaciones de aire" value={airStations} detail="51 inventariadas · 49 en mapa"/></section>
+<section className="map-section" id="mapa" aria-labelledby="map-title"><div className="section-heading"><div><span className="eyebrow">Mapa territorial</span><h2 id="map-title">Una capa principal, su escala y su unidad</h2></div><p>Cambia entre acceso, renta, densidad y contaminantes medidos. No se interpola el aire a toda una isla.</p></div><AccessibilityMap municipalities={municipalities}/><SourceMethodPanel/></section>
+<section className="section context-board" id="entorno" aria-labelledby="context-title"><div className="section-heading"><div><span className="eyebrow">Contexto territorial infantil</span><h2 id="context-title">Medido, derivado y pendiente</h2></div><p>Cada dominio conserva su fecha, geografía y estado de validación.</p></div><div className="context-grid"><article><DataBadge status="COMPLETE"/><h3>Renta municipal</h3><strong>88 municipios</strong><p>Renta general del territorio; no se presenta como pobreza infantil.</p></article><article><DataBadge status="ESTIMATED"/><h3>Densidad y DEGURBA</h3><strong>255.814 niños</strong><p>Malla infantil 2024 sobre clasificación oficial 2021, sin score de ruralidad.</p></article><article><DataBadge status="PARTIAL"/><h3>Calidad del aire</h3><strong>{airStations} estaciones</strong><p>Valores de estación 2025; dos ubicaciones quedan sin coordenada validada para mapa.</p></article><article><DataBadge status="NOT AVAILABLE"/><h3>Meteorología y calima</h3><strong>{weatherStations} estaciones</strong><p>Inventario disponible. Observaciones requieren API key; episodios 2025 siguen provisionales.</p></article></div></section>
+<section className="section" id="islas" aria-labelledby="islands-title"><div className="section-heading"><div><span className="eyebrow">Siete perfiles · V2</span><h2 id="islands-title">Un archipiélago, siete contextos</h2></div><p>Ninguna isla desaparece por disponibilidad desigual.</p></div><IslandCards islands={islands}/></section>
+<AccessGapTable islands={islands}/>
+<section className="section split-section" id="metodologia"><div><span className="eyebrow">Dotación · SIAP 2024</span><h2>{summary.pediatricians_ap_2024} pediatras AP</h2><p>Profesionales y edificios se mantienen separados. Las nuevas capas describen contexto y no modifican el cálculo de accesibilidad RC1.</p></div><div className="method-callout"><DataBadge status="PENDING OFFICIAL GEOMETRY"/><h3>Perfiles ZBS no publicados</h3><p>Los perfiles por Zona Básica de Salud no se publican actualmente porque no existe una geometría oficial vigente reutilizable validada para las siete islas.</p></div></section>
+<div className="data-ribbon"><span>{metadata.source_period} · población</span><span>{metadata.income_period} · renta</span><span>{metadata.air_period} · aire validado</span><span>{metadata.status} · preview</span></div></>}
