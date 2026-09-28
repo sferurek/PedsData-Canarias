@@ -1,5 +1,11 @@
-# Siguiente paso
+# Siguiente paso vigente
 
-Tras revisar RC5, priorizar una auditoría editorial del catálogo de fuentes y validación clínica de las definiciones semánticas. Las ampliaciones deben entrar primero en `sources_catalog.json` y `metrics_catalog.json`; ningún módulo nuevo puede eludir el contrato de trazabilidad.
+Tras publicar `v0.9.0-beta.1`, el siguiente paso es observar la beta sin ampliar alcance durante un ciclo corto de revisión técnica, clínica, metodológica y de usuarios.
 
-ZBS sigue bloqueada hasta disponer de geometría oficial vigente. Los siguientes análisis clínicos o ambientales requieren coincidencia explícita de geografía, periodo, universo y definición.
+1. monitorizar errores de ejecución y enlaces oficiales;
+2. recoger correcciones mediante GitHub Issues;
+3. verificar periódicamente periodos y versiones de fuentes;
+4. revisar consultas Ask PedsData que terminen en error controlado;
+5. priorizar solicitudes institucionales solo después de evaluar el uso real.
+
+ZBS no se activa hasta disponer de geometría oficial vigente reutilizable. No se debe convertir la beta en release estable ni añadir nuevos datasets desde este documento.
