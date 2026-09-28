@@ -1,3 +1,35 @@
 import {SourceMethodPanel} from "@/components/SourceMethodPanel";
-export const metadata={title:"Prevención: estado de fuentes"};
-export default function Page(){return <><section className="clinical-hero"><span className="eyebrow">Prevención · HOLD</span><h1>Primero, validar<br/><em>los denominadores.</em></h1><p>No se publican coberturas sin export, cohorte, geografía y método verificables.</p></section><div className="clinical-shell"><section className="clinical-module"><h2>Vacunación</h2><p>HOLD · El resumen disponible es estatal y provisional2025. No representa coberturas de Canarias. Nirsevimab necesita denominador propio y no es una vacuna.</p><h2>Cribado metabólico y auditivo</h2><p>HOLD · Pendiente de validar las tablas regionales, niños únicos y seguimiento. Son indicadores de proceso, no prevalencias.</p><SourceMethodPanel details={[{label:"Admisión pendiente",text:"No se integra ningún porcentaje. Para admitir: export reproducible, población elegible, cohorte/periodo, geografía, licencia y comparabilidad."}]} sourceLinks={[{label:"SIVAMIN Ministerio",url:"https://www.sanidad.gob.es/gl/areas/promocionPrevencion/vacunaciones/coberturas/home.htm"}]}/></section></div></>}
+import data from "@/data/phase6b-screening.json";
+
+export const metadata={title:"Prevención pediátrica"};
+
+export default function Page(){
+ const value=(id:string)=>data.find(row=>row.indicator_id===id)!;
+ const participation=value("participation");
+ const invalid=value("first_invalid_sample");
+ const traceability=value("traceability");
+ return <><section className="clinical-hero">
+  <span className="eyebrow">Prevención · RC4.1</span>
+  <h1>Procesos preventivos<br/><em>con denominador.</em></h1>
+  <p>Indicadores regionales publicados sin convertir proceso en prevalencia.</p>
+ </section><div className="clinical-shell"><section className="clinical-module">
+  <h2>Cribado metabólico neonatal · Canarias 2024</h2>
+  <p><b>OBSERVED · REGIONAL</b>. Calidad y oportunidad del programa de prueba de talón.</p>
+  <div className="clinical-kpis">
+   <div><span>Participación</span><strong>{participation.value} %</strong></div>
+   <div><span>Primeras muestras no válidas</span><strong>{invalid.value} %</strong></div>
+   <div><span>Trazabilidad</span><strong>{traceability.value} %</strong></div>
+  </div>
+  <p>{participation.numerator}/{participation.denominator} recién nacidos. Son indicadores de proceso, no prevalencia de enfermedad.</p>
+  <h2>Vacunación y cribado auditivo</h2>
+  <p>HOLD · SIVAMIN no ofrece aún un export reproducible de Canarias. El informe auditivo 2024 no publica una fila de Canarias; ausencia no significa cero.</p>
+  <SourceMethodPanel details={[
+   {label:"Fuente",text:"SICN, evaluación 2024, tablas 2–3."},
+   {label:"Geografía",text:"Canarias; no se reparte entre islas."},
+   {label:"Método",text:"Participación 11.536/11.671; tiempos como percentiles publicados."}
+  ]} sourceLinks={[
+   {label:"Informe SICN 2024",url:participation.source_url},
+   {label:"Condiciones de uso",url:participation.license_url}
+  ]}/>
+ </section></div></>;
+}
