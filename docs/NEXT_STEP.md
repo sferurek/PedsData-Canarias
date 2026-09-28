@@ -1,7 +1,5 @@
-# Siguiente paso vigente
+# Siguiente paso
 
-Con Phase 6B cerrada, la prioridad es revisión clínica y metodológica de RC4.1: interpretación BDCAP, lenguaje de cribado, universos ESdE/ESTUDES y estabilidad visual móvil.
+Tras revisar RC5, priorizar una auditoría editorial del catálogo de fuentes y validación clínica de las definiciones semánticas. Las ampliaciones deben entrar primero en `sources_catalog.json` y `metrics_catalog.json`; ningún módulo nuevo puede eludir el contrato de trazabilidad.
 
-El siguiente incremento sustantivo necesita autorización para preparar solicitudes institucionales: CMBD por isla de residencia, urgencias homogéneas, actividad pediátrica AP, vacunación territorial, microbiología, listas de espera con geografía definida y recursos humanos.
-
-ZBS permanece RED. No activar perfiles ZBS, espera insular, tasas sin denominador ni cruces respiratorio-ambiente sin alineación temporal y geográfica. RC4.1 sigue siendo preview, no producción.
+ZBS sigue bloqueada hasta disponer de geometría oficial vigente. Los siguientes análisis clínicos o ambientales requieren coincidencia explícita de geografía, periodo, universo y definición.

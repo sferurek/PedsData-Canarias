@@ -10,7 +10,7 @@ import { ClinicalExplorer } from "./ClinicalExplorer";
 
 describe("publication UI contracts", () => {
   it("renders null as unavailable rather than zero", () => {
-    render(<Metric label="Tiempo" value={null} suffix=" min" />);
+    render(<Metric metricId="accessibility_ap" label="Tiempo" value={null} suffix=" min" />);
     expect(screen.getByText("No disponible")).toBeInTheDocument();
     expect(screen.queryByText("0 min")).not.toBeInTheDocument();
   });
@@ -21,7 +21,7 @@ describe("publication UI contracts", () => {
     expect(screen.getByText("Transferencia interinsular")).toBeInTheDocument();
     expect(screen.getByText("No evaluable")).toBeInTheDocument();
     render(<MapLegend layer="income" />);
-    expect(screen.getByText(/Renta neta media por persona/)).toBeInTheDocument();
+    expect(screen.getByText(/Renta media por persona/)).toBeInTheDocument();
   });
 
   it("makes provenance and the clinical-time limitation visible", () => {
