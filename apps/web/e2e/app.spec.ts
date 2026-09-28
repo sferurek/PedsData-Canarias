@@ -73,3 +73,25 @@ test("municipal context keeps scale and provenance visible", async ({ page }) =>
   await expect(page.getByText("Densidad infantil")).toBeVisible();
   await expect(page.getByText("Fuente y metodología")).toBeVisible();
 });
+
+
+test("clinical outcomes preserve geography and status", async ({ page }, testInfo) => {
+  await page.goto("/resultados");
+  await expect(page.getByRole("heading", { name: /Clínica con escala explícita/i })).toBeVisible();
+  await expect(page.getByText(/Estos datos no permiten comparar islas/i)).toBeVisible();
+  await page.getByLabel("Grupo diagnóstico").selectOption("asthma");
+  await page.getByLabel("Edad hospitalización").selectOption("Y5T14");
+  await expect(page.getByText("SURVEY_ESTIMATE", { exact: true })).toBeVisible();
+  await expect(page.getByText(/Suprimido 1–4/).first()).toBeVisible();
+  await expect(page.getByText("Fuente y metodología")).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
+  await page.screenshot({ path: `test-results/phase5-clinical-${testInfo.project.name}.png`, fullPage: true });
+});
+
+test("island and municipal profiles do not invent clinical geography", async ({ page }) => {
+  await page.goto("/islas/el-hierro");
+  await expect(page.getByRole("heading", { name: /Perinatalidad y mortalidad segura/i })).toBeVisible();
+  await expect(page.getByText(/Hospitalización pediátrica disponible únicamente a nivel Canarias/i)).toBeVisible();
+  await page.goto("/municipios/35001");
+  await expect(page.getByText(/No se imputan hospitalización, mortalidad, prematuridad ni encuesta/i)).toBeVisible();
+});

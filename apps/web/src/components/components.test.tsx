@@ -6,6 +6,7 @@ import { MapLegend, legendItems } from "./MapLegend";
 import { Metric } from "./Metric";
 import { SourceMethodPanel } from "./SourceMethodPanel";
 import { profiles } from "@/lib/data";
+import { ClinicalExplorer } from "./ClinicalExplorer";
 
 describe("publication UI contracts", () => {
   it("renders null as unavailable rather than zero", () => {
@@ -39,5 +40,13 @@ describe("publication UI contracts", () => {
   it("renders explicit data statuses", () => {
     render(<DataBadge status="PENDING OFFICIAL GEOMETRY" />);
     expect(screen.getByText("PENDING OFFICIAL GEOMETRY")).toBeInTheDocument();
+  });
+
+  it("keeps clinical status, geography and suppression visible", () => {
+    render(<ClinicalExplorer />);
+    expect(screen.getByText(/Estos datos no permiten comparar islas/i)).toBeInTheDocument();
+    expect(screen.getByText("SURVEY_ESTIMATE")).toBeInTheDocument();
+    expect(screen.getAllByText(/Suprimido 1–4/i).length).toBeGreaterThan(0);
+    expect(screen.queryByText(/ranking de hospitales/i)).not.toBeInTheDocument();
   });
 });
