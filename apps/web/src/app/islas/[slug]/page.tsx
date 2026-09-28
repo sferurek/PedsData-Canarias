@@ -20,7 +20,7 @@ export default async function IslandPage({ params }: { params: Promise<{ slug: s
   return <>
     <section className="profile-hero"><Link className="back-link" href="/">← Canarias</Link>
       <div className="profile-title"><div><span className="eyebrow">Perfil insular · acceso potencial</span><h1>{island.name}</h1></div><DataBadge status={isLanzarote ? "PARTIAL" : "VALIDATED"} /></div>
-      <p>{formatNumber(island.children_0_14)} niños de 0–14 años · {island.eligible_pediatric_facilities} destinos AP elegibles · {island.pediatricians_ap_2024} pediatras AP SIAP.</p>
+      <p>{formatNumber(island.children_0_14)} niños de 0–14 años · {island.eligible_pediatric_facilities} destinos AP elegibles · {island.pediatricians_ap_2024} pediatras AP SIAP.</p><Link className="primary-link report-cta" href={`/informes/${island.island_id}`}>Generar informe territorial</Link>
     </section>
     <section className="profile-metrics">
       <Metric metricId="accessibility_ap" label="Mediana" value={island.median_travel_minutes} suffix=" min" detail="Ponderada por niños" />
@@ -37,7 +37,7 @@ export default async function IslandPage({ params }: { params: Promise<{ slug: s
       <Metric metricId="PM10" label="Estaciones de aire" value={island.air_station_count} detail="Inventario 2025" />
     </section>
     <section className="island-clinical" aria-label="Resultados clínicos disponibles"><div><span className="eyebrow">Resultados de salud · escala insular</span><h2>Perinatalidad y mortalidad segura</h2></div><div className="clinical-kpis"><div><span>Nacimientos 2024</span><strong>{formatNumber(clinicalSummary.births_2024)}</strong><small>Residencia materna</small></div><div><span>Prematuridad 2024</span><strong>{clinicalSummary.preterm_rate_2024?.toLocaleString("es-ES")} %</strong><small>{clinicalSummary.preterm_births_2024} nacimientos</small></div><div><span>Defunciones 0–14</span><strong>{clinicalSummary.pediatric_deaths_2020_2024 ?? "Suprimido"}</strong><small>2020–2024 · {clinicalSummary.mortality_status}</small></div></div><p>Hospitalización pediátrica disponible únicamente a nivel Canarias. Urgencias comparables no disponibles para el perfil insular.</p><Link className="primary-link" href="/resultados">Ver resultados y método</Link></section>
-    {isLanzarote && <aside className="transfer-note"><strong>La Graciosa</strong><p>Transferencia interinsular requerida; tiempo terrestre no estimado. 91 niños permanecen fuera del denominador evaluable.</p></aside>}
+    {isLanzarote && <aside className="transfer-note"><strong>La Graciosa</strong><p>Transferencia interinsular requerida; tiempo terrestre no estimado. 91 niños permanecen fuera del denominador evaluable.</p><Link className="result-sources-link" href="/informes/la-graciosa">Generar informe territorial de La Graciosa ↗</Link></aside>}
     <section className="map-section compact-map"><div className="section-heading"><div><span className="eyebrow">Mapa insular</span><h2>Accesibilidad a Pediatría AP</h2></div><p>{formatPercent(island.pct_20_or_more_total)} de la población está a 20 minutos o más.</p></div>
       <LazyAccessibilityMap municipalities={municipalities} initialIsland={island.island_id} /><SourceMethodPanel />
     </section>
