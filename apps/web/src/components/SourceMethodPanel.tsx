@@ -1,4 +1,5 @@
-export function SourceMethodPanel({compact=false}:{compact?:boolean}){
+export function SourceMethodPanel({compact=false,details,sourceLinks=[]}:{compact?:boolean;details?:{label:string;text:string}[];sourceLinks?:{label:string;url:string}[]}){
+ if(details) return <details className="source-panel"><summary>Fuente y metodología</summary><div className="source-grid">{details.map(d=><div key={d.label}><strong>{d.label}</strong><p style={{overflowWrap:"anywhere"}}>{d.text}</p></div>)}</div><ul>{sourceLinks.map(s=><li key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{s.label}</a></li>)}</ul></details>;
  return <details className={`source-panel${compact?" source-panel-compact":""}`}><summary>Fuente y metodología</summary><div className="source-grid">
   <div><strong>Accesibilidad</strong><p>ISTAC 0–14 (2024), catálogo pediátrico, OSM congelado y OSRM 5.27.1. Acceso geográfico potencial; no representa tiempo hasta recibir atención sanitaria.</p></div>
   <div><strong>Territorio y entorno</strong><p>INE ADRH 2023, DEGURBA 2021 y Red Canaria 2025. Aire por estación sin interpolación.</p></div>
