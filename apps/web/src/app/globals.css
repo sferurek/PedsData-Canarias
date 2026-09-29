@@ -416,6 +416,20 @@ h1 em,h2 em { color:var(--sea); font-weight:400; }
 .home-light-section { position:relative; overflow:hidden; padding-bottom:105px; }
 .home-light-section::after { position:absolute; right:-7rem; bottom:-13rem; width:32rem; height:32rem; border-radius:50%; content:""; background:rgb(45 226 230 / 10%); filter:blur(20px); }
 .home-light-section .section { position:relative; z-index:1; }
+.home-light-section .section { padding-top:32px; }
+.territorial-heading { grid-template-columns:minmax(0,1fr) auto; align-items:end; margin-bottom:28px; }
+.territorial-heading-actions { display:flex; align-items:center; justify-content:flex-end; gap:22px; }
+.territorial-heading-actions p { max-width:330px; margin:0; color:var(--ink-soft); font-size:.92rem; line-height:1.4; text-align:right; }
+.territorial-heading-actions .button-outline { flex:0 0 auto; }
+.island-card { position:relative; }
+.island-card-report-hitarea { position:absolute; z-index:1; inset:0; border-radius:inherit; }
+.island-card-body,.island-image-card { position:relative; z-index:2; pointer-events:none; }
+.island-card .result-sources-link,.island-card .island-report-link,.island-card .photo-credit,.island-card .photo-credit a { position:relative; z-index:3; pointer-events:auto; }
+.island-card:hover { transform:translateY(-3px); box-shadow:0 18px 42px rgb(13 73 91 / 14%); }
+.island-report-link { margin-top:10px; font-weight:760; }
+@media(max-width:1180px){ .territorial-heading { grid-template-columns:1fr; gap:18px; } .territorial-heading-actions { justify-content:space-between; } .territorial-heading-actions p { max-width:560px; text-align:left; } }
+@media(max-width:680px){ .home-light-section .section { padding-top:24px; } .territorial-heading-actions { align-items:stretch; flex-direction:column; } .territorial-heading-actions p { text-align:left; } }
+
 .home-light-section .island-grid { grid-template-columns:repeat(7,1fr); gap:8px; }
 .home-light-section .island-card { min-height:265px; padding:18px 14px; border-color:rgb(11 85 105 / 14%); background:linear-gradient(180deg,#fff,#edf8fa); box-shadow:0 12px 28px rgb(13 73 91 / 8%); }
 .home-light-section .island-card h3 { font-family:var(--font-display); font-size:1.35rem; }
