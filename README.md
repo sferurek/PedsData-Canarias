@@ -51,7 +51,7 @@ No se publican perfiles por Zona Básica de Salud porque no existe una geometrí
 
 ## Citación
 
-PedsData Canarias. *Observatorio independiente de salud infantil en Canarias*. Versión 0.9.0-beta.1. Consultado el [fecha] en https://web-sferureks-projects.vercel.app. Código: https://github.com/sferurek/PedsData-Canarias.
+PedsData Canarias. *Observatorio independiente de salud infantil en Canarias*. Versión 0.9.0-beta.2. Consultado el [fecha] en https://web-sferureks-projects.vercel.app. Código: https://github.com/sferurek/PedsData-Canarias.
 
 No existe DOI asignado en esta versión.
 

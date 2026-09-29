@@ -1,53 +1,66 @@
 # Informes territoriales pediátricos
 
-Fecha: 28/09/2026. Estado: **READY FOR REVIEW**.
+Fecha: 29/09/2026. Versión: **v0.9.0-beta.2**. Estado: **PUBLIC BETA**.
 
 ## Objetivo
 
-`TERRITORIAL_REPORT` convierte una isla, municipio o componente territorial registrado en un informe HTML estructurado. No incorpora datasets, fuentes ni metodologías nuevas. El planner consume exclusivamente `metrics_catalog`, `sources_catalog`, las series ya publicadas y los agregados territoriales validados.
+`TERRITORIAL_REPORT` convierte una isla, municipio o componente territorial registrado en un informe HTML estructurado. No incorpora datasets, fuentes ni metodologías nuevas. El planner consume exclusivamente `metrics_catalog`, `sources_catalog`, las series publicadas y los agregados territoriales validados.
 
 Rutas: `/informes/[geography_id]`. Se generan estáticamente Canarias, las siete islas, La Graciosa y los 88 municipios. Las rutas no registradas devuelven 404.
 
 ## Flujo determinista
 
-1. resolver `geography_id` contra el registro territorial;
-2. identificar la resolución real (`island`, `municipality`, `grid_250m` o `autonomous_community`);
-3. seleccionar métricas registradas compatibles;
-4. recuperar observaciones y agregados ya validados;
-5. agrupar por dominio;
-6. calcular cambios absolutos, relativos y participación en el total de las siete islas cuando la métrica es aditiva;
-7. elegir tabla, serie o mapa según el tipo de dato;
-8. renderizar únicamente si existen `source_ids`;
-9. listar las fuentes efectivamente usadas.
+1. resuelve `geography_id` contra el registro territorial;
+2. conserva la resolución real: `island`, `municipality`, `grid_250m` o `autonomous_community`;
+3. selecciona métricas registradas compatibles;
+4. recupera observaciones y agregados validados;
+5. agrupa por dominio;
+6. calcula cambios absolutos y porcentuales, relación de niños por pediatra, participación en el total de las siete islas y comparación de accesibilidad solo cuando escala, periodo y método coinciden;
+7. elige tabla, serie o mapa según el dato;
+8. renderiza únicamente si existen `source_ids`;
+9. lista únicamente las fuentes usadas.
 
-El resumen ejecutivo utiliza reglas de código. Ask PedsData interpreta la intención, pero no calcula ni genera cifras.
+Ask PedsData interpreta la intención y abre el informe. No calcula ni genera cifras.
+
+## Resumen editorial seguro
+
+El resumen detecta mediante reglas de código:
+
+- aumento, descenso o estabilidad de población infantil asignada, pediatras, consultas, frecuentación, nacimientos y prematuridad;
+- cambio en la relación publicada de niños por pediatra;
+- concentración insular de métricas aditivas;
+- diferencia descriptiva de accesibilidad frente al agregado de las siete islas.
+
+Cada hallazgo guarda `metricIds` y periodo, y muestra **“Fuentes de este resultado”**. La redacción no atribuye causalidad, riesgo individual, calidad asistencial ni explicaciones clínicas.
+
+El bloque **“Qué sabemos / qué no podemos concluir”** cierra el informe con entre tres y cinco conclusiones descriptivas trazables, límites de interpretación y datos faltantes relevantes.
 
 ## Geografía y contexto regional
 
 Un dato insular nunca se convierte en municipal. Un dato autonómico nunca se atribuye a una isla o municipio. Espera pediátrica y hospitalización regional aparecen únicamente bajo **“Contexto regional — no atribuible al territorio analizado”**.
 
-La Graciosa conserva `requires_interisland_transfer`: no recibe tiempo de ferry, avión, ambulancia ni un tiempo terrestre estimado. Los municipios no reciben prematuridad, mortalidad u otra métrica clínica si el catálogo no declara esa escala.
+La Graciosa conserva `requires_interisland_transfer`: no recibe tiempo de ferry, avión, ambulancia ni tiempo terrestre estimado. Los municipios no reciben prematuridad, mortalidad u otra métrica clínica si el catálogo no declara esa escala.
 
 ## Trazabilidad
 
-Cada tabla, gráfico, mapa y sección enlaza mediante **“Fuentes de este resultado”** a `/trazabilidad/[metric_id]`. Cada hecho mantiene indicador, `source_ids`, periodo, geografía, método, unidad y estado. El cierre del informe enumera únicamente las fuentes usadas.
+Cada hallazgo, tabla, gráfico, mapa y sección enlaza a `/trazabilidad/[metric_id]`. Cada hecho mantiene indicador, `source_ids`, periodo, geografía, método, unidad y estado. El cierre enumera solo las fuentes realmente usadas.
 
 ## Presentación
 
-Los informes incluyen resumen ejecutivo, índice, dominios disponibles, contexto regional separado, dominios ausentes, limitaciones y fuentes. La vista es responsive y dispone de CSS de impresión mediante **“Exportar / imprimir informe”**. No se añadió una dependencia PDF.
+Los informes incluyen resumen ejecutivo, índice, dominios disponibles, contexto regional separado, lectura responsable, dominios ausentes, limitaciones y fuentes. La vista es responsive y dispone de HTML imprimible mediante **“Exportar / imprimir informe”**. No se añadió una dependencia PDF.
 
 ## Acceso
 
-- perfiles insulares y municipales: CTA **“Generar informe territorial”**;
+- perfiles insulares y municipales: **“Generar informe territorial”**;
 - Lanzarote: enlace específico al informe de La Graciosa;
 - Ask PedsData: preguntas como “Hazme un informe exhaustivo de Gran Canaria”, “Analiza Lanzarote” y “Perfil pediátrico de Telde”.
 
 ## QA
 
-- 43 tests unitarios, incluidos planner, geografía, La Graciosa, provenance y parser;
-- 19 E2E aprobados y 1 skip esperado en el fichero específico, cubriendo Gran Canaria, Lanzarote, El Hierro, Telde, La Graciosa, territorio inexistente, contexto regional, provenance, Ask, móvil y print;
-- build estático: 267 páginas, incluidos 97 informes.
+- 46 tests unitarios, incluidos planner, lenguaje editorial, comparador insular, geografía, La Graciosa, provenance y parser;
+- QA E2E específico de informes: Gran Canaria, Lanzarote, El Hierro, Telde, La Graciosa, 404, contexto regional, provenance por hallazgo, Ask, móvil y print;
+- la suite final de publicación se registra en el commit y deployment de beta.2.
 
 ## Límites
 
-Los hallazgos son descriptivos. No implican causalidad ni riesgo individual. Los dominios sin métrica válida se indican como no atribuibles o se omiten. El informe no sustituye una valoración clínica ni las fuentes oficiales.
+Los hallazgos son descriptivos. No implican causalidad, riesgo individual ni calidad asistencial. Los dominios sin métrica válida se indican como no atribuibles o se omiten. El informe no sustituye una valoración clínica ni las fuentes oficiales.
