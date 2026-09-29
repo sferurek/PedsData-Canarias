@@ -195,7 +195,7 @@ function valuesFor(layer:ContextLayer,year:number,municipalities:MunicipalityPro
 }
 
 export function AccessibilityMap({municipalities,initialIsland="all",initialLayer="accessibility"}:{municipalities:MunicipalityProfile[];initialIsland?:string;initialLayer?:ContextLayer}){
- const container=useRef<HTMLDivElement>(null),mapRef=useRef<MapLibreMap|null>(null);
+ const container=useRef<HTMLDivElement>(null),mapRef=useRef<MapLibreMap|null>(null),valueMarkersRef=useRef<maplibregl.Marker[]>([]);
  const [island,setIsland]=useState(initialIsland),[municipality,setMunicipality]=useState("all"),[layer,setLayer]=useState<ContextLayer>(initialLayer),[year,setYear]=useState(metadata[initialLayer].period);
  const [state,setState]=useState<"loading"|"ready"|"error">("loading"),[detail,setDetail]=useState<Record<string,unknown>|null>(null),[facilities,setFacilities]=useState(true),[stations,setStations]=useState(false);
  const item=metadata[layer],definition=metricById(item.metric)!;
@@ -218,13 +218,13 @@ export function AccessibilityMap({municipalities,initialIsland="all",initialLaye
    map.addSource("accessibility",{type:"geojson",data:"/data/accessibility-grid.geojson"});map.addLayer({id:"accessibility-fill",type:"fill",source:"accessibility",paint:{"fill-color":["match",["get","band"],"under_5","#00d4c4","5_to_under_10","#2fc79f","10_to_under_15","#74cf78","15_to_under_20","#d8c94d","20_to_under_30","#f09a3d","30_or_more","#e95f4f","requires_interisland_transfer","#9b7cff","#657b86"],"fill-opacity":.74,"fill-outline-color":"rgba(255,255,255,.48)"}});
    map.addSource("facilities",{type:"geojson",data:"/data/facilities.geojson"});map.addLayer({id:"facilities",type:"circle",source:"facilities",paint:{"circle-radius":3.5,"circle-color":"#2de2e6","circle-stroke-color":"#f5fbfd","circle-stroke-width":1.5}});
    map.addSource("air",{type:"geojson",data:"/data/air-stations.geojson"});map.addLayer({id:"air-stations",type:"circle",source:"air",layout:{visibility:"none"},paint:{"circle-radius":8,"circle-color":"#7aa7ff","circle-stroke-color":"#d9ffff","circle-stroke-width":2}});
-   map.addSource("island-values",{type:"geojson",data:{type:"FeatureCollection",features:[]} as GeoJSON.FeatureCollection});map.addLayer({id:"island-value-labels",type:"symbol",source:"island-values",layout:{visibility:"none","text-field":["get","label"],"text-size":15,"text-font":["Open Sans Bold"],"text-allow-overlap":true,"text-ignore-placement":true},paint:{"text-color":"#082f3f","text-halo-color":"rgba(255,255,255,.96)","text-halo-width":2.2,"text-halo-blur":.35}});
+
    const click=(id:string)=>(event:MapLayerMouseEvent)=>{const properties=event.features?.[0]?.properties;if(properties)setDetail({...properties,__scope:id})};for(const id of ["accessibility-fill","context-fill","island-fill","air-stations","facilities"]){map.on("click",id,click(id));map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer");map.on("mouseleave",id,()=>map.getCanvas().style.cursor="")}
    map.once("idle",()=>setState("ready"));
-  };if(map.isStyleLoaded())init();else map.once("style.load",init);map.on("error",event=>{if(!map.isStyleLoaded())setState("error");console.error(event.error)});return()=>{map.remove();mapRef.current=null}
+  };if(map.isStyleLoaded())init();else map.once("style.load",init);map.on("error",event=>{if(!map.isStyleLoaded())setState("error");console.error(event.error)});return()=>{valueMarkersRef.current.forEach(marker=>marker.remove());valueMarkersRef.current=[];map.remove();mapRef.current=null}
  },[]);
 
- useEffect(()=>{const map=mapRef.current;if(!map||state!=="ready")return;const scope=item.scope;
+ useEffect(()=>{const map=mapRef.current;if(!map||state!=="ready")return;valueMarkersRef.current.forEach(marker=>marker.remove());valueMarkersRef.current=[];const scope=item.scope;
   const filters:unknown[]=[];if(island!=="all")filters.push(["==",["get","island_id"],island]);if(municipality!=="all")filters.push(["==",["get","municipality_id"],municipality]);const filter=filters.length===0?null:filters.length===1?filters[0]:["all",...filters];
   map.setFilter("accessibility-fill",filter as never);map.setFilter("context-fill",filter as never);map.setFilter("island-fill",island==="all"?null:["==",["get","island_id"],island] as never);
   map.setFilter("facilities",island==="all"?null:["==",["get","island_id"],island] as never);
@@ -234,9 +234,8 @@ export function AccessibilityMap({municipalities,initialIsland="all",initialLaye
   map.setLayoutProperty("air-stations","visibility",air||stations?"visible":"none");
   if(municipal&&item.property){if(layer==="degurba")map.setPaintProperty("context-fill","fill-color",["match",["get","degurba_class"],"urban_centre","#247ea0","urban_cluster","#45b8b6","rural","#c9a662","#607581"] as never);else map.setPaintProperty("context-fill","fill-color",stepExpression(item.property,breaks,COLORS) as never)}
   if(insular){const rows=rawValues as typeof timePoints;const expression:unknown[]=["match",["get","island_id"]];rows.forEach(row=>{const index=breaks.findIndex(value=>row.value<value);expression.push(row.geography_id,COLORS[index===-1?COLORS.length-1:index])});expression.push("#607581");map.setPaintProperty("island-fill","fill-color",expression as never);
-   const labels={type:"FeatureCollection",features:rows.filter(row=>island==="all"||row.geography_id===island).map(row=>({type:"Feature",geometry:{type:"Point",coordinates:islandCenter(row.geography_id)},properties:{island_id:row.geography_id,island_name:islandLabels[row.geography_id]??row.geography_id,label:islandValueLabel(layer,row.value)}}))} as GeoJSON.FeatureCollection;
-   (map.getSource("island-values") as maplibregl.GeoJSONSource).setData(labels);map.setLayoutProperty("island-value-labels","visibility","visible");
-  } else {map.setLayoutProperty("island-value-labels","visibility","none")}
+   rows.filter(row=>island==="all"||row.geography_id===island).forEach(row=>{const el=document.createElement("button");el.type="button";el.className="island-value-marker";el.textContent=islandValueLabel(layer,row.value);el.setAttribute("aria-label",(islandLabels[row.geography_id]??row.geography_id)+": "+el.textContent);el.onclick=()=>setDetail({__scope:"island-fill",island_id:row.geography_id,island_name:islandLabels[row.geography_id]??row.geography_id});const marker=new maplibregl.Marker({element:el,anchor:"center"}).setLngLat(islandCenter(row.geography_id)).addTo(map);valueMarkersRef.current.push(marker)});
+  }
   if(air&&item.property){const stationFilter:unknown[]=[];if(island!=="all")stationFilter.push(["==",["get","island_id"],island]);stationFilter.push(["!=",["get",item.property],null]);map.setFilter("air-stations",["all",...stationFilter] as never);map.setPaintProperty("air-stations","circle-color",stepExpression(item.property,breaks,COLORS) as never)}
   else {map.setFilter("air-stations",island==="all"?null:["==",["get","island_id"],island] as never);map.setPaintProperty("air-stations","circle-color","#7aa7ff")}
   map.fitBounds(island==="all"?CANARY:BOUNDS[island],{padding:38,duration:400});setDetail(null);
