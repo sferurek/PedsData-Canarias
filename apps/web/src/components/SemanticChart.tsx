@@ -2,7 +2,7 @@
 import type {ChartType,MetricDefinition,TimePoint} from "@/lib/semantic";
 import {islandLabels} from "@/lib/semantic";
 
-const COLORS=["#176b68","#7d62a3","#dc765e","#2d6d96","#a87924","#3f7b52","#8b4f6c"];
+const COLORS=["#2de2e6","#7aa7ff","#ffbd69","#9f86ff","#56d6a9","#ef718c","#b3d65c"];
 const nf=new Intl.NumberFormat("es-ES",{maximumFractionDigits:2});
 function seriesKey(point:TimePoint){return point.metric_id+"|"+point.geography_id+(point.dimension?"|"+point.dimension:"")}
 function seriesLabel(key:string,metrics:MetricDefinition[]){const [metric,geo,dimension]=key.split("|");const def=metrics.find(item=>item.metric_id===metric);return [def?.label,islandLabels[geo]??geo,dimension].filter(Boolean).join(" · ")}
