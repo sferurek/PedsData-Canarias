@@ -8,7 +8,9 @@ export type TerritoryKind="island"|"municipality"|"archipelago"|"territorial_com
 export type ReportTerritory={id:string;name:string;kind:TerritoryKind;geographyLevel:string;islandId?:string;publicationStatus:"publishable"|"limited"};
 export type ReportFact={metric_id:string;label:string;value:number|string|null;unit:string;period:string;geography_level:string;geography_id:string;status:string;source_ids:string[];method_id:string};
 export type ReportSection={id:string;title:string;metricIds:string[];facts:ReportFact[];series:TimePoint[];visual:"line"|"table"|"map";note?:string};
-export type TerritorialReport={territory:ReportTerritory;sections:ReportSection[];regionalContext:ReportSection[];findings:string[];unavailableDomains:string[];sourceIds:string[];limitations:string[]};
+export type ExecutiveFinding={id:string;text:string;metricIds:string[];period:string};
+export type ReportInterpretation={known:ExecutiveFinding[];cannotConclude:string[];missingData:string[]};
+export type TerritorialReport={territory:ReportTerritory;sections:ReportSection[];regionalContext:ReportSection[];findings:ExecutiveFinding[];interpretation:ReportInterpretation;unavailableDomains:string[];sourceIds:string[];limitations:string[]};
 
 const DOMAIN_METRICS:{id:string;title:string;metrics:string[]}[]=[
  {id:"demography",title:"Demografía infantil",metrics:["child_population_grid_0_14","child_population_assigned_0_14"]},
@@ -93,21 +95,37 @@ function toSections(territory:ReportTerritory,facts:ReportFact[],series:TimePoin
 function regionalSections(){
  const points=regionalSeries();return REGIONAL_METRICS.flatMap(metricId=>{const metricPoints=points.filter(point=>point.metric_id===metricId);if(!metricPoints.length)return [];const metric=def(metricId);return [{id:"regional-"+metricId,title:metric.label,metricIds:[metricId],facts:[],series:metricPoints,visual:"line" as const,note:"Dato de Canarias. No se atribuye al territorio analizado."}]});
 }
-function displayUnit(unit:string){return ({professionals:"pediatras",consultations:"consultas",persons:"personas",births:"nacimientos",percent:"%",consultations_per_assigned_person_year:"consultas por persona asignada y año",consultations_per_professional:"consultas por pediatra",persons_per_professional:"niños por pediatra"} as Record<string,string>)[unit]??unit}
+function displayUnit(unit:string){return ({professionals:"pediatras",consultations:"consultas",persons:"personas asignadas","assigned_persons/professional":"niños por pediatra",births:"nacimientos",percent:"%",consultations_per_assigned_person_year:"consultas por persona asignada y año",consultations_per_professional:"consultas por pediatra",persons_per_professional:"niños por pediatra"} as Record<string,string>)[unit]??unit}
 function format(value:number,unit:string){const label=displayUnit(unit);return nf.format(value)+(label==="%"||label.startsWith("%")?" %":" "+label)}
+function seriesFor(series:TimePoint[],metricId:string){return series.filter(point=>point.metric_id===metricId).slice().sort((a,b)=>a.period.localeCompare(b.period))}
+function relativeChange(first:number,last:number){return first===0?null:(last-first)/Math.abs(first)*100}
+function trendVerb(change:number){return change>0?"aumentó":change<0?"descendió":"se mantuvo"}
+function changeText(first:TimePoint,last:TimePoint){const change=last.value-first.value,pct=relativeChange(first.value,last.value);return `${trendVerb(change)} de ${format(first.value,first.unit)} a ${format(last.value,last.unit)}${pct===null?"":` (${change>=0?"+":""}${nf.format(pct)} %)`}`}
+function finding(id:string,text:string,metricIds:string[],period:string):ExecutiveFinding{return {id,text,metricIds:[...new Set(metricIds)],period}}
 function buildFindings(territory:ReportTerritory,facts:ReportFact[],series:TimePoint[]){
- const findings:string[]=[];
- for(const item of facts){if(item.value!==null&&findings.length<4)findings.push(item.label+": "+(typeof item.value==="number"?format(item.value,item.unit):item.value)+" ("+item.period+").")}
- const priority=["pediatricians_ap","pediatric_consultations","pediatric_frequentation","births","preterm_rate"];
+ const findings:ExecutiveFinding[]=[];
+ if(territory.kind==="island"){
+  const population=seriesFor(series,"child_population_assigned_0_14"),pediatricians=seriesFor(series,"pediatricians_ap"),ratio=seriesFor(series,"assigned_children_per_pediatrician");
+  const periods=[population[0]?.period,pediatricians[0]?.period,ratio[0]?.period].filter(Boolean) as string[];
+  const ends=[population.at(-1)?.period,pediatricians.at(-1)?.period,ratio.at(-1)?.period].filter(Boolean) as string[];
+  const start=periods.sort().at(-1),end=ends.sort()[0];
+  const at=(points:TimePoint[],period:string|undefined)=>points.find(point=>point.period===period);
+  const p0=at(population,start),p1=at(population,end),d0=at(pediatricians,start),d1=at(pediatricians,end),r0=at(ratio,start),r1=at(ratio,end);
+  if(start&&end&&p0&&p1&&d0&&d1&&r0&&r1)findings.push(finding("workforce-balance",`Entre ${start} y ${end}, la población infantil asignada ${changeText(p0,p1)}, mientras que la dotación de pediatras ${changeText(d0,d1)}. La relación pasó de ${format(r0.value,r0.unit)} a ${format(r1.value,r1.unit)}. Es una descripción de dotación y población asignada, no de calidad asistencial.`,["child_population_assigned_0_14","pediatricians_ap","assigned_children_per_pediatrician"],`${start}–${end}`));
+ }
+ const priority=["pediatric_consultations","pediatric_frequentation","births","preterm_rate"];
  for(const metricId of priority){
-  if(findings.length>=9)break;
-  const points=series.filter(point=>point.metric_id===metricId).slice().sort((a,b)=>a.period.localeCompare(b.period));if(points.length<2)continue;
-  const first=points[0],last=points.at(-1)!,change=last.value-first.value;const pct=first.value!==0?change/Math.abs(first.value)*100:null;const metric=def(metricId);
-  findings.push(metric.label+" pasó de "+format(first.value,first.unit)+" en "+first.period+" a "+format(last.value,last.unit)+" en "+last.period+" (cambio absoluto "+format(change,last.unit)+(pct===null?"":", "+nf.format(pct)+" %")+").");
+  const points=seriesFor(series,metricId);if(points.length<2)continue;const first=points[0],last=points.at(-1)!,metric=def(metricId);
+  findings.push(finding(`trend-${metricId}`,`Entre ${first.period} y ${last.period}, ${metric.label.toLocaleLowerCase("es")} ${changeText(first,last)}.`,[metricId],`${first.period}–${last.period}`));
  }
  if(territory.kind==="island"){
+  const profile=profiles.islands.find(item=>item.island_id===territory.id)!;
+  const medianDelta=(profile.median_travel_minutes??0)-profiles.summary.median_travel_minutes;
+  if(profile.median_travel_minutes!==null)findings.push(finding("access-comparison",`En 2024, la mediana de acceso geográfico potencial fue ${nf.format(profile.median_travel_minutes)} min, frente a ${nf.format(profiles.summary.median_travel_minutes)} min en el conjunto de las siete islas (${medianDelta>=0?"+":""}${nf.format(medianDelta)} min). El ${nf.format(profile.pct_under_15_total)} % de la población infantil quedó a menos de 15 min, frente al ${nf.format(profiles.summary.pct_under_15_total)} % del conjunto.`,["accessibility_ap"],"2024"));
   const latestByMetric=new Map<string,TimePoint>();for(const point of timePoints.filter(item=>item.period&&item.geography_level==="island"))if(!latestByMetric.get(point.metric_id)||point.period>latestByMetric.get(point.metric_id)!.period)latestByMetric.set(point.metric_id,point);
-  for(const metricId of ["child_population_assigned_0_14","pediatricians_ap"]){if(findings.length>=10)break;const period=latestByMetric.get(metricId)?.period;if(!period||!additiveMetrics.has(metricId))continue;const all=timePoints.filter(item=>item.metric_id===metricId&&item.period===period);const own=all.find(item=>item.geography_id===territory.id);const total=all.reduce((sum,item)=>sum+item.value,0);if(own&&total>0)findings.push(territory.name+" concentra "+nf.format(own.value/total*100)+" % del total de las siete islas para "+def(metricId).label.toLocaleLowerCase("es")+" en "+period+".");}
+  for(const metricId of ["child_population_assigned_0_14","pediatricians_ap"]){const period=latestByMetric.get(metricId)?.period;if(!period||!additiveMetrics.has(metricId))continue;const all=timePoints.filter(item=>item.metric_id===metricId&&item.period===period);const own=all.find(item=>item.geography_id===territory.id);const total=all.reduce((sum,item)=>sum+item.value,0);if(own&&total>0)findings.push(finding(`share-${metricId}`,`${territory.name} concentra ${nf.format(own.value/total*100)} % del total de las siete islas para ${def(metricId).label.toLocaleLowerCase("es")} en ${period}.`,[metricId],period));}
+ }else{
+  for(const item of facts){if(item.value!==null&&findings.length<5)findings.push(finding(`fact-${item.metric_id}-${item.label}`,`${item.label}: ${typeof item.value==="number"?format(item.value,item.unit):item.value} (${item.period}).`,[item.metric_id],item.period))}
  }
  return findings.slice(0,10);
 }
@@ -119,6 +137,8 @@ export function buildTerritorialReport(geographyId:string):TerritorialReport|nul
  const availableDomainIds=new Set(sections.map(item=>item.id));
  const unavailableDomains=DOMAIN_METRICS.filter(domain=>!availableDomainIds.has(domain.id)&&domain.id!=="hospital").map(domain=>domain.title);
  const limitations=["Informe descriptivo construido solo con métricas y fuentes registradas.","Los análisis territoriales describen asociaciones ecológicas y accesibilidad potencial; no estiman riesgo individual ni causalidad.","Los datos regionales aparecen separados y no se atribuyen al territorio.",...(territory.publicationStatus==="limited"?["El detalle territorial está limitado por las reglas de publicación o por ausencia de una serie propia."]:[])];
- return {territory,sections,regionalContext,findings:buildFindings(territory,facts,series),unavailableDomains,sourceIds,limitations};
+ const findings=buildFindings(territory,facts,series);
+ const interpretation:ReportInterpretation={known:findings.slice(0,5),cannotConclude:["No permite atribuir causas a las diferencias observadas ni estimar riesgo individual.","No mide calidad asistencial, tiempo hasta recibir atención ni resultados clínicos individuales.","Las comparaciones describen periodos, universos y geografías registrados; no prueban que un indicador explique otro."],missingData:[...unavailableDomains.slice(0,5),"Geometría oficial vigente de Zonas Básicas de Salud para las siete islas"]};
+ return {territory,sections,regionalContext,findings,interpretation,unavailableDomains,sourceIds,limitations};
 }
 export function metricsForTerritorialReport(geographyId:string):MetricDefinition[]{const report=buildTerritorialReport(geographyId);if(!report)return [];return [...new Set([...report.sections,...report.regionalContext].flatMap(item=>item.metricIds))].map(def)}
