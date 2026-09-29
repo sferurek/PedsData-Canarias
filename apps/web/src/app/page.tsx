@@ -45,7 +45,7 @@ export default function Home(){
 
   <section className="home-light-section">
    <div className="section" id="islas" aria-labelledby="islands-title">
-    <div className="section-heading"><div><span className="eyebrow">Territorio, contexto, realidad</span><h2 id="islands-title">Informes territoriales</h2></div><div><p>La situación pediátrica de cada isla, con indicadores, tendencias y límites explícitos.</p><Link className="button-outline" href="/informes/canarias">Ver informe del archipiélago →</Link></div></div>
+    <div className="section-heading territorial-heading"><div><span className="eyebrow">Territorio, contexto, realidad</span><h2 id="islands-title">Informes territoriales</h2></div><div className="territorial-heading-actions"><p>La situación pediátrica de cada isla, con indicadores, tendencias y límites explícitos.</p><Link className="button-outline" href="/informes/canarias">Ver informe del archipiélago →</Link></div></div>
     <IslandCards islands={islands}/>
    </div>
   </section>
