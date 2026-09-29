@@ -29,6 +29,18 @@ const BAND:Record<string,string>={
  not_evaluated:"No evaluable"
 };
 const COLORS=["#0f4c6d","#087f9d","#12b8c4","#4fe1d2"];
+const islandCenter=(id:string):[number,number]=>{const bounds=BOUNDS[id];return bounds?[(bounds[0][0]+bounds[1][0])/2,(bounds[0][1]+bounds[1][1])/2]:[-15.5,28.3]};
+function islandValueLabel(layer:ContextLayer,value:number){
+ const formatted=new Intl.NumberFormat("es-ES",{maximumFractionDigits:1}).format(value);
+ if(layer==="pediatricians_ap")return formatted+" pediatras";
+ if(layer==="assigned_children_per_pediatrician")return formatted+" niños/pediatra";
+ if(layer==="pediatric_consultations")return formatted+" consultas";
+ if(layer==="pediatric_frequentation")return formatted+" consultas/persona/año";
+ if(layer==="child_population_assigned_0_14")return formatted+" niños";
+ if(layer==="births")return formatted+" nacimientos";
+ if(layer==="preterm_rate")return formatted+" %";
+ return formatted;
+}
 
 type Scope="grid"|"municipality"|"island"|"station"|"facility";
 type LayerMeta={
@@ -183,7 +195,7 @@ function valuesFor(layer:ContextLayer,year:number,municipalities:MunicipalityPro
 }
 
 export function AccessibilityMap({municipalities,initialIsland="all",initialLayer="accessibility"}:{municipalities:MunicipalityProfile[];initialIsland?:string;initialLayer?:ContextLayer}){
- const container=useRef<HTMLDivElement>(null),mapRef=useRef<MapLibreMap|null>(null);
+ const container=useRef<HTMLDivElement>(null),mapRef=useRef<MapLibreMap|null>(null),valueMarkersRef=useRef<maplibregl.Marker[]>([]);
  const [island,setIsland]=useState(initialIsland),[municipality,setMunicipality]=useState("all"),[layer,setLayer]=useState<ContextLayer>(initialLayer),[year,setYear]=useState(metadata[initialLayer].period);
  const [state,setState]=useState<"loading"|"ready"|"error">("loading"),[detail,setDetail]=useState<Record<string,unknown>|null>(null),[facilities,setFacilities]=useState(true),[stations,setStations]=useState(false);
  const item=metadata[layer],definition=metricById(item.metric)!;
@@ -206,12 +218,13 @@ export function AccessibilityMap({municipalities,initialIsland="all",initialLaye
    map.addSource("accessibility",{type:"geojson",data:"/data/accessibility-grid.geojson"});map.addLayer({id:"accessibility-fill",type:"fill",source:"accessibility",paint:{"fill-color":["match",["get","band"],"under_5","#00d4c4","5_to_under_10","#2fc79f","10_to_under_15","#74cf78","15_to_under_20","#d8c94d","20_to_under_30","#f09a3d","30_or_more","#e95f4f","requires_interisland_transfer","#9b7cff","#657b86"],"fill-opacity":.74,"fill-outline-color":"rgba(255,255,255,.48)"}});
    map.addSource("facilities",{type:"geojson",data:"/data/facilities.geojson"});map.addLayer({id:"facilities",type:"circle",source:"facilities",paint:{"circle-radius":3.5,"circle-color":"#2de2e6","circle-stroke-color":"#f5fbfd","circle-stroke-width":1.5}});
    map.addSource("air",{type:"geojson",data:"/data/air-stations.geojson"});map.addLayer({id:"air-stations",type:"circle",source:"air",layout:{visibility:"none"},paint:{"circle-radius":8,"circle-color":"#7aa7ff","circle-stroke-color":"#d9ffff","circle-stroke-width":2}});
+
    const click=(id:string)=>(event:MapLayerMouseEvent)=>{const properties=event.features?.[0]?.properties;if(properties)setDetail({...properties,__scope:id})};for(const id of ["accessibility-fill","context-fill","island-fill","air-stations","facilities"]){map.on("click",id,click(id));map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer");map.on("mouseleave",id,()=>map.getCanvas().style.cursor="")}
    map.once("idle",()=>setState("ready"));
-  };if(map.isStyleLoaded())init();else map.once("style.load",init);map.on("error",event=>{if(!map.isStyleLoaded())setState("error");console.error(event.error)});return()=>{map.remove();mapRef.current=null}
+  };if(map.isStyleLoaded())init();else map.once("style.load",init);map.on("error",event=>{if(!map.isStyleLoaded())setState("error");console.error(event.error)});return()=>{valueMarkersRef.current.forEach(marker=>marker.remove());valueMarkersRef.current=[];map.remove();mapRef.current=null}
  },[]);
 
- useEffect(()=>{const map=mapRef.current;if(!map||state!=="ready")return;const scope=item.scope;
+ useEffect(()=>{const map=mapRef.current;if(!map||state!=="ready")return;valueMarkersRef.current.forEach(marker=>marker.remove());valueMarkersRef.current=[];const scope=item.scope;
   const filters:unknown[]=[];if(island!=="all")filters.push(["==",["get","island_id"],island]);if(municipality!=="all")filters.push(["==",["get","municipality_id"],municipality]);const filter=filters.length===0?null:filters.length===1?filters[0]:["all",...filters];
   map.setFilter("accessibility-fill",filter as never);map.setFilter("context-fill",filter as never);map.setFilter("island-fill",island==="all"?null:["==",["get","island_id"],island] as never);
   map.setFilter("facilities",island==="all"?null:["==",["get","island_id"],island] as never);
@@ -220,7 +233,9 @@ export function AccessibilityMap({municipalities,initialIsland="all",initialLaye
   map.setLayoutProperty("facilities","visibility",facility||facilities?"visible":"none");map.setPaintProperty("facilities","circle-radius",facility?6:3.5);
   map.setLayoutProperty("air-stations","visibility",air||stations?"visible":"none");
   if(municipal&&item.property){if(layer==="degurba")map.setPaintProperty("context-fill","fill-color",["match",["get","degurba_class"],"urban_centre","#247ea0","urban_cluster","#45b8b6","rural","#c9a662","#607581"] as never);else map.setPaintProperty("context-fill","fill-color",stepExpression(item.property,breaks,COLORS) as never)}
-  if(insular){const rows=rawValues as typeof timePoints;const expression:unknown[]=["match",["get","island_id"]];rows.forEach(row=>{const index=breaks.findIndex(value=>row.value<value);expression.push(row.geography_id,COLORS[index===-1?COLORS.length-1:index])});expression.push("#607581");map.setPaintProperty("island-fill","fill-color",expression as never)}
+  if(insular){const rows=rawValues as typeof timePoints;const expression:unknown[]=["match",["get","island_id"]];rows.forEach(row=>{const index=breaks.findIndex(value=>row.value<value);expression.push(row.geography_id,COLORS[index===-1?COLORS.length-1:index])});expression.push("#607581");map.setPaintProperty("island-fill","fill-color",expression as never);
+   rows.filter(row=>island==="all"||row.geography_id===island).forEach(row=>{const el=document.createElement("button");el.type="button";el.className="island-value-marker";el.textContent=islandValueLabel(layer,row.value);el.setAttribute("aria-label",(islandLabels[row.geography_id]??row.geography_id)+": "+el.textContent);el.onclick=()=>setDetail({__scope:"island-fill",island_id:row.geography_id,island_name:islandLabels[row.geography_id]??row.geography_id});const marker=new maplibregl.Marker({element:el,anchor:"center"}).setLngLat(islandCenter(row.geography_id)).addTo(map);valueMarkersRef.current.push(marker)});
+  }
   if(air&&item.property){const stationFilter:unknown[]=[];if(island!=="all")stationFilter.push(["==",["get","island_id"],island]);stationFilter.push(["!=",["get",item.property],null]);map.setFilter("air-stations",["all",...stationFilter] as never);map.setPaintProperty("air-stations","circle-color",stepExpression(item.property,breaks,COLORS) as never)}
   else {map.setFilter("air-stations",island==="all"?null:["==",["get","island_id"],island] as never);map.setPaintProperty("air-stations","circle-color","#7aa7ff")}
   map.fitBounds(island==="all"?CANARY:BOUNDS[island],{padding:38,duration:400});setDetail(null);
@@ -229,21 +244,21 @@ export function AccessibilityMap({municipalities,initialIsland="all",initialLaye
  const available=municipalities.filter(row=>island==="all"||row.island_id===island);
  const detailScope=String(detail?.__scope??"");
  const islandPoint=detailScope==="island-fill"?timePoints.find(point=>point.metric_id===item.metric&&point.period===String(year)&&point.geography_id===detail?.island_id):undefined;
+ const centerIslandPoint=detailScope==="facilities"&&item.scope==="island"?timePoints.find(point=>point.metric_id===item.metric&&point.period===String(year)&&point.geography_id===detail?.island_id):undefined;
  const period=item.scope==="island"?year:item.period;
  const detailValue=detailScope==="island-fill"?(islandPoint?islandPoint.value.toLocaleString("es-ES")+" "+islandPoint.unit:"Sin dato"):
   detailScope==="air-stations"?(detail?.[item.property??""]==null?"Sin observación":String(detail[item.property??""])+" µg/m³"):
   detailScope==="context-fill"?(layer==="income"?String(detail?.income_mean_per_person_2023)+" €/persona":layer==="density"?String(detail?.child_density_per_km2)+" niños/km²":String(detail?.degurba_class??"Sin dato").replace("_"," ")):
-  detailScope==="facilities"?String(detail?.status??"VERIFIED"):
+  detailScope==="facilities"?"Centro pediátrico AP verificado":
   String(detail?.nearest_facility_name??"No asignado");
 
  return <div className="map-shell">
   <div className="map-toolbar">
    <label>Ámbito insular<select value={island} onChange={event=>{setIsland(event.target.value);setMunicipality("all")}}><option value="all">Canarias · 7 islas</option>{Object.entries(islandLabels).filter(([id])=>!["canarias","la-graciosa"].includes(id)).map(([id,label])=><option key={id} value={id}>{label}</option>)}</select></label>
-   <label>Municipio<select value={municipality} onChange={event=>setMunicipality(event.target.value)} disabled={item.scope==="island"||item.scope==="station"||item.scope==="facility"}><option value="all">Todos los municipios</option>{available.map(row=><option key={row.municipality_id} value={row.municipality_id}>{row.municipality_name}</option>)}</select></label>
-   <label className="map-layer-select">Qué quieres ver<select aria-label="Qué quieres ver en el mapa" value={layer} onChange={event=>{const next=event.target.value as ContextLayer;setLayer(next);setYear(metadata[next].period)}}>
+   <label>Municipio<select value={municipality} onChange={event=>{const next=event.target.value;setMunicipality(next);if(next!=="all"){const selected=municipalities.find(row=>row.municipality_id===next);if(selected)setIsland(selected.island_id)}}} disabled={item.scope==="island"||item.scope==="station"||item.scope==="facility"}><option value="all">Todos los municipios</option>{available.map(row=><option key={row.municipality_id} value={row.municipality_id}>{row.municipality_name}</option>)}</select></label>
+   <label className="map-layer-select">Qué quieres ver<select aria-label="Qué quieres ver en el mapa" value={layer} onChange={event=>{const next=event.target.value as ContextLayer;setLayer(next);setYear(metadata[next].period);setMunicipality("all");setFacilities(next==="accessibility");setStations(false)}}>
     <optgroup label="Acceso y recursos">
      <option value="accessibility">Accesibilidad a Pediatría AP</option>
-     <option value="facilities">Centros pediátricos AP</option>
      <option value="child_population_assigned_0_14">Población infantil asignada</option>
     </optgroup>
     <optgroup label="Actividad asistencial">
@@ -269,9 +284,9 @@ export function AccessibilityMap({municipalities,initialIsland="all",initialLaye
    </select></label>
    {availableYears.length>1?<label>Año<select aria-label="Año de la capa" value={year} onChange={event=>setYear(Number(event.target.value))}>{availableYears.map(value=><option key={value}>{value}</option>)}</select></label>:<div className="map-year-static"><span>Año</span><strong>{availableYears[0]}</strong></div>}
   </div>
-  <fieldset className="map-aux"><legend>Capas auxiliares</legend>{layer!=="facilities"&&<label><input type="checkbox" checked={facilities} onChange={event=>setFacilities(event.target.checked)}/>Centros</label>}{!["PM10","PM2.5","NO2"].includes(layer)&&<label><input type="checkbox" checked={stations} onChange={event=>setStations(event.target.checked)}/>Estaciones</label>}</fieldset>
+  <fieldset className="map-aux"><legend>Capas auxiliares · opcionales</legend><label><input type="checkbox" checked={facilities} onChange={event=>setFacilities(event.target.checked)}/>Centros</label>{!["PM10","PM2.5","NO2"].includes(layer)&&<label><input type="checkbox" checked={stations} onChange={event=>setStations(event.target.checked)}/>Estaciones</label>}</fieldset>
   <div className="map-stage"><div ref={container} className="map" aria-label="Mapa temático pediátrico de Canarias"/>{state==="loading"&&<div className="map-state" role="status">Cargando capa validada…</div>}{state==="error"&&<div className="map-state" role="alert">El mapa no pudo cargarse. Los indicadores siguen disponibles en tabla.</div>}
-   {detail&&<aside className="map-detail" aria-live="polite"><button onClick={()=>setDetail(null)} aria-label="Cerrar detalle">×</button><span className="eyebrow">{item.label} · {period}</span><strong>{detailScope==="island-fill"?String(detail.island_name):detailScope==="air-stations"?String(detail.name):detailScope==="context-fill"?String(detail.municipality_name):detailScope==="facilities"?String(detail.name):BAND[String(detail.band)]??"Estado no disponible"}</strong><p>{detailValue}</p><small>{definition.source_ids.join(" · ")} · {definition.classification_method??"observado"}</small></aside>}
+   {detail&&<aside className="map-detail" aria-live="polite"><button onClick={()=>setDetail(null)} aria-label="Cerrar detalle">×</button><span className="eyebrow">{detailScope==="facilities"?"Centro pediátrico AP":item.label} · {period}</span><strong>{detailScope==="island-fill"?String(detail.island_name):detailScope==="air-stations"?String(detail.name):detailScope==="context-fill"?String(detail.municipality_name):detailScope==="facilities"?String(detail.name):BAND[String(detail.band)]??"Estado no disponible"}</strong><p>{detailValue}</p>{detailScope==="facilities"&&centerIslandPoint&&<div className="map-detail-context"><span>{item.label} · {islandLabels[String(detail.island_id)]??String(detail.island_id)}</span><b>{islandValueLabel(layer,centerIslandPoint.value)}</b><small>Dato de la isla; no corresponde específicamente a este centro.</small></div>}{detailScope==="facilities"&&item.scope==="grid"&&<div className="map-detail-context"><span>{item.label}</span><small>El valor de accesibilidad se calcula desde cada zona de origen hasta el centro más próximo; no existe un único tiempo atribuible al centro.</small></div>}<small>{definition.source_ids.join(" · ")} · {definition.classification_method??"observado"}</small></aside>}
   </div>
   <MapLegend layer={layer} year={period} breaks={breaks}/>
   <div className="map-caption"><div><span className="eyebrow">Qué representa este mapa</span><p>{item.explanation}</p></div><span className="map-resolution">Resolución: <strong>{item.resolution}</strong> · Periodo: <strong>{period}</strong></span></div>
