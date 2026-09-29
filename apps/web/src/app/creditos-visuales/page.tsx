@@ -1,0 +1,7 @@
+import type {Metadata} from "next";
+import {IslandHeroImage} from "@/components/IslandHeroImage";
+import {islandHeroImages} from "@/lib/island-images";
+
+export const metadata:Metadata={title:"Créditos visuales",description:"Autoría, fuente y licencia de las fotografías territoriales de PedsData Canarias.",alternates:{canonical:"/creditos-visuales"}};
+
+export default function VisualCreditsPage(){return <><section className="semantic-hero compact-hero"><span className="eyebrow">Transparencia visual</span><h1>Créditos de las fotografías territoriales.</h1><p>Cada imagen fue seleccionada y validada individualmente. Las versiones web conservan la licencia de la obra original y enlazan a Wikimedia Commons.</p></section><div className="semantic-shell visual-credits-grid">{islandHeroImages.map(image=><article key={image.image_id} id={image.territory_id}><IslandHeroImage territoryId={image.territory_id} variant="credit"/><div><span className="eyebrow">{image.territory_name}</span><h2>{image.title}</h2><p><strong>Autoría:</strong> {image.author}</p><p><strong>Licencia:</strong> <a href={image.license_url} target="_blank" rel="noreferrer">{image.license}</a></p><p><strong>Validación:</strong> {image.license_validation} · {image.commons_assessment}</p><p><strong>Original:</strong> {image.original_dimensions} · adquirido {image.retrieved_at}</p><p>{image.derivative}</p><a className="official-source-link" href={image.source_url} target="_blank" rel="noreferrer">Abrir fuente original ↗</a></div></article>)}</div></>}

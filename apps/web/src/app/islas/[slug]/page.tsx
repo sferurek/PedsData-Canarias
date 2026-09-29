@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LazyAccessibilityMap } from "@/components/LazyAccessibilityMap";
 import { DataBadge } from "@/components/DataBadge";
+import { IslandHeroImage } from "@/components/IslandHeroImage";
 import { Metric } from "@/components/Metric";
 import { SourceMethodPanel } from "@/components/SourceMethodPanel";
 import { islandBySlug, profiles } from "@/lib/data";
@@ -18,9 +19,13 @@ export default async function IslandPage({ params }: { params: Promise<{ slug: s
   const isLanzarote = island.island_id === "lanzarote";
   const clinicalSummary = clinical.island_summary[island.island_id as keyof typeof clinical.island_summary];
   return <>
-    <section className="profile-hero"><Link className="back-link" href="/">← Canarias</Link>
-      <div className="profile-title"><div><span className="eyebrow">Perfil insular · acceso potencial</span><h1>{island.name}</h1></div><DataBadge status={isLanzarote ? "PARTIAL" : "VALIDATED"} /></div>
-      <p>{formatNumber(island.children_0_14)} niños de 0–14 años · {island.eligible_pediatric_facilities} destinos AP elegibles · {island.pediatricians_ap_2024} pediatras AP SIAP.</p><Link className="primary-link report-cta" href={`/informes/${island.island_id}`}>Generar informe territorial</Link>
+    <section className="profile-hero profile-hero-with-image">
+      <IslandHeroImage territoryId={island.island_id} priority />
+      <div className="profile-hero-content"><Link className="back-link" href="/">← Canarias</Link>
+        <div className="profile-title"><div><span className="eyebrow">Perfil insular · acceso potencial</span><h1>{island.name}</h1></div><DataBadge status={isLanzarote ? "PARTIAL" : "VALIDATED"} /></div>
+        <p>{formatNumber(island.children_0_14)} niños de 0–14 años · {island.eligible_pediatric_facilities} destinos AP elegibles · {island.pediatricians_ap_2024} pediatras AP SIAP.</p>
+        <Link className="primary-link report-cta" href={`/informes/${island.island_id}`}>Generar informe territorial</Link>
+      </div>
     </section>
     <section className="profile-metrics">
       <Metric metricId="accessibility_ap" label="Mediana" value={island.median_travel_minutes} suffix=" min" detail="Ponderada por niños" />

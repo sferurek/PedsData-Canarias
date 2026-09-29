@@ -2,12 +2,14 @@ import type {Metadata} from "next";
 import Link from "next/link";
 import {notFound} from "next/navigation";
 import {LazyAccessibilityMap} from "@/components/LazyAccessibilityMap";
+import {IslandHeroImage} from "@/components/IslandHeroImage";
 import {PrintReportButton} from "@/components/PrintReportButton";
 import {ResultSourcesLink} from "@/components/ResultSourcesLink";
 import {SemanticChart} from "@/components/SemanticChart";
 import {profiles} from "@/lib/data";
 import {sourceById} from "@/lib/provenance";
 import {metricById} from "@/lib/semantic";
+import {islandHeroByTerritory} from "@/lib/island-images";
 import {buildTerritorialReport,territorialReportIds,type ExecutiveFinding,type ReportSection} from "@/lib/territorial-report";
 
 const nf=new Intl.NumberFormat("es-ES",{maximumFractionDigits:2});
@@ -30,7 +32,8 @@ function Section({section,geographyId}:{section:ReportSection;geographyId:string
 export default async function TerritorialReportPage({params}:{params:Promise<{geography_id:string}>}){
  const {geography_id}=await params;const report=buildTerritorialReport(geography_id);if(!report)notFound();
  const sources=report.sourceIds.map(sourceById).filter(Boolean);
- return <><article className="territorial-report"><header className="report-hero"><div><Link className="back-link" href={report.territory.kind==="island"?`/islas/${report.territory.id}`:report.territory.kind==="municipality"?`/municipios/${report.territory.id}`:"/pregunta"}>← Volver al perfil</Link><span className="eyebrow">Informe territorial pediátrico</span><h1>{report.territory.name}</h1><p>Informe determinista construido exclusivamente con métricas y fuentes registradas. Geografía solicitada: <b>{report.territory.geographyLevel}</b>.</p></div><PrintReportButton/></header>
+ const hasTerritoryImage=Boolean(islandHeroByTerritory(report.territory.id));
+ return <><article className="territorial-report"><header className={`report-hero${hasTerritoryImage?" report-hero-with-image":""}`}>{hasTerritoryImage&&<IslandHeroImage territoryId={report.territory.id} priority/>}<div className="report-hero-content"><div><Link className="back-link" href={report.territory.kind==="island"?`/islas/${report.territory.id}`:report.territory.kind==="municipality"?`/municipios/${report.territory.id}`:"/pregunta"}>← Volver al perfil</Link><span className="eyebrow">Informe territorial pediátrico</span><h1>{report.territory.name}</h1><p>Informe determinista construido exclusivamente con métricas y fuentes registradas. Geografía solicitada: <b>{report.territory.geographyLevel}</b>.</p></div><PrintReportButton/></div></header>
   <section className="executive-findings"><span className="eyebrow">Resumen ejecutivo</span><h2>Hallazgos calculados</h2>{report.findings.length?<FindingList findings={report.findings} geography={report.territory.id}/>:<p>No hay métricas publicables directamente atribuibles a esta geografía. El contexto regional se mantiene separado.</p>}<p className="scientific-caveat">Lectura descriptiva: no estima riesgo individual ni causalidad.</p></section>
   <nav className="report-toc" aria-label="Secciones del informe">{report.sections.map(section=><a key={section.id} href={`#${section.id}`}>{section.title}</a>)}{report.regionalContext.length>0&&<a href="#regional-context">Contexto regional</a>}</nav>
   {report.sections.map(section=><Section key={section.id} section={section} geographyId={geography_id}/>)}
