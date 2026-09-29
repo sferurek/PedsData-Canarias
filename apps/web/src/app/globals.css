@@ -384,6 +384,8 @@ h1 em,h2 em { color:var(--sea); font-weight:400; }
 .home-hero .map-stage { background:#d6e7ed; }
 .home-hero .maplibregl-ctrl-attrib { color:#284b59; background:rgb(246 251 252 / 88%); }
 .home-hero .maplibregl-ctrl-attrib a { color:#174f65; }
+.home-hero .maplibregl-ctrl-attrib { max-width:70%; padding:2px 6px; border-radius:6px 0 0 0; font-size:.58rem; line-height:1.25; opacity:.72; }
+.home-hero .maplibregl-ctrl-attrib:hover { opacity:1; }
 .home-quick-links { width:min(1540px,100%); margin:24px auto 0; border-color:var(--line); background:rgb(2 15 26 / 48%); }
 .home-quick-links a { color:#b8ced8; border-color:var(--line); }
 .home-quick-links a:hover,.home-quick-links a:focus-visible { color:white; background:rgb(45 226 230 / 10%); }
