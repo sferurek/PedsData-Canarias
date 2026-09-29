@@ -388,6 +388,11 @@ h1 em,h2 em { color:var(--sea); font-weight:400; }
 .map-caption p { margin:5px 0 0; color:#d5e6ed; font-size:.78rem; line-height:1.5; }
 .map-resolution { flex:0 0 auto; padding-top:2px; color:#89a9b8; font-size:.65rem; white-space:nowrap; }
 .map-resolution strong { color:#dff8fa; font-weight:700; }
+.map-detail-context { display:grid; gap:4px; margin:12px 0 4px; padding:11px 12px; border:1px solid rgb(45 226 230 / 24%); border-radius:10px; background:rgb(45 226 230 / 8%); }
+.map-detail-context span { color:#9feef1; font-size:.68rem; font-weight:760; letter-spacing:.03em; text-transform:uppercase; }
+.map-detail-context b { color:#fff; font-size:1.05rem; }
+.map-detail-context small { color:#a9c2cd; font-size:.66rem; line-height:1.35; }
+
 .island-value-marker { min-width:86px; padding:6px 10px; border:1px solid rgb(8 47 63 / 18%); border-radius:999px; color:#082f3f; background:rgb(255 255 255 / 92%); box-shadow:0 4px 14px rgb(0 27 40 / 20%); font-size:.72rem; font-weight:800; line-height:1; white-space:nowrap; cursor:pointer; backdrop-filter:blur(4px); }
 .island-value-marker:hover,.island-value-marker:focus-visible { transform:translateY(-1px); background:white; }
 
