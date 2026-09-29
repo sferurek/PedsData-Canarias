@@ -28,7 +28,7 @@ export default function Home(){
      <ul className="hero-principles" aria-label="Principios del observatorio"><li><b>Datos públicos</b><span>y trazables</span></li><li><b>Rigor científico</b><span>y sanitario</span></li><li><b>Siete islas</b><span>siempre visibles</span></li></ul>
     </div>
     <div className="hero-map-frame" id="mapa-interactivo">
-     <div className="hero-map-heading"><div><span className="eyebrow">Archipiélago en datos</span><strong>Mapa pediátrico de Canarias</strong></div><span>2024 · acceso potencial</span></div>
+     <div className="hero-map-heading"><strong>Mapa pediátrico de Canarias · Tiempo de acceso por carretera a la atención pediátrica</strong></div>
      <LazyAccessibilityMap municipalities={municipalities}/>
     </div>
    </div>
