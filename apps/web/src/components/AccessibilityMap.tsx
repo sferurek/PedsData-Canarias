@@ -258,7 +258,6 @@ export function AccessibilityMap({municipalities,initialIsland="all",initialLaye
    <label className="map-layer-select">Qué quieres ver<select aria-label="Qué quieres ver en el mapa" value={layer} onChange={event=>{const next=event.target.value as ContextLayer;setLayer(next);setYear(metadata[next].period)}}>
     <optgroup label="Acceso y recursos">
      <option value="accessibility">Accesibilidad a Pediatría AP</option>
-     <option value="facilities">Centros pediátricos AP</option>
      <option value="child_population_assigned_0_14">Población infantil asignada</option>
     </optgroup>
     <optgroup label="Actividad asistencial">
@@ -284,7 +283,7 @@ export function AccessibilityMap({municipalities,initialIsland="all",initialLaye
    </select></label>
    {availableYears.length>1?<label>Año<select aria-label="Año de la capa" value={year} onChange={event=>setYear(Number(event.target.value))}>{availableYears.map(value=><option key={value}>{value}</option>)}</select></label>:<div className="map-year-static"><span>Año</span><strong>{availableYears[0]}</strong></div>}
   </div>
-  <fieldset className="map-aux"><legend>Capas auxiliares</legend>{layer!=="facilities"&&<label><input type="checkbox" checked={facilities} onChange={event=>setFacilities(event.target.checked)}/>Centros</label>}{!["PM10","PM2.5","NO2"].includes(layer)&&<label><input type="checkbox" checked={stations} onChange={event=>setStations(event.target.checked)}/>Estaciones</label>}</fieldset>
+  <fieldset className="map-aux"><legend>Capas auxiliares</legend><label><input type="checkbox" checked={facilities} onChange={event=>setFacilities(event.target.checked)}/>Centros</label>{!["PM10","PM2.5","NO2"].includes(layer)&&<label><input type="checkbox" checked={stations} onChange={event=>setStations(event.target.checked)}/>Estaciones</label>}</fieldset>
   <div className="map-stage"><div ref={container} className="map" aria-label="Mapa temático pediátrico de Canarias"/>{state==="loading"&&<div className="map-state" role="status">Cargando capa validada…</div>}{state==="error"&&<div className="map-state" role="alert">El mapa no pudo cargarse. Los indicadores siguen disponibles en tabla.</div>}
    {detail&&<aside className="map-detail" aria-live="polite"><button onClick={()=>setDetail(null)} aria-label="Cerrar detalle">×</button><span className="eyebrow">{detailScope==="facilities"?"Centro pediátrico AP":item.label} · {period}</span><strong>{detailScope==="island-fill"?String(detail.island_name):detailScope==="air-stations"?String(detail.name):detailScope==="context-fill"?String(detail.municipality_name):detailScope==="facilities"?String(detail.name):BAND[String(detail.band)]??"Estado no disponible"}</strong><p>{detailValue}</p><small>{definition.source_ids.join(" · ")} · {definition.classification_method??"observado"}</small></aside>}
   </div>
