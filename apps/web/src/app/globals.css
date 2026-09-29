@@ -388,6 +388,9 @@ h1 em,h2 em { color:var(--sea); font-weight:400; }
 .map-caption p { margin:5px 0 0; color:#d5e6ed; font-size:.78rem; line-height:1.5; }
 .map-resolution { flex:0 0 auto; padding-top:2px; color:#89a9b8; font-size:.65rem; white-space:nowrap; }
 .map-resolution strong { color:#dff8fa; font-weight:700; }
+.island-value-marker { min-width:86px; padding:6px 10px; border:1px solid rgb(8 47 63 / 18%); border-radius:999px; color:#082f3f; background:rgb(255 255 255 / 92%); box-shadow:0 4px 14px rgb(0 27 40 / 20%); font-size:.72rem; font-weight:800; line-height:1; white-space:nowrap; cursor:pointer; backdrop-filter:blur(4px); }
+.island-value-marker:hover,.island-value-marker:focus-visible { transform:translateY(-1px); background:white; }
+
 @media(max-width:900px){ .home-hero .map-toolbar { grid-template-columns:1fr 1fr; } .map-caption { flex-direction:column; } .map-resolution { white-space:normal; } }
 
 .home-hero .map-toolbar,.home-hero .map-aux { background:rgb(8 54 76 / 88%); }
