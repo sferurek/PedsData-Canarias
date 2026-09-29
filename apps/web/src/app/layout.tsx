@@ -21,7 +21,7 @@ export const metadata:Metadata={
  twitter:{card:"summary_large_image",title:"PedsData Canarias · Beta pública",description:"Salud infantil en las siete islas con datos públicos y trazabilidad explícita.",images:["/opengraph-image"]},
  robots:{index:true,follow:true},
 };
-export const viewport:Viewport={width:"device-width",initialScale:1,themeColor:"#f5f2ea",colorScheme:"light"};
+export const viewport:Viewport={width:"device-width",initialScale:1,themeColor:"#031522",colorScheme:"dark"};
 
 export default function RootLayout({children}:Readonly<{children:React.ReactNode}>){return <html lang="es" data-scroll-behavior="smooth"><body className={geist.variable}>
  <a className="skip-link" href="#contenido">Saltar al contenido principal</a>

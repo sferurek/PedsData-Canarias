@@ -14,8 +14,8 @@ const labels: Record<ContextLayer,{label:string;unit:string;method:string}> = {
 };
 export function MapLegend({layer="accessibility",year,breaks=[]}:{layer?:ContextLayer;year?:number;breaks?:number[]}){
  if(layer==="accessibility") return <div className="legend" aria-label="Leyenda de tiempo estimado">{legendItems.map(([key,label])=><span key={key}><i className={"swatch swatch-"+key}/>{label}</span>)}</div>;
- if(layer==="degurba") return <div className="legend context-legend" aria-label="Leyenda Urbanización DEGURBA"><strong>Urbanización DEGURBA · 2021 · categorical</strong>{[["#385e8d","Centro urbano"],["#6f91b8","Agrupación urbana"],["#c9a662","Rural"]].map(([color,label])=><span key={label}><i className="swatch" style={{background:color}}/>{label}</span>)}</div>;
- const selected=labels[layer],colors=["#d9e2f2","#9eb8d7","#607fae","#3f326d"];
+ if(layer==="degurba") return <div className="legend context-legend" aria-label="Leyenda Urbanización DEGURBA"><strong>Urbanización DEGURBA · 2021 · categorical</strong>{[["#247ea0","Centro urbano"],["#45b8b6","Agrupación urbana"],["#c9a662","Rural"]].map(([color,label])=><span key={label}><i className="swatch" style={{background:color}}/>{label}</span>)}</div>;
+ const selected=labels[layer],colors=["#163f5b","#15728e","#20aeb9","#62e0d5"];
  const text=(index:number)=>index===0?(breaks[0]===undefined?"Dato observado":"< "+breaks[0].toLocaleString("es-ES")):index===colors.length-1?(breaks[index-1]===undefined?"":"≥ "+breaks[index-1].toLocaleString("es-ES")):(breaks[index-1]?.toLocaleString("es-ES")??"")+"–"+(breaks[index]?.toLocaleString("es-ES")??"");
  return <div className="legend context-legend" aria-label={"Leyenda "+selected.label}><strong>{selected.label}{year?" · "+year:""} · {selected.method}</strong>{colors.map((color,index)=><span key={color}><i className="swatch" style={{background:color}}/>{text(index)} {selected.unit}</span>)}</div>;
 }
