@@ -6,7 +6,7 @@ import {IslandHeroImage} from "./IslandHeroImage";
 import {ResultSourcesLink} from "./ResultSourcesLink";
 
 export function IslandCards({islands}:{islands:IslandProfile[]}){
- return <div className="island-grid">{islands.map((island,index)=><article className="island-card" key={island.island_id}>
+ return <div className="island-grid">{islands.map((island,index)=><article className="island-card" key={island.island_id}><Link className="island-card-report-hitarea" href={`/informes/${island.island_id}`} aria-label={`Generar informe completo de ${island.name}`}/>
   <IslandHeroImage territoryId={island.island_id} variant="card"/>
   <div className="island-card-body">
    <div className="island-card-top"><span className="island-index">{String(index+1).padStart(2,"0")}</span><DataBadge status={island.island_id==="lanzarote"?"PARTIAL":"VALIDATED"}/></div>
@@ -14,7 +14,7 @@ export function IslandCards({islands}:{islands:IslandProfile[]}){
    <div className="island-stat"><strong>{formatNumber(island.children_0_14)}</strong><span>niños 0–14</span></div>
    <dl><div><dt>Mediana</dt><dd>{formatMinutes(island.median_travel_minutes)}</dd></div><div><dt>&lt;15 min</dt><dd>{formatPercent(island.pct_under_15_total)}</dd></div></dl>
    <ResultSourcesLink metricId="accessibility_ap" period={2024} geography={island.island_id} result="Perfil resumido · "/>
-   <Link className="text-link" href={`/islas/${island.slug}`}>Abrir perfil <span aria-hidden="true">→</span></Link>
+   <Link className="text-link island-report-link" href={`/informes/${island.island_id}`}>Generar informe completo <span aria-hidden="true">→</span></Link>
   </div>
  </article>)}</div>;
 }
