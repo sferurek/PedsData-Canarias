@@ -562,3 +562,5 @@ footer p { color:#829caa; }
  .profile-hero-with-image,.report-hero-with-image{min-height:0;padding:20px 0;border:0}
 }
 [data-territory-image="gran-canaria"] img{object-position:10% center}
+.island-image-hero{pointer-events:none}
+.island-image-hero .photo-credit{pointer-events:auto}
