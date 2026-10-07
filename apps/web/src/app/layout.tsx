@@ -6,7 +6,7 @@ import "./globals.css";
 import {SiteHeader} from "@/components/SiteHeader";
 
 const geist=Geist({subsets:["latin"],variable:"--font-geist"});
-const publicUrl="https://web-sferureks-projects.vercel.app";
+const publicUrl="https://pedsdata.pedscore.app";
 
 export const metadata:Metadata={
  metadataBase:new URL(publicUrl),

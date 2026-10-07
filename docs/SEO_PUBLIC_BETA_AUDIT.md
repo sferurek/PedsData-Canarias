@@ -12,4 +12,4 @@ Fecha: 28/09/2026. Versión objetivo: `v0.9.0-beta.1`.
 - jerarquía con un único `main`, un `h1` por ruta principal y encabezados descriptivos.
 - rutas legibles: `/evolucion`, `/comparar`, `/pregunta`, `/fuentes`, `/indicadores/[metric_id]`, `/aviso`, `/licencias`, `/citar`.
 
-Lighthouse final: SEO **100/100** en móvil y escritorio. El sitemap incluye páginas públicas, 7 perfiles insulares, 88 municipales, 20 indicadores y 15 fuentes. La URL canónica de beta es `https://web-sferureks-projects.vercel.app` hasta disponer de dominio propio.
+Lighthouse final: SEO **100/100** en móvil y escritorio. El sitemap incluye páginas públicas, 7 perfiles insulares, 88 municipales, 20 indicadores y 15 fuentes. La URL canónica de producción es `https://pedsdata.pedscore.app`.
