@@ -20,7 +20,6 @@ export default function Home(){
    <div className="hero-atmosphere" aria-hidden="true"/>
    <div className="home-hero-grid">
     <div className="home-hero-copy">
-     <div className="hero-badges"><DataBadge status="VALIDATED"/><span>7 islas · beta pública</span></div>
      <span className="hero-kicker">Datos para una infancia más saludable</span>
      <h1 id="home-title">Entender la salud<br/><em>infantil de las islas.</em></h1>
      <p>PedsData Canarias centraliza en un único punto de acceso las fuentes públicas disponibles sobre la asistencia pediátrica en las islas. Nuestra misión es hacer visibles, comparables y trazables los datos actuales y su evolución histórica para comprender mejor cómo cambia la atención pediátrica en Canarias.</p>
