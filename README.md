@@ -40,7 +40,7 @@ pnpm test:e2e
 - [Arquitectura de trazabilidad](docs/DATA_PROVENANCE_ARCHITECTURE.md)
 - [Métodos de accesibilidad](docs/ACCESSIBILITY_PUBLICATION_METHODS.md)
 - [Catálogo semántico](docs/SEMANTIC_METRICS_CATALOG.md)
-- [Catálogo público de fuentes](https://web-sferureks-projects.vercel.app/fuentes)
+- [Catálogo público de fuentes](https://pedsdata.pedscore.app/fuentes)
 - [Checklist de beta pública](docs/PUBLIC_BETA_CHECKLIST.md)
 
 Los datasets de terceros conservan sus propias licencias y atribuciones. La aplicación enlaza la fuente oficial exacta desde cada indicador y resultado.
@@ -51,7 +51,7 @@ No se publican perfiles por Zona Básica de Salud porque no existe una geometrí
 
 ## Citación
 
-PedsData Canarias. *Observatorio independiente de salud infantil en Canarias*. Versión 0.9.0-beta.2. Consultado el [fecha] en https://web-sferureks-projects.vercel.app. Código: https://github.com/sferurek/PedsData-Canarias.
+PedsData Canarias. *Observatorio independiente de salud infantil en Canarias*. Versión 0.9.0-beta.2. Consultado el [fecha] en https://pedsdata.pedscore.app. Código: https://github.com/sferurek/PedsData-Canarias.
 
 No existe DOI asignado en esta versión.
 
